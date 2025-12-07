@@ -3,13 +3,13 @@
 	"id": "firesreflamed",
 	"version": "${version}",
 	"name": "Fire's Reflamed",
-	"description": "This is a test of my mod.",
+	"description": "Welcome to the fabricated workshop!",
 	"authors": [
-		"Fire_Branley"
+		"Fire_Brantley"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://modrinth.com/user/Fire_Brantley",
+		"sources": "https://github.com/FireBrantley/Fabric-Fires-Reflamed-1.21.X"
 	},
 	"license": "MIT",
 	"icon": "assets/firesreflamed/icon.png",
