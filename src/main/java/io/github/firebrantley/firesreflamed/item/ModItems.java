@@ -19,10 +19,5 @@ public class ModItems {
 
     public static void registerModItems() {
         FiresReflamed.LOGGER.info("Registering Mod Items for " + FiresReflamed.MOD_ID);
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries ->{
-            entries.add(RAW_TITANIUM);
-            entries.add(TITANIUM_INGOT);
-        });
     }
 }

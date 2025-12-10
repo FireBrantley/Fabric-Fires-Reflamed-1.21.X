@@ -1,6 +1,7 @@
 package io.github.firebrantley.firesreflamed;
 
 import io.github.firebrantley.firesreflamed.block.ModBlocks;
+import io.github.firebrantley.firesreflamed.item.ModItemGroups;
 import io.github.firebrantley.firesreflamed.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
@@ -14,6 +15,7 @@ public class FiresReflamed implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+        ModItemGroups.registerItemGroups();
         ModBlocks.registerModBlocks();
         ModItems.registerModItems();
 	}

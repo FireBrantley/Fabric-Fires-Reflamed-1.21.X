@@ -31,13 +31,5 @@ public class ModBlocks {
 
     public static void registerModBlocks() {
         FiresReflamed.LOGGER.info("Registering Blocks Items for " + FiresReflamed.MOD_ID);
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(entries ->{
-            entries.add(TITANIUM_ORE);
-        });
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries ->{
-            entries.add(BLOCK_OF_TITANIUM);
-        });
     }
 }
