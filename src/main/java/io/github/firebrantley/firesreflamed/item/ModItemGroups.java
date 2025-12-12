@@ -16,6 +16,7 @@ public class ModItemGroups {
             FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.RAW_TITANIUM))
                     .displayName(Text.translatable("itemgroup.firesreflamed.fires_reflamed"))
                     .entries((displayContext, entries) -> {
+                        // Titanium
                         entries.add(ModBlocks.BLOCK_OF_TITANIUM);
                         entries.add(ModBlocks.TITANIUM_ORE);
                         entries.add(ModItems.RAW_TITANIUM);

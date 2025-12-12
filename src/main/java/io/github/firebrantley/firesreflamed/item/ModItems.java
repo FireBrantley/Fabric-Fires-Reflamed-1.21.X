@@ -9,6 +9,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 public class ModItems {
+    //Titanium
     public static final  Item RAW_TITANIUM = registerItem("raw_titanium", new Item(new Item.Settings()));
     public static final  Item TITANIUM_INGOT = registerItem("titanium_ingot", new Item(new Item.Settings()));
 

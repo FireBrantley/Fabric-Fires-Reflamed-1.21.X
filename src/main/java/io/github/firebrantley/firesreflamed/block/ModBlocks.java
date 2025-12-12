@@ -14,11 +14,11 @@ import net.minecraft.util.math.intprovider.UniformIntProvider;
 
 public class ModBlocks {
 
+    //Titanium
     public static final Block TITANIUM_ORE = registerBlock("titanium_ore",
             new ExperienceDroppingBlock(UniformIntProvider.create(2,5),
                     AbstractBlock.Settings.create().strength(3f)
             .requiresTool().sounds(BlockSoundGroup.STONE)));
-
     public static final Block BLOCK_OF_TITANIUM = registerBlock("block_of_titanium", new Block(AbstractBlock.Settings.create().strength(3)
             .requiresTool().sounds(BlockSoundGroup.NETHERITE)));
 
