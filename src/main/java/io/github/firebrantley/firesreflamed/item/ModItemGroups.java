@@ -16,16 +16,24 @@ public class ModItemGroups {
             FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.RAW_TITANIUM))
                     .displayName(Text.translatable("itemgroup.firesreflamed.fires_reflamed"))
                     .entries((displayContext, entries) -> {
-                        // Titanium
+                        // Titanium Items
                         entries.add(ModBlocks.BLOCK_OF_TITANIUM);
                         entries.add(ModBlocks.TITANIUM_ORE);
+                        entries.add(ModItems.RAW_TITANIUM);
+                        entries.add(ModItems.TITANIUM_INGOT);
+
+                        //Titanium Tool Set
                         entries.add(ModItems.TITANIUM_SHOVEL);
                         entries.add(ModItems.TITANIUM_PICKAXE);
                         entries.add(ModItems.TITANIUM_AXE);
                         entries.add(ModItems.TITANIUM_HOE);
                         entries.add(ModItems.TITANIUM_SWORD);
-                        entries.add(ModItems.RAW_TITANIUM);
-                        entries.add(ModItems.TITANIUM_INGOT);
+
+                        //Titanium Armor Set
+                        entries.add(ModItems.TITANIUM_HELMET);
+                        entries.add(ModItems.TITANIUM_CHESTPLATE);
+                        entries.add(ModItems.TITANIUM_LEGGINGS);
+                        entries.add(ModItems.TITANIUM_BOOTS);
 
                     }).build());
 

@@ -10,6 +10,11 @@
   "item.firesreflamed.titanium_pickaxe": "Titanium Pickaxe",
   "item.firesreflamed.titanium_axe": "Titanium Axe",
   "item.firesreflamed.titanium_hoe": "Titanium Hoe",
-  "item.firesreflamed.titanium_sword": "Titanium Sword"
+  "item.firesreflamed.titanium_sword": "Titanium Sword",
+
+    "item.firesreflamed.titanium_helmet": "Titanium Helmet",
+    "item.firesreflamed.titanium_chestplate": "Titanium Chestplate",
+    "item.firesreflamed.titanium_leggings": "Titanium Leggings",
+    "item.firesreflamed.titanium_boots": "Titanium Boots"
 
 }
