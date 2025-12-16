@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "firesreflamed:item/titanium_pickaxe"
+  }
+}

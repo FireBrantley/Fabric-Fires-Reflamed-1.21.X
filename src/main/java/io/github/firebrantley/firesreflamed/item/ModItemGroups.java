@@ -19,6 +19,11 @@ public class ModItemGroups {
                         // Titanium
                         entries.add(ModBlocks.BLOCK_OF_TITANIUM);
                         entries.add(ModBlocks.TITANIUM_ORE);
+                        entries.add(ModItems.TITANIUM_SHOVEL);
+                        entries.add(ModItems.TITANIUM_PICKAXE);
+                        entries.add(ModItems.TITANIUM_AXE);
+                        entries.add(ModItems.TITANIUM_HOE);
+                        entries.add(ModItems.TITANIUM_SWORD);
                         entries.add(ModItems.RAW_TITANIUM);
                         entries.add(ModItems.TITANIUM_INGOT);
 

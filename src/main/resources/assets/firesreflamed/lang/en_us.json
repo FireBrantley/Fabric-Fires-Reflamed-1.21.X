@@ -1,8 +1,15 @@
 {
   "itemgroup.firesreflamed.fires_reflamed": "Fire's Reflamed",
+
   "item.firesreflamed.raw_titanium": "Raw Titanium",
   "item.firesreflamed.titanium_ingot": "Titanium Ingot",
-
   "block.firesreflamed.titanium_ore": "Titanium Ore",
-  "block.firesreflamed.block_of_titanium": "Block of Titanium"
+  "block.firesreflamed.block_of_titanium": "Block of Titanium",
+
+  "item.firesreflamed.titanium_shovel": "Titanium Shovel",
+  "item.firesreflamed.titanium_pickaxe": "Titanium Pickaxe",
+  "item.firesreflamed.titanium_axe": "Titanium Axe",
+  "item.firesreflamed.titanium_hoe": "Titanium Hoe",
+  "item.firesreflamed.titanium_sword": "Titanium Sword"
+
 }
