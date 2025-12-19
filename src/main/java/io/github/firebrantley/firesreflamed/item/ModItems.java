@@ -1,7 +1,6 @@
 package io.github.firebrantley.firesreflamed.item;
 
 import io.github.firebrantley.firesreflamed.FiresReflamed;
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -50,6 +49,37 @@ public class ModItems {
             new ArmorItem(ModArmorMaterials.TITANIUM_ARMOR_MATERIAL,
                     ArmorItem.Type.BOOTS, new Item.Settings().maxCount(1)));
 
+    // Steel Items
+    public static final Item CARBONIZED_IRON = registerItem("carbonized_iron",
+            new Item(new Item.Settings()));
+    public static final Item STEEL_INGOT = registerItem("steel_ingot",
+            new Item(new Item.Settings()));
+    public static final Item STEEL_NUGGET = registerItem("steel_nugget",
+            new Item(new Item.Settings()));
+
+    // Steel Tool Set
+    public static final Item STEEL_SHOVEL = registerItem("steel_shovel",
+            new ShovelItem(ModToolMaterials.STEEL, new Item.Settings()
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.STEEL,
+                            -1, -2.4f))));
+    public static final Item STEEL_PICKAXE = registerItem("steel_pickaxe",
+            new PickaxeItem(ModToolMaterials.STEEL, new Item.Settings()
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.STEEL,
+                            -2, -2.8f))));
+    public static final Item STEEL_AXE = registerItem("steel_axe",
+            new AxeItem(ModToolMaterials.STEEL, new Item.Settings()
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.STEEL,
+                            8, -3.0f))));
+    public static final Item STEEL_HOE = registerItem("steel_hoe",
+            new HoeItem(ModToolMaterials.STEEL, new Item.Settings()
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.STEEL,
+                            -8, -2.4f))));
+    public static final Item STEEL_SWORD = registerItem("steel_sword",
+            new SwordItem(ModToolMaterials.STEEL, new Item.Settings()
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.STEEL,
+                            5, -2.4f))));
+
+    // Helper method to register items
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(FiresReflamed.MOD_ID, name), item);
     }

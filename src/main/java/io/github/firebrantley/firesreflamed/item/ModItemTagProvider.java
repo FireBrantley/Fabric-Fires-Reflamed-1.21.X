@@ -14,15 +14,29 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
+        // Swords
         getOrCreateTagBuilder(ItemTags.SWORDS)
-                .add(ModItems.TITANIUM_SWORD);
+                .add(ModItems.TITANIUM_SWORD)
+                .add(ModItems.STEEL_SWORD);
+
+        // Pickaxes
         getOrCreateTagBuilder(ItemTags.PICKAXES)
-                .add(ModItems.TITANIUM_PICKAXE);
+                .add(ModItems.TITANIUM_PICKAXE)
+                .add(ModItems.STEEL_PICKAXE);
+
+        // Shovels
         getOrCreateTagBuilder(ItemTags.SHOVELS)
-                .add(ModItems.TITANIUM_SHOVEL);
+                .add(ModItems.TITANIUM_SHOVEL)
+                .add(ModItems.STEEL_SHOVEL);
+
+        // Axes
         getOrCreateTagBuilder(ItemTags.AXES)
-                .add(ModItems.TITANIUM_AXE);
+                .add(ModItems.TITANIUM_AXE)
+                .add(ModItems.STEEL_AXE);
+
+        // Hoes
         getOrCreateTagBuilder(ItemTags.HOES)
-                .add(ModItems.TITANIUM_HOE);
+                .add(ModItems.TITANIUM_HOE)
+                .add(ModItems.STEEL_HOE);
     }
 }

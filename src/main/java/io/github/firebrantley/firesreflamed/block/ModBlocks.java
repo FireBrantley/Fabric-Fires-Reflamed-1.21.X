@@ -19,8 +19,14 @@ public class ModBlocks {
             new ExperienceDroppingBlock(UniformIntProvider.create(2,5),
                     AbstractBlock.Settings.create().strength(3f)
             .requiresTool().sounds(BlockSoundGroup.STONE)));
-    public static final Block BLOCK_OF_TITANIUM = registerBlock("block_of_titanium", new Block(AbstractBlock.Settings.create().strength(3)
+    public static final Block BLOCK_OF_TITANIUM = registerBlock("block_of_titanium",
+            new Block(AbstractBlock.Settings.create().strength(3)
             .requiresTool().sounds(BlockSoundGroup.NETHERITE)));
+
+    // Steel
+    public static final Block BLOCK_OF_STEEL = registerBlock("block_of_steel",
+            new Block(AbstractBlock.Settings.create().strength(5)
+            .requiresTool().sounds(BlockSoundGroup.METAL)));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);

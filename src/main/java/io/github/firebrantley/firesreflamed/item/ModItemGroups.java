@@ -35,6 +35,19 @@ public class ModItemGroups {
                         entries.add(ModItems.TITANIUM_LEGGINGS);
                         entries.add(ModItems.TITANIUM_BOOTS);
 
+                        // Steel Items
+                        entries.add(ModBlocks.BLOCK_OF_STEEL);
+                        entries.add(ModItems.CARBONIZED_IRON);
+                        entries.add(ModItems.STEEL_INGOT);
+                        entries.add(ModItems.STEEL_NUGGET);
+
+                        // Steel Tool Set
+                        entries.add(ModItems.STEEL_SHOVEL);
+                        entries.add(ModItems.STEEL_PICKAXE);
+                        entries.add(ModItems.STEEL_AXE);
+                        entries.add(ModItems.STEEL_HOE);
+                        entries.add(ModItems.STEEL_SWORD);
+
                     }).build());
 
     public static void registerItemGroups() {

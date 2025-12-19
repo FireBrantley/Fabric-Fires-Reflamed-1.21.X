@@ -12,9 +12,20 @@
   "item.firesreflamed.titanium_hoe": "Titanium Hoe",
   "item.firesreflamed.titanium_sword": "Titanium Sword",
 
-    "item.firesreflamed.titanium_helmet": "Titanium Helmet",
-    "item.firesreflamed.titanium_chestplate": "Titanium Chestplate",
-    "item.firesreflamed.titanium_leggings": "Titanium Leggings",
-    "item.firesreflamed.titanium_boots": "Titanium Boots"
+  "item.firesreflamed.titanium_helmet": "Titanium Helmet",
+  "item.firesreflamed.titanium_chestplate": "Titanium Chestplate",
+  "item.firesreflamed.titanium_leggings": "Titanium Leggings",
+  "item.firesreflamed.titanium_boots": "Titanium Boots",
+
+    "item.firesreflamed.carbonized_iron": "Carbonized Iron",
+    "item.firesreflamed.steel_ingot": "Steel Ingot",
+    "item.firesreflamed.steel_nugget": "Steel Nugget",
+    "block.firesreflamed.block_of_steel": "Block of Steel",
+
+    "item.firesreflamed.steel_shovel": "Steel Shovel",
+    "item.firesreflamed.steel_pickaxe": "Steel Pickaxe",
+    "item.firesreflamed.steel_axe": "Steel Axe",
+    "item.firesreflamed.steel_hoe": "Steel Hoe",
+    "item.firesreflamed.steel_sword": "Steel Sword"
 
 }

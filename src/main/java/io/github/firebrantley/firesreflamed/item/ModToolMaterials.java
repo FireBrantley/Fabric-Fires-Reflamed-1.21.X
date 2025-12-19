@@ -11,8 +11,12 @@ import net.minecraft.registry.tag.TagKey;
 import java.util.function.Supplier;
 
 public enum ModToolMaterials implements ToolMaterial {
-    TITANIUM(ModTags.Blocks.INCORRECT_FOR_TITANIUM_TOOL, 2500, 12.0F, 9.0F, 22, () -> Ingredient.ofItems(ModItems.TITANIUM_INGOT));
+    // Tool Materials
+    TITANIUM(ModTags.Blocks.INCORRECT_FOR_TITANIUM_TOOL, 2500, 12.0F, 9.0F, 22, () -> Ingredient.ofItems(ModItems.TITANIUM_INGOT)),
 
+    STEEL(ModTags.Blocks.INCORRECT_FOR_STEEL_TOOL, 1800, 9.0F, 7.0F, 18, () -> Ingredient.ofItems(ModItems.STEEL_INGOT));
+
+    // Fields
     private final TagKey<Block> inverseTag;
     private final int itemDurability;
     private final float miningSpeed;

@@ -1,40 +1,40 @@
 {
-	"schemaVersion": 1,
-	"id": "firesreflamed",
-	"version": "${version}",
-	"name": "Fire's Reflamed",
-	"description": "Welcome to the fabricated workshop!",
-	"authors": [
-		"Fire_Brantley"
-	],
-	"contact": {
-		"homepage": "https://modrinth.com/user/Fire_Brantley",
-		"sources": "https://github.com/FireBrantley/Fabric-Fires-Reflamed-1.21.X"
-	},
-	"license": "MIT",
-	"icon": "assets/firesreflamed/icon.png",
-	"environment": "*",
-	"entrypoints": {
-		"main": [
-			"io.github.firebrantley.firesreflamed.FiresReflamed"
-		],
-		"fabric-datagen": [
-			"io.github.firebrantley.firesreflamed.FiresReflamedDataGenerator"
-		]
-	},
-	"mixins": [
-		"firesreflamed.mixins.json"
-	],
-    "client": [
-        "io.github.firebrantley.firesreflamed.FiresReflamedClient"
+  "schemaVersion": 1,
+  "id": "firesreflamed",
+  "version": "${version}",
+  "name": "Fire's Reflamed",
+  "description": "Welcome to the fabricated workshop!",
+  "authors": [
+    "Fire_Brantley"
+  ],
+  "contact": {
+    "homepage": "https://modrinth.com/user/Fire_Brantley",
+    "sources": "https://github.com/FireBrantley/Fabric-Fires-Reflamed-1.21.X"
+  },
+  "license": "MIT",
+  "icon": "assets/firesreflamed/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "io.github.firebrantley.firesreflamed.FiresReflamed"
     ],
-	"depends": {
-		"fabricloader": ">=0.18.1",
-		"minecraft": "~1.21",
-		"java": ">=21",
-		"fabric-api": "*"
-	},
-	"suggests": {
-		"another-mod": "*"
-	}
+    "fabric-datagen": [
+      "io.github.firebrantley.firesreflamed.FiresReflamedDataGenerator"
+    ],
+    "client": [
+      "io.github.firebrantley.firesreflamed.FiresReflamedClient"
+    ]
+  },
+  "mixins": [
+    "firesreflamed.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.18.1",
+    "minecraft": "~1.21",
+    "java": ">=21",
+    "fabric-api": "*"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
 }
