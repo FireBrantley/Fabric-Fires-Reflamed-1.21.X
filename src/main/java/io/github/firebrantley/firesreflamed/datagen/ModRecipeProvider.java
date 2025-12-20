@@ -186,7 +186,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('I', input)
                 .input('S', Items.STICK)
                 .criterion(hasItem(input), conditionsFromItem(input))
-                // IMPORTANT: Give it a unique name so it doesn't crash like the Steel Ingot!
                 .offerTo(exporter, getItemPath(output) + "_flipped");
     }
 
@@ -209,7 +208,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('I', input)
                 .input('S', Items.STICK)
                 .criterion(hasItem(input), conditionsFromItem(input))
-                // IMPORTANT: Give it a unique name so it doesn't crash like the Steel Ingot!
                 .offerTo(exporter, getItemPath(output) + "_flipped");
     }
 
@@ -229,6 +227,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, output)
                 .pattern("III")
                 .pattern("I I")
+                .pattern("   ")
                 .input('I', input)
                 .criterion(hasItem(input), conditionsFromItem(input))
                 .offerTo(exporter);
@@ -256,6 +255,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
     private void createBootsRecipe(RecipeExporter exporter, ItemConvertible output, ItemConvertible input) {
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, output)
+                .pattern("   ")
                 .pattern("I I")
                 .pattern("I I")
                 .input('I', input)
