@@ -16,15 +16,23 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
+        // Steel Items
         itemModelGenerator.register(ModItems.CARBONIZED_IRON, Models.GENERATED);
         itemModelGenerator.register(ModItems.STEEL_INGOT, Models.GENERATED);
         itemModelGenerator.register(ModItems.STEEL_NUGGET, Models.GENERATED);
 
+        // Steel Tool Set
         itemModelGenerator.register(ModItems.STEEL_SHOVEL, Models.HANDHELD);
         itemModelGenerator.register(ModItems.STEEL_PICKAXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.STEEL_AXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.STEEL_HOE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.STEEL_SWORD, Models.HANDHELD);
+
+        // Steel Armor Set
+        itemModelGenerator.register(ModItems.STEEL_HELMET, Models.GENERATED);
+        itemModelGenerator.register(ModItems.STEEL_CHESTPLATE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.STEEL_LEGGINGS, Models.GENERATED);
+        itemModelGenerator.register(ModItems.STEEL_BOOTS, Models.GENERATED);
     }
 
     @Override

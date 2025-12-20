@@ -14,9 +14,9 @@ public class ModItemGroups {
     public static final ItemGroup FIRES_REFLAMED = Registry.register(Registries.ITEM_GROUP,
             Identifier.of(FiresReflamed.MOD_ID, "fires_reflamed"),
             FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.RAW_TITANIUM))
-                    .displayName(Text.translatable("itemgroup.firesreflamed.fires_reflamed"))
+                    .displayName(Text.translatable("itemGroup.firesreflamed.fires_reflamed"))
                     .entries((displayContext, entries) -> {
-                        // Titanium Items
+                        // Titanium Items & Blocks
                         entries.add(ModBlocks.BLOCK_OF_TITANIUM);
                         entries.add(ModBlocks.TITANIUM_ORE);
                         entries.add(ModItems.RAW_TITANIUM);
@@ -35,7 +35,7 @@ public class ModItemGroups {
                         entries.add(ModItems.TITANIUM_LEGGINGS);
                         entries.add(ModItems.TITANIUM_BOOTS);
 
-                        // Steel Items
+                        // Steel Items & Blocks
                         entries.add(ModBlocks.BLOCK_OF_STEEL);
                         entries.add(ModItems.CARBONIZED_IRON);
                         entries.add(ModItems.STEEL_INGOT);
@@ -47,6 +47,12 @@ public class ModItemGroups {
                         entries.add(ModItems.STEEL_AXE);
                         entries.add(ModItems.STEEL_HOE);
                         entries.add(ModItems.STEEL_SWORD);
+
+                        // Steel Armor Set
+                        entries.add(ModItems.STEEL_HELMET);
+                        entries.add(ModItems.STEEL_CHESTPLATE);
+                        entries.add(ModItems.STEEL_LEGGINGS);
+                        entries.add(ModItems.STEEL_BOOTS);
 
                     }).build());
 

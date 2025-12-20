@@ -79,6 +79,20 @@ public class ModItems {
                     .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.STEEL,
                             5, -2.4f))));
 
+    // Steel Armor Set
+    public static final Item STEEL_HELMET = registerItem("steel_helmet",
+            new ArmorItem(ModArmorMaterials.STEEL_ARMOR_MATERIAL,
+                    ArmorItem.Type.HELMET, new Item.Settings().maxCount(1)));
+    public static final Item STEEL_CHESTPLATE = registerItem("steel_chestplate",
+            new ArmorItem(ModArmorMaterials.STEEL_ARMOR_MATERIAL,
+                    ArmorItem.Type.CHESTPLATE, new Item.Settings().maxCount(1)));
+    public static final Item STEEL_LEGGINGS = registerItem("steel_leggings",
+            new ArmorItem(ModArmorMaterials.STEEL_ARMOR_MATERIAL,
+                    ArmorItem.Type.LEGGINGS, new Item.Settings().maxCount(1)));
+    public static final Item STEEL_BOOTS = registerItem("steel_boots",
+            new ArmorItem(ModArmorMaterials.STEEL_ARMOR_MATERIAL,
+                    ArmorItem.Type.BOOTS, new Item.Settings().maxCount(1)));
+
     // Helper method to register items
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(FiresReflamed.MOD_ID, name), item);

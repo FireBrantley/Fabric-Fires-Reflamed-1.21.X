@@ -39,6 +39,28 @@ public class ModArmorMaterials {
                     )
             );
 
+    public static final RegistryEntry<ArmorMaterial> STEEL_ARMOR_MATERIAL =
+            registerArmorMaterial("steel",
+                    () -> new ArmorMaterial(
+                            Util.make(new EnumMap<>(ArmorItem.Type.class), map -> {
+                                map.put(ArmorItem.Type.BOOTS, 3);
+                                map.put(ArmorItem.Type.LEGGINGS, 6);
+                                map.put(ArmorItem.Type.CHESTPLATE, 8);
+                                map.put(ArmorItem.Type.HELMET, 3);
+                            }),
+                            15,
+                            SoundEvents.ITEM_ARMOR_EQUIP_IRON,
+                            () -> Ingredient.ofItems(ModItems.STEEL_INGOT),
+                            List.of(
+                                    new ArmorMaterial.Layer(
+                                            Identifier.of(FiresReflamed.MOD_ID, "steel")
+                                    )
+                            ),
+                            0,
+                            0
+                    )
+            );
+
     public static RegistryEntry<ArmorMaterial> registerArmorMaterial(
             String name,
             Supplier<ArmorMaterial> material
