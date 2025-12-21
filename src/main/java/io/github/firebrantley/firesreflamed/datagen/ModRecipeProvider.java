@@ -86,7 +86,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 "steel_ingot_from_nuggets", null, // Names for Ingot
                 "steel_nugget_from_ingot", null);  // Names for Nugget
 
-
         createShovelRecipe(exporter,
                 ModItems.STEEL_SHOVEL,
                 ModItems.STEEL_INGOT);
