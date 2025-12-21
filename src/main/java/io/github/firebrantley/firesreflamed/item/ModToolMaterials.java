@@ -3,18 +3,30 @@ package io.github.firebrantley.firesreflamed.item;
 import com.google.common.base.Suppliers;
 import io.github.firebrantley.firesreflamed.util.ModTags;
 import net.minecraft.block.Block;
-import net.minecraft.item.Items;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
+import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.registry.tag.TagKey;
 
 import java.util.function.Supplier;
 
 public enum ModToolMaterials implements ToolMaterial {
     // Tool Materials
-    TITANIUM(ModTags.Blocks.INCORRECT_FOR_TITANIUM_TOOL, 2500, 12.0F, 9.0F, 22, () -> Ingredient.ofItems(ModItems.TITANIUM_INGOT)),
+    TITANIUM(
+            BlockTags.INCORRECT_FOR_DIAMOND_TOOL,
+            2500,
+            12.0F,
+            9.0F,
+            22,
+            () -> Ingredient.ofItems(ModItems.TITANIUM_INGOT)),
 
-    STEEL(ModTags.Blocks.INCORRECT_FOR_STEEL_TOOL, 1800, 9.0F, 7.0F, 18, () -> Ingredient.ofItems(ModItems.STEEL_INGOT));
+    STEEL(
+            BlockTags.INCORRECT_FOR_IRON_TOOL,
+            1800,
+            9.0F,
+            7.0F,
+            18,
+            () -> Ingredient.ofItems(ModItems.STEEL_INGOT));
 
     // Fields
     private final TagKey<Block> inverseTag;

@@ -1,6 +1,6 @@
 package io.github.firebrantley.firesreflamed.datagen;
 
-import io.github.firebrantley.firesreflamed.util.ModTags;
+import io.github.firebrantley.firesreflamed.block.ModBlocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.registry.RegistryWrapper;
@@ -15,8 +15,21 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
+        // Pickaxe Mineable
+        getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
+                .add(ModBlocks.TITANIUM_ORE)
+                .add(ModBlocks.BLOCK_OF_TITANIUM)
+                .add(ModBlocks.BLOCK_OF_STEEL);
 
-        getOrCreateTagBuilder(ModTags.Blocks.NEEDS_TITANIUM_TOOL)
-                .addTag(BlockTags.NEEDS_DIAMOND_TOOL);
+        // --- Needs Tool Tags ---
+        // Needs Iron Tool
+        getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
+                .add(ModBlocks.BLOCK_OF_STEEL);
+
+        // Needs Diamond Tool
+        getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
+                .add(ModBlocks.TITANIUM_ORE)
+                .add(ModBlocks.BLOCK_OF_TITANIUM);
+
     }
 }

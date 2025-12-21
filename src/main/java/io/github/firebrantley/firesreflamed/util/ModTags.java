@@ -8,17 +8,7 @@ import net.minecraft.util.Identifier;
 
 public class ModTags {
     public static class Blocks {
-        public static final TagKey<Block> NEEDS_TITANIUM_TOOL =
-                createBlockTag("needs_titanium_tool");
-
-        public static final TagKey<Block> INCORRECT_FOR_TITANIUM_TOOL =
-                createBlockTag("incorrect_for_titanium_tool");
-
-        public static final TagKey<Block> NEEDS_STEEL_TOOL =
-                createBlockTag("needs_steel_tool");
-
-        public static final TagKey<Block> INCORRECT_FOR_STEEL_TOOL =
-                createBlockTag("incorrect_for_steel_tool");
+        // Empty, but still here in case needed later
 
         private static TagKey<Block> createBlockTag(String name) {
             return TagKey.of(

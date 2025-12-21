@@ -1,5 +1,6 @@
 package io.github.firebrantley.firesreflamed;
 
+import io.github.firebrantley.firesreflamed.datagen.ModBlockTagProvider;
 import io.github.firebrantley.firesreflamed.datagen.ModLanguageProvider;
 import io.github.firebrantley.firesreflamed.datagen.ModModelProvider;
 import io.github.firebrantley.firesreflamed.datagen.ModRecipeProvider;
@@ -13,6 +14,7 @@ public class FiresReflamedDataGenerator implements DataGeneratorEntrypoint {
     public void onInitializeDataGenerator(FabricDataGenerator generator) {
         FabricDataGenerator.Pack pack = generator.createPack();
         pack.addProvider(ModItemTagProvider::new);
+        pack.addProvider(ModBlockTagProvider::new);
         pack.addProvider(ModModelProvider::new);
         pack.addProvider(ModLanguageProvider::new);
         pack.addProvider(ModRecipeProvider::new);
