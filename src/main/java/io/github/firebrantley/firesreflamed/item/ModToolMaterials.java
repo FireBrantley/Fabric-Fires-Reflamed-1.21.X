@@ -1,7 +1,6 @@
 package io.github.firebrantley.firesreflamed.item;
 
 import com.google.common.base.Suppliers;
-import io.github.firebrantley.firesreflamed.util.ModTags;
 import net.minecraft.block.Block;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
@@ -15,18 +14,26 @@ public enum ModToolMaterials implements ToolMaterial {
     TITANIUM(
             BlockTags.INCORRECT_FOR_DIAMOND_TOOL,
             2500,
-            12.0F,
-            9.0F,
-            22,
+            13.0F,
+            10.0F,
+            28,
             () -> Ingredient.ofItems(ModItems.TITANIUM_INGOT)),
 
     STEEL(
             BlockTags.INCORRECT_FOR_IRON_TOOL,
-            1800,
-            9.0F,
-            7.0F,
-            18,
-            () -> Ingredient.ofItems(ModItems.STEEL_INGOT));
+            750,
+            6.0F,
+            10.0F,
+            14,
+            () -> Ingredient.ofItems(ModItems.STEEL_INGOT)),
+
+    RUBY(
+            BlockTags.INCORRECT_FOR_IRON_TOOL,
+            650,
+            6.0F,
+            10.0F,
+            16,
+            () -> Ingredient.ofItems(ModItems.RUBY_GEM));
 
     // Fields
     private final TagKey<Block> inverseTag;

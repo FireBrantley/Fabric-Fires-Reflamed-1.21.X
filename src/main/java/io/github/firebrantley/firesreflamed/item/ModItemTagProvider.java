@@ -17,27 +17,32 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
         // Swords
         getOrCreateTagBuilder(ItemTags.SWORDS)
                 .add(ModItems.TITANIUM_SWORD)
-                .add(ModItems.STEEL_SWORD);
+                .add(ModItems.STEEL_SWORD)
+                .add(ModItems.RUBY_SWORD);
 
         // Pickaxes
         getOrCreateTagBuilder(ItemTags.PICKAXES)
                 .add(ModItems.TITANIUM_PICKAXE)
-                .add(ModItems.STEEL_PICKAXE);
+                .add(ModItems.STEEL_PICKAXE)
+                .add(ModItems.RUBY_PICKAXE);
 
         // Shovels
         getOrCreateTagBuilder(ItemTags.SHOVELS)
                 .add(ModItems.TITANIUM_SHOVEL)
-                .add(ModItems.STEEL_SHOVEL);
+                .add(ModItems.STEEL_SHOVEL)
+                .add(ModItems.RUBY_SHOVEL);
 
         // Axes
         getOrCreateTagBuilder(ItemTags.AXES)
                 .add(ModItems.TITANIUM_AXE)
-                .add(ModItems.STEEL_AXE);
+                .add(ModItems.STEEL_AXE)
+                .add(ModItems.RUBY_AXE);
 
         // Hoes
         getOrCreateTagBuilder(ItemTags.HOES)
                 .add(ModItems.TITANIUM_HOE)
-                .add(ModItems.STEEL_HOE);
+                .add(ModItems.STEEL_HOE)
+                .add(ModItems.RUBY_HOE);
 
         // Armor
         getOrCreateTagBuilder(ItemTags.TRIMMABLE_ARMOR)

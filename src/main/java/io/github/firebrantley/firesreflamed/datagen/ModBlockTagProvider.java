@@ -19,12 +19,16 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
                 .add(ModBlocks.TITANIUM_ORE)
                 .add(ModBlocks.BLOCK_OF_TITANIUM)
-                .add(ModBlocks.BLOCK_OF_STEEL);
+                .add(ModBlocks.BLOCK_OF_STEEL)
+                .add(ModBlocks.RUBY_ORE)
+                .add(ModBlocks.BLOCK_OF_RUBY);
 
         // --- Needs Tool Tags ---
         // Needs Iron Tool
         getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
-                .add(ModBlocks.BLOCK_OF_STEEL);
+                .add(ModBlocks.BLOCK_OF_STEEL)
+                .add(ModBlocks.RUBY_ORE)
+                .add(ModBlocks.BLOCK_OF_RUBY);
 
         // Needs Diamond Tool
         getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL)

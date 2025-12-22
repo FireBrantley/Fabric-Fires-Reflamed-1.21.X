@@ -57,5 +57,18 @@ public class ModLanguageProvider extends FabricLanguageProvider {
         builder.add(ModItems.STEEL_CHESTPLATE, "Steel Chestplate");
         builder.add(ModItems.STEEL_LEGGINGS, "Steel Leggings");
         builder.add(ModItems.STEEL_BOOTS, "Steel Boots");
+
+        // Ruby Items & Blocks
+        builder.add(ModItems.RUBY_GEM, "Ruby Gem");
+        builder.add(ModItems.RUBY_CRYSTALS, "Ruby Crystals");
+        builder.add(ModBlocks.BLOCK_OF_RUBY, "Block of Ruby");
+        builder.add(ModBlocks.RUBY_ORE, "Ruby Ore");
+
+        // Ruby Tool Set
+        builder.add(ModItems.RUBY_SHOVEL, "Ruby Shovel");
+        builder.add(ModItems.RUBY_PICKAXE, "Ruby Pickaxe");
+        builder.add(ModItems.RUBY_AXE, "Ruby Axe");
+        builder.add(ModItems.RUBY_HOE, "Ruby Hoe");
+        builder.add(ModItems.RUBY_SWORD, "Ruby Sword");
     }
 }

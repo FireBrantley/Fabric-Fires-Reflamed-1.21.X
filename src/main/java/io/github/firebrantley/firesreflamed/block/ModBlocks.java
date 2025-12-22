@@ -28,6 +28,15 @@ public class ModBlocks {
             new Block(AbstractBlock.Settings.create().strength(5)
             .requiresTool().sounds(BlockSoundGroup.METAL)));
 
+    // Ruby
+    public static final Block RUBY_ORE = registerBlock("ruby_ore",
+            new ExperienceDroppingBlock(UniformIntProvider.create(3,7),
+                    AbstractBlock.Settings.create().strength(4f)
+            .requiresTool().sounds(BlockSoundGroup.STONE)));
+    public static final Block BLOCK_OF_RUBY = registerBlock("block_of_ruby",
+            new Block(AbstractBlock.Settings.create().strength(4)
+            .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)));
+
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
         return Registry.register(Registries.BLOCK, Identifier.of(FiresReflamed.MOD_ID, name), block);

@@ -17,23 +17,23 @@ public class ModItems {
     public static final Item TITANIUM_SHOVEL = registerItem("titanium_shovel",
             new ShovelItem(ModToolMaterials.TITANIUM, new Item.Settings()
                     .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.TITANIUM,
-                            -1, -2.4f))));
+                            -2, -2.4f))));
     public static final Item TITANIUM_PICKAXE = registerItem("titanium_pickaxe",
             new PickaxeItem(ModToolMaterials.TITANIUM, new Item.Settings()
                     .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.TITANIUM,
-                            -2, -2.8f))));
+                            -3, -2.8f))));
     public static final Item TITANIUM_AXE = registerItem("titanium_axe",
             new AxeItem(ModToolMaterials.TITANIUM, new Item.Settings()
                     .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.TITANIUM,
-                            8, -3.0f))));
+                            7, -3.0f))));
     public static final Item TITANIUM_HOE = registerItem("titanium_hoe",
             new HoeItem(ModToolMaterials.TITANIUM, new Item.Settings()
                     .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.TITANIUM,
-                            -8, -2.4f))));
+                            -9, -2.4f))));
     public static final Item TITANIUM_SWORD = registerItem("titanium_sword",
             new SwordItem(ModToolMaterials.TITANIUM, new Item.Settings()
                     .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.TITANIUM,
-                            5, -2.4f))));
+                            4, -2.4f))));
 
     //Titanium Armor Set
     public static final Item TITANIUM_HELMET = registerItem("titanium_helmet",
@@ -61,15 +61,15 @@ public class ModItems {
     public static final Item STEEL_SHOVEL = registerItem("steel_shovel",
             new ShovelItem(ModToolMaterials.STEEL, new Item.Settings()
                     .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.STEEL,
-                            -1, -2.4f))));
+                            -7, -2.4f))));
     public static final Item STEEL_PICKAXE = registerItem("steel_pickaxe",
             new PickaxeItem(ModToolMaterials.STEEL, new Item.Settings()
                     .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.STEEL,
-                            -2, -2.8f))));
+                            -7, -2.8f))));
     public static final Item STEEL_AXE = registerItem("steel_axe",
             new AxeItem(ModToolMaterials.STEEL, new Item.Settings()
                     .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.STEEL,
-                            8, -3.0f))));
+                            -7, -3.0f))));
     public static final Item STEEL_HOE = registerItem("steel_hoe",
             new HoeItem(ModToolMaterials.STEEL, new Item.Settings()
                     .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.STEEL,
@@ -77,7 +77,7 @@ public class ModItems {
     public static final Item STEEL_SWORD = registerItem("steel_sword",
             new SwordItem(ModToolMaterials.STEEL, new Item.Settings()
                     .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.STEEL,
-                            5, -2.4f))));
+                            -4, -2.4f))));
 
     // Steel Armor Set
     public static final Item STEEL_HELMET = registerItem("steel_helmet",
@@ -92,6 +92,34 @@ public class ModItems {
     public static final Item STEEL_BOOTS = registerItem("steel_boots",
             new ArmorItem(ModArmorMaterials.STEEL_ARMOR_MATERIAL,
                     ArmorItem.Type.BOOTS, new Item.Settings().maxCount(1)));
+
+    // Ruby Items
+    public static final Item RUBY_CRYSTALS = registerItem("ruby_crystals",
+            new Item(new Item.Settings()));
+    public static final Item RUBY_GEM = registerItem("ruby_gem",
+            new Item(new Item.Settings()));
+
+    // Ruby Tool Set
+    public static final Item RUBY_SHOVEL = registerItem("ruby_shovel",
+            new ShovelItem(ModToolMaterials.RUBY, new Item.Settings()
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.RUBY,
+                            -6, -2.4f))));
+    public static final Item RUBY_PICKAXE = registerItem("ruby_pickaxe",
+            new PickaxeItem(ModToolMaterials.RUBY, new Item.Settings()
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.RUBY,
+                            -7, -2.8f))));
+    public static final Item RUBY_AXE = registerItem("ruby_axe",
+            new AxeItem(ModToolMaterials.RUBY, new Item.Settings()
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.RUBY,
+                            -2, -3.0f))));
+    public static final Item RUBY_HOE = registerItem("ruby_hoe",
+            new HoeItem(ModToolMaterials.RUBY, new Item.Settings()
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.RUBY,
+                            -10, -2.4f))));
+    public static final Item RUBY_SWORD = registerItem("ruby_sword",
+            new SwordItem(ModToolMaterials.RUBY, new Item.Settings()
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.RUBY,
+                            -5, -2.4f))));
 
     // Helper method to register items
     private static Item registerItem(String name, Item item) {

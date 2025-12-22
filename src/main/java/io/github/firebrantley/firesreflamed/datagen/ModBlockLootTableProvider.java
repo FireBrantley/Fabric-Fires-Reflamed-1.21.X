@@ -5,7 +5,16 @@ import io.github.firebrantley.firesreflamed.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.minecraft.block.Block;
+import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.Item;
+import net.minecraft.loot.LootPool;
+import net.minecraft.loot.LootTable;
+import net.minecraft.loot.condition.RandomChanceLootCondition;
+import net.minecraft.loot.entry.ItemEntry;
+import net.minecraft.loot.function.ApplyBonusLootFunction;
+import net.minecraft.loot.function.SetCountLootFunction;
+import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
+import net.minecraft.loot.provider.number.UniformLootNumberProvider;
 import net.minecraft.registry.RegistryWrapper;
 
 import java.util.concurrent.CompletableFuture;
@@ -21,9 +30,16 @@ public class ModBlockLootTableProvider extends FabricBlockLootTableProvider {
 
     @Override
     public void generate() {
-        addSelfDrop(ModBlocks.BLOCK_OF_STEEL);
-        addSelfDrop(ModBlocks.BLOCK_OF_TITANIUM);
+        // Titanium Blocks
         addOreDrop(ModBlocks.TITANIUM_ORE, ModItems.RAW_TITANIUM);
+        addSelfDrop(ModBlocks.BLOCK_OF_TITANIUM);
+
+        // Steel Blocks
+        addSelfDrop(ModBlocks.BLOCK_OF_STEEL);
+
+        // Ruby Blocks
+        addMultiDropOre(ModBlocks.RUBY_ORE, ModItems.RUBY_CRYSTALS, ModItems.RUBY_CRYSTALS);
+        addSelfDrop(ModBlocks.BLOCK_OF_RUBY);
     }
 
     // --- Helper Methods ---
@@ -35,6 +51,31 @@ public class ModBlockLootTableProvider extends FabricBlockLootTableProvider {
     // Single Ore Drop Table
     private void addOreDrop(Block ore, Item drop) {
         addDrop(ore, oreDrops(ore, drop));
+    }
+
+    // Multiple Ore Drop Table
+    private void addMultiDropOre(Block ore, Item primary, Item bonus) {
+        addDrop(ore, LootTable.builder()
+                // PRIMARY DROP (ruby crystals)
+                .pool(LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .with(ItemEntry.builder(primary))
+                        .apply(SetCountLootFunction.builder(
+                                UniformLootNumberProvider.create(1.0f, 3.0f)
+                        ))
+                        .apply(ApplyBonusLootFunction.oreDrops(
+                                registryLookup
+                                        .getWrapperOrThrow(net.minecraft.registry.RegistryKeys.ENCHANTMENT)
+                                        .getOrThrow(Enchantments.FORTUNE)
+                        ))
+                )
+
+                // BONUS DROP (optional)
+                .pool(LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(2))
+                        .with(ItemEntry.builder(bonus))
+                        .conditionally(RandomChanceLootCondition.builder(0.25f)))
+        );
     }
 
     // Slab Drop Table

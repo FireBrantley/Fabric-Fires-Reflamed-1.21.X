@@ -16,6 +16,23 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
+        // Titanium Items
+        itemModelGenerator.register(ModItems.RAW_TITANIUM, Models.GENERATED);
+        itemModelGenerator.register(ModItems.TITANIUM_INGOT, Models.GENERATED);
+
+        // Titanium Tool Set
+        itemModelGenerator.register(ModItems.TITANIUM_SHOVEL, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.TITANIUM_PICKAXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.TITANIUM_AXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.TITANIUM_HOE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.TITANIUM_SWORD, Models.HANDHELD);
+
+        // Titanium Armor Set
+        itemModelGenerator.register(ModItems.TITANIUM_HELMET, Models.GENERATED);
+        itemModelGenerator.register(ModItems.TITANIUM_CHESTPLATE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.TITANIUM_LEGGINGS, Models.GENERATED);
+        itemModelGenerator.register(ModItems.TITANIUM_BOOTS, Models.GENERATED);
+
         // Steel Items
         itemModelGenerator.register(ModItems.CARBONIZED_IRON, Models.GENERATED);
         itemModelGenerator.register(ModItems.STEEL_INGOT, Models.GENERATED);
@@ -33,10 +50,30 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.STEEL_CHESTPLATE, Models.GENERATED);
         itemModelGenerator.register(ModItems.STEEL_LEGGINGS, Models.GENERATED);
         itemModelGenerator.register(ModItems.STEEL_BOOTS, Models.GENERATED);
+
+        // Ruby Items
+        itemModelGenerator.register(ModItems.RUBY_GEM, Models.GENERATED);
+        itemModelGenerator.register(ModItems.RUBY_CRYSTALS, Models.GENERATED);
+
+        // Ruby Tool Set
+        itemModelGenerator.register(ModItems.RUBY_SHOVEL, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.RUBY_PICKAXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.RUBY_AXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.RUBY_HOE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.RUBY_SWORD, Models.HANDHELD);
     }
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
+        // Titanium Blocks
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TITANIUM_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.BLOCK_OF_TITANIUM);
+
+        // Steel Blocks
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.BLOCK_OF_STEEL);
+
+        // Ruby Blocks
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RUBY_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.BLOCK_OF_RUBY);
     }
 }

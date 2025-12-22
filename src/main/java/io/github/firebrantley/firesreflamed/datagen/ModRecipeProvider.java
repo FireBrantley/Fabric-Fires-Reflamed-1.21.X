@@ -12,9 +12,12 @@ import net.minecraft.item.Items;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.ItemTags;
+import net.minecraft.util.Identifier;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
+
+import static org.spongepowered.asm.mixin.FabricUtil.getModId;
 
 public class ModRecipeProvider extends FabricRecipeProvider {
     public ModRecipeProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
@@ -130,6 +133,55 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 List.of(ModItems.CARBONIZED_IRON),
                 RecipeCategory.MISC, ModItems.STEEL_INGOT,
                 0.7f, 50, "steel");
+
+        // --- Ruby Recipes ---
+        // Crafting
+        offerReversibleCompactingRecipes(exporter,
+                RecipeCategory.MISC, ModItems.RUBY_GEM,
+                RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLOCK_OF_RUBY);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.RUBY_GEM, 1)
+                .pattern("R")
+                .pattern("R")
+                .input('R', ModItems.RUBY_CRYSTALS)
+                .criterion(hasItem(ModItems.RUBY_CRYSTALS), conditionsFromItem(ModItems.RUBY_CRYSTALS))
+                .offerTo(exporter,
+                        Identifier.of(
+                                "firesreflamed",
+                                getItemPath(ModItems.RUBY_GEM)
+                                        + "_from_crystals"));
+
+        createShovelRecipe(exporter,
+                ModItems.RUBY_SHOVEL,
+                ModItems.RUBY_GEM);
+        createPickaxeRecipe(exporter,
+                ModItems.RUBY_PICKAXE,
+                ModItems.RUBY_GEM);
+        createAxeRecipe(exporter,
+                ModItems.RUBY_AXE,
+                ModItems.RUBY_GEM);
+        createFlippedAxeRecipe(exporter,
+                ModItems.RUBY_AXE,
+                ModItems.RUBY_GEM);
+        createHoeRecipe(exporter,
+                ModItems.RUBY_HOE,
+                ModItems.RUBY_GEM);
+        createFlippedHoeRecipe(exporter,
+                ModItems.RUBY_HOE,
+                ModItems.RUBY_GEM);
+        createSwordRecipe(exporter,
+                ModItems.RUBY_SWORD,
+                ModItems.RUBY_GEM);
+
+        // Smelting & Blasting
+        offerSmelting(exporter,
+                List.of(ModBlocks.RUBY_ORE),
+                RecipeCategory.MISC, ModItems.RUBY_GEM,
+                1.0f, 200, "ruby");
+        offerBlasting(exporter,
+                List.of(ModBlocks.RUBY_ORE),
+                RecipeCategory.MISC, ModItems.RUBY_GEM,
+                1.0f, 100, "ruby");
     }
 
     // --- Helper Methods ---

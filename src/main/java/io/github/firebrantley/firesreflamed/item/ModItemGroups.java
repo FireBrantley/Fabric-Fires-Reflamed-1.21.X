@@ -54,6 +54,18 @@ public class ModItemGroups {
                         entries.add(ModItems.STEEL_LEGGINGS);
                         entries.add(ModItems.STEEL_BOOTS);
 
+                        // Ruby Items & Blocks
+                        entries.add(ModBlocks.BLOCK_OF_RUBY);
+                        entries.add(ModBlocks.RUBY_ORE);
+                        entries.add(ModItems.RUBY_GEM);
+                        entries.add(ModItems.RUBY_CRYSTALS);
+
+                        // Ruby Tool Set
+                        entries.add(ModItems.RUBY_SHOVEL);
+                        entries.add(ModItems.RUBY_PICKAXE);
+                        entries.add(ModItems.RUBY_AXE);
+                        entries.add(ModItems.RUBY_HOE);
+                        entries.add(ModItems.RUBY_SWORD);
                     }).build());
 
     public static void registerItemGroups() {
