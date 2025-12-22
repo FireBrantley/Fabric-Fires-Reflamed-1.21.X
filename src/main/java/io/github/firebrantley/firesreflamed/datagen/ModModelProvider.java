@@ -61,6 +61,15 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.RUBY_AXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.RUBY_HOE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.RUBY_SWORD, Models.HANDHELD);
+
+        // Aquamarine Items
+        itemModelGenerator.register(ModItems.AQUAMARINE_SHARD, Models.GENERATED);
+
+        // Aquamarine Armor Set
+        itemModelGenerator.register(ModItems.AQUAMARINE_HELMET, Models.GENERATED);
+        itemModelGenerator.register(ModItems.AQUAMARINE_CHESTPLATE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.AQUAMARINE_LEGGINGS, Models.GENERATED);
+        itemModelGenerator.register(ModItems.AQUAMARINE_BOOTS, Models.GENERATED);
     }
 
     @Override
@@ -75,5 +84,9 @@ public class ModModelProvider extends FabricModelProvider {
         // Ruby Blocks
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RUBY_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.BLOCK_OF_RUBY);
+
+        // Aquamarine Blocks
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.AQUAMARINE_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.BLOCK_OF_AQUAMARINE);
     }
 }

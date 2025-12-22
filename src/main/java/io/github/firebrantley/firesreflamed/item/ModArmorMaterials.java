@@ -26,7 +26,7 @@ public class ModArmorMaterials {
                                 map.put(ArmorItem.Type.CHESTPLATE, 12);
                                 map.put(ArmorItem.Type.HELMET, 4);
                             }),
-                            20,
+                            28,
                             SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND,
                             () -> Ingredient.ofItems(ModItems.TITANIUM_INGOT),
                             List.of(
@@ -34,8 +34,8 @@ public class ModArmorMaterials {
                                             Identifier.of(FiresReflamed.MOD_ID, "titanium")
                                     )
                             ),
-                            0,
-                            0
+                            3,
+                            0.1f
                     )
             );
 
@@ -48,7 +48,7 @@ public class ModArmorMaterials {
                                 map.put(ArmorItem.Type.CHESTPLATE, 8);
                                 map.put(ArmorItem.Type.HELMET, 3);
                             }),
-                            15,
+                            14,
                             SoundEvents.ITEM_ARMOR_EQUIP_IRON,
                             () -> Ingredient.ofItems(ModItems.STEEL_INGOT),
                             List.of(
@@ -57,7 +57,29 @@ public class ModArmorMaterials {
                                     )
                             ),
                             0,
-                            0
+                            0.01f
+                    )
+            );
+
+    public static final RegistryEntry<ArmorMaterial> AQUAMARINE_ARMOR_MATERIAL =
+            registerArmorMaterial("aquamarine",
+                    () -> new ArmorMaterial(
+                            Util.make(new EnumMap<>(ArmorItem.Type.class), map -> {
+                                map.put(ArmorItem.Type.BOOTS, 3);
+                                map.put(ArmorItem.Type.LEGGINGS, 6);
+                                map.put(ArmorItem.Type.CHESTPLATE, 8);
+                                map.put(ArmorItem.Type.HELMET, 3);
+                            }),
+                            19,
+                            SoundEvents.ITEM_ARMOR_EQUIP_IRON,
+                            () -> Ingredient.ofItems(ModItems.AQUAMARINE_SHARD),
+                            List.of(
+                                    new ArmorMaterial.Layer(
+                                            Identifier.of(FiresReflamed.MOD_ID, "aquamarine")
+                                    )
+                            ),
+                            1,
+                            0.01f
                     )
             );
 

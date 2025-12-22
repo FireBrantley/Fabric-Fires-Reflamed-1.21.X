@@ -70,5 +70,16 @@ public class ModLanguageProvider extends FabricLanguageProvider {
         builder.add(ModItems.RUBY_AXE, "Ruby Axe");
         builder.add(ModItems.RUBY_HOE, "Ruby Hoe");
         builder.add(ModItems.RUBY_SWORD, "Ruby Sword");
+
+        // Aquamarine Items & Blocks
+        builder.add(ModItems.AQUAMARINE_SHARD, "Aquamarine Shard");
+        builder.add(ModBlocks.BLOCK_OF_AQUAMARINE, "Block of Aquamarine");
+        builder.add(ModBlocks.AQUAMARINE_ORE, "Aquamarine Ore");
+
+        // Aquamarine Armor Set
+        builder.add(ModItems.AQUAMARINE_HELMET, "Aquamarine Helmet");
+        builder.add(ModItems.AQUAMARINE_CHESTPLATE, "Aquamarine Chestplate");
+        builder.add(ModItems.AQUAMARINE_LEGGINGS, "Aquamarine Leggings");
+        builder.add(ModItems.AQUAMARINE_BOOTS, "Aquamarine Boots");
     }
 }

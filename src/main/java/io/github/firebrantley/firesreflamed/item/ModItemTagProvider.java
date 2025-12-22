@@ -53,6 +53,10 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.STEEL_HELMET)
                 .add(ModItems.STEEL_CHESTPLATE)
                 .add(ModItems.STEEL_LEGGINGS)
-                .add(ModItems.STEEL_BOOTS);
+                .add(ModItems.STEEL_BOOTS)
+                .add(ModItems.AQUAMARINE_HELMET)
+                .add(ModItems.AQUAMARINE_CHESTPLATE)
+                .add(ModItems.AQUAMARINE_LEGGINGS)
+                .add(ModItems.AQUAMARINE_BOOTS);
     }
 }

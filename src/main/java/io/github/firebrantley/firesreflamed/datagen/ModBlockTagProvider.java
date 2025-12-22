@@ -21,7 +21,9 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.BLOCK_OF_TITANIUM)
                 .add(ModBlocks.BLOCK_OF_STEEL)
                 .add(ModBlocks.RUBY_ORE)
-                .add(ModBlocks.BLOCK_OF_RUBY);
+                .add(ModBlocks.BLOCK_OF_RUBY)
+                .add(ModBlocks.AQUAMARINE_ORE)
+                .add(ModBlocks.BLOCK_OF_AQUAMARINE);
 
         // --- Needs Tool Tags ---
         // Needs Iron Tool
@@ -33,7 +35,9 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         // Needs Diamond Tool
         getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(ModBlocks.TITANIUM_ORE)
-                .add(ModBlocks.BLOCK_OF_TITANIUM);
+                .add(ModBlocks.BLOCK_OF_TITANIUM)
+                .add(ModBlocks.AQUAMARINE_ORE)
+                .add(ModBlocks.BLOCK_OF_AQUAMARINE);
 
     }
 }

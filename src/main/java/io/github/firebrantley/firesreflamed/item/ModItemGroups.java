@@ -66,6 +66,17 @@ public class ModItemGroups {
                         entries.add(ModItems.RUBY_AXE);
                         entries.add(ModItems.RUBY_HOE);
                         entries.add(ModItems.RUBY_SWORD);
+
+                        // Aquamarine Items & Blocks
+                        entries.add(ModBlocks.BLOCK_OF_AQUAMARINE);
+                        entries.add(ModBlocks.AQUAMARINE_ORE);
+                        entries.add(ModItems.AQUAMARINE_SHARD);
+
+                        // Aquamarine Armor Set
+                        entries.add(ModItems.AQUAMARINE_HELMET);
+                        entries.add(ModItems.AQUAMARINE_CHESTPLATE);
+                        entries.add(ModItems.AQUAMARINE_LEGGINGS);
+                        entries.add(ModItems.AQUAMARINE_BOOTS);
                     }).build());
 
     public static void registerItemGroups() {

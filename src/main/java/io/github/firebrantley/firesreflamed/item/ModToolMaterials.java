@@ -32,7 +32,7 @@ public enum ModToolMaterials implements ToolMaterial {
             650,
             6.0F,
             10.0F,
-            16,
+            14,
             () -> Ingredient.ofItems(ModItems.RUBY_GEM));
 
     // Fields

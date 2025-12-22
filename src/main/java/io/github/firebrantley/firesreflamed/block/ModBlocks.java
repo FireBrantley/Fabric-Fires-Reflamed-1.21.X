@@ -37,6 +37,15 @@ public class ModBlocks {
             new Block(AbstractBlock.Settings.create().strength(4)
             .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)));
 
+    // Aquamarine
+    public static final Block AQUAMARINE_ORE = registerBlock("aquamarine_ore",
+            new ExperienceDroppingBlock(UniformIntProvider.create(3,7),
+                    AbstractBlock.Settings.create().strength(4f)
+            .requiresTool().sounds(BlockSoundGroup.STONE)));
+    public static final Block BLOCK_OF_AQUAMARINE = registerBlock("block_of_aquamarine",
+            new Block(AbstractBlock.Settings.create().strength(4)
+            .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)));
+
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
         return Registry.register(Registries.BLOCK, Identifier.of(FiresReflamed.MOD_ID, name), block);

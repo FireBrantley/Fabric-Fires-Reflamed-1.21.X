@@ -38,8 +38,16 @@ public class ModBlockLootTableProvider extends FabricBlockLootTableProvider {
         addSelfDrop(ModBlocks.BLOCK_OF_STEEL);
 
         // Ruby Blocks
-        addMultiDropOre(ModBlocks.RUBY_ORE, ModItems.RUBY_CRYSTALS, ModItems.RUBY_CRYSTALS);
+        addMultiDropOre(ModBlocks.RUBY_ORE,
+                ModItems.RUBY_CRYSTALS,
+                ModItems.RUBY_CRYSTALS);
         addSelfDrop(ModBlocks.BLOCK_OF_RUBY);
+
+        // Aquamarine Blocks
+        addMultiDropOre(ModBlocks.AQUAMARINE_ORE,
+                ModItems.AQUAMARINE_SHARD,
+                ModItems.AQUAMARINE_SHARD);
+        addSelfDrop(ModBlocks.BLOCK_OF_AQUAMARINE);
     }
 
     // --- Helper Methods ---
@@ -56,7 +64,7 @@ public class ModBlockLootTableProvider extends FabricBlockLootTableProvider {
     // Multiple Ore Drop Table
     private void addMultiDropOre(Block ore, Item primary, Item bonus) {
         addDrop(ore, LootTable.builder()
-                // PRIMARY DROP (ruby crystals)
+                // Primary Drop
                 .pool(LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .with(ItemEntry.builder(primary))
@@ -70,7 +78,7 @@ public class ModBlockLootTableProvider extends FabricBlockLootTableProvider {
                         ))
                 )
 
-                // BONUS DROP (optional)
+                // Bonus Drop
                 .pool(LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(2))
                         .with(ItemEntry.builder(bonus))

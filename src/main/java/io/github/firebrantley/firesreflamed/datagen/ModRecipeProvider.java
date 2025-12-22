@@ -148,8 +148,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .offerTo(exporter,
                         Identifier.of(
                                 "firesreflamed",
-                                getItemPath(ModItems.RUBY_GEM)
-                                        + "_from_crystals"));
+                                getItemPath(ModItems.RUBY_GEM) + "_from_crystals"));
 
         createShovelRecipe(exporter,
                 ModItems.RUBY_SHOVEL,
@@ -182,6 +181,35 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 List.of(ModBlocks.RUBY_ORE),
                 RecipeCategory.MISC, ModItems.RUBY_GEM,
                 1.0f, 100, "ruby");
+
+        // --- Aquamarine Recipes ---
+        // Crafting
+        offerReversibleCompactingRecipes(exporter,
+                RecipeCategory.MISC, ModItems.AQUAMARINE_SHARD,
+                RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLOCK_OF_AQUAMARINE);
+
+        createHelmetRecipe(exporter,
+                ModItems.AQUAMARINE_HELMET,
+                ModItems.AQUAMARINE_SHARD);
+        createChestplateRecipe(exporter,
+                ModItems.AQUAMARINE_CHESTPLATE,
+                ModItems.AQUAMARINE_SHARD);
+        createLeggingsRecipe(exporter,
+                ModItems.AQUAMARINE_LEGGINGS,
+                ModItems.AQUAMARINE_SHARD);
+        createBootsRecipe(exporter,
+                ModItems.AQUAMARINE_BOOTS,
+                ModItems.AQUAMARINE_SHARD);
+
+        // Smelting & Blasting
+        offerSmelting(exporter,
+                List.of(ModBlocks.AQUAMARINE_ORE),
+                RecipeCategory.MISC, ModItems.AQUAMARINE_SHARD,
+                0.8f, 200, "aquamarine");
+        offerBlasting(exporter,
+                List.of(ModBlocks.AQUAMARINE_ORE),
+                RecipeCategory.MISC, ModItems.AQUAMARINE_SHARD,
+                0.8f, 100, "aquamarine");
     }
 
     // --- Helper Methods ---

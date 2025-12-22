@@ -121,6 +121,24 @@ public class ModItems {
                     .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.RUBY,
                             -5, -2.4f))));
 
+    // Aquamarine Items
+    public static final Item AQUAMARINE_SHARD = registerItem("aquamarine_shard",
+            new Item(new Item.Settings()));
+
+    // Aquamarine Armor Set
+    public static final Item AQUAMARINE_HELMET = registerItem("aquamarine_helmet",
+            new ArmorItem(ModArmorMaterials.AQUAMARINE_ARMOR_MATERIAL,
+                    ArmorItem.Type.HELMET, new Item.Settings().maxCount(1)));
+    public static final Item AQUAMARINE_CHESTPLATE = registerItem("aquamarine_chestplate",
+            new ArmorItem(ModArmorMaterials.AQUAMARINE_ARMOR_MATERIAL,
+                    ArmorItem.Type.CHESTPLATE, new Item.Settings().maxCount(1)));
+    public static final Item AQUAMARINE_LEGGINGS = registerItem("aquamarine_leggings",
+            new ArmorItem(ModArmorMaterials.AQUAMARINE_ARMOR_MATERIAL,
+                    ArmorItem.Type.LEGGINGS, new Item.Settings().maxCount(1)));
+    public static final Item AQUAMARINE_BOOTS = registerItem("aquamarine_boots",
+            new ArmorItem(ModArmorMaterials.AQUAMARINE_ARMOR_MATERIAL,
+                    ArmorItem.Type.BOOTS, new Item.Settings().maxCount(1)));
+
     // Helper method to register items
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(FiresReflamed.MOD_ID, name), item);
