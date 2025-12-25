@@ -1,5 +1,6 @@
 package io.github.firebrantley.firesreflamed.item;
 
+import io.github.firebrantley.firesreflamed.block.ModBlocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.registry.RegistryWrapper;
@@ -14,6 +15,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
+        // --- Tool & Armor Tags ---
         // Swords
         getOrCreateTagBuilder(ItemTags.SWORDS)
                 .add(ModItems.TITANIUM_SWORD)

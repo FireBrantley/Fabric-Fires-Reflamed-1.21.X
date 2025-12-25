@@ -57,8 +57,8 @@ public class ModItemGroups {
                         // Ruby Items & Blocks
                         entries.add(ModBlocks.BLOCK_OF_RUBY);
                         entries.add(ModBlocks.RUBY_ORE);
-                        entries.add(ModItems.RUBY_GEM);
                         entries.add(ModItems.RUBY_CRYSTALS);
+                        entries.add(ModItems.RUBY_GEM);
 
                         // Ruby Tool Set
                         entries.add(ModItems.RUBY_SHOVEL);

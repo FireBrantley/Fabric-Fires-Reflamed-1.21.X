@@ -32,30 +32,25 @@ public class ModBlockLootTableProvider extends FabricBlockLootTableProvider {
     public void generate() {
         // Titanium Blocks
         addOreDrop(ModBlocks.TITANIUM_ORE, ModItems.RAW_TITANIUM);
-        addSelfDrop(ModBlocks.BLOCK_OF_TITANIUM);
+        addDrop(ModBlocks.BLOCK_OF_TITANIUM);
 
         // Steel Blocks
-        addSelfDrop(ModBlocks.BLOCK_OF_STEEL);
+        addDrop(ModBlocks.BLOCK_OF_STEEL);
 
         // Ruby Blocks
         addMultiDropOre(ModBlocks.RUBY_ORE,
                 ModItems.RUBY_CRYSTALS,
                 ModItems.RUBY_CRYSTALS);
-        addSelfDrop(ModBlocks.BLOCK_OF_RUBY);
+        addDrop(ModBlocks.BLOCK_OF_RUBY);
 
         // Aquamarine Blocks
         addMultiDropOre(ModBlocks.AQUAMARINE_ORE,
                 ModItems.AQUAMARINE_SHARD,
                 ModItems.AQUAMARINE_SHARD);
-        addSelfDrop(ModBlocks.BLOCK_OF_AQUAMARINE);
+        addDrop(ModBlocks.BLOCK_OF_AQUAMARINE);
     }
 
     // --- Helper Methods ---
-    // Self Drop Table
-    private void addSelfDrop(Block block) {
-        addDrop(block);
-    }
-
     // Single Ore Drop Table
     private void addOreDrop(Block ore, Item drop) {
         addDrop(ore, oreDrops(ore, drop));
@@ -94,10 +89,5 @@ public class ModBlockLootTableProvider extends FabricBlockLootTableProvider {
     // Door Drop Table
     private void addDoorDrop(Block door) {
         addDrop(door, doorDrops(door));
-    }
-
-    // Leaves Drop Table
-    private void addLeavesDrop(Block leaves, Block sapling, float chance) {
-        addDrop(leaves, leavesDrops(leaves, sapling, chance));
     }
 }
