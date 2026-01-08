@@ -1,6 +1,7 @@
 package io.github.firebrantley.firesreflamed.item;
 
 import io.github.firebrantley.firesreflamed.FiresReflamed;
+import io.github.firebrantley.firesreflamed.item.custom.BatItem;
 import io.github.firebrantley.firesreflamed.item.custom.HammerItem;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
@@ -147,6 +148,16 @@ public class ModItems {
             new HammerItem(ModToolMaterials.STEEL, new Item.Settings()
                     .attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterials.STEEL,
                             -7, -2.8f))));
+
+    public static final Item WOODEN_BAT = registerItem(
+            "wooden_bat",
+            new BatItem(
+                    ToolMaterials.WOOD,
+                    2,
+                    -2.8f,
+                    new Item.Settings()
+            )
+    );
 
     // Helper method to register items
     private static Item registerItem(String name, Item item) {

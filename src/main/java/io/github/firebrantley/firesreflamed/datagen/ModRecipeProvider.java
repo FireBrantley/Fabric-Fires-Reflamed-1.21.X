@@ -229,6 +229,10 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('G', Items.GOLD_BLOCK)
                 .criterion(hasItem(ModItems.STEEL_INGOT), conditionsFromItem(ModItems.STEEL_INGOT))
                 .offerTo(exporter);
+        createBatRecipe(exporter,
+                ModItems.WOODEN_BAT,
+                Items.OAK_LOG,
+                Items.STICK);
     }
 
     // --- Helper Methods ---
@@ -237,7 +241,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, output)
                 .input(ironInput)
                 .input(ItemTags.COALS)
-                // Just use the ironInput for the unlock condition to keep it simple!
                 .criterion(hasItem(ironInput), conditionsFromItem(ironInput))
                 .offerTo(exporter);
     }
@@ -358,6 +361,22 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("I I")
                 .input('I', input)
                 .criterion(hasItem(input), conditionsFromItem(input))
+                .offerTo(exporter);
+    }
+
+    private void createBatRecipe(
+            RecipeExporter exporter,
+            ItemConvertible output,
+            ItemConvertible blade,
+            ItemConvertible handle
+    ) {
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, output)
+                .pattern(" B ")
+                .pattern(" B ")
+                .pattern(" H ")
+                .input('B', blade)
+                .input('H', handle)
+                .criterion(hasItem(blade), conditionsFromItem(blade))
                 .offerTo(exporter);
     }
 }

@@ -85,5 +85,6 @@ public class ModLanguageProvider extends FabricLanguageProvider {
         // Misc Items
         builder.add(ModItems.DRILL_BIT, "Drill Bit");
         builder.add(ModItems.DRILL, "Drill");
+        builder.add(ModItems.WOODEN_BAT, "Wooden Bat");
     }
 }

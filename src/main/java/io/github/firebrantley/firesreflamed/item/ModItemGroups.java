@@ -81,6 +81,7 @@ public class ModItemGroups {
                         // Misc Items
                         entries.add(ModItems.DRILL_BIT);
                         entries.add(ModItems.DRILL);
+                        entries.add(ModItems.WOODEN_BAT);
                     }).build());
 
     public static void registerItemGroups() {

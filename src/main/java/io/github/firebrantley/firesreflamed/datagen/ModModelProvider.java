@@ -74,6 +74,7 @@ public class ModModelProvider extends FabricModelProvider {
         // Misc Items
         itemModelGenerator.register(ModItems.DRILL_BIT, Models.GENERATED);
         itemModelGenerator.register(ModItems.DRILL, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.WOODEN_BAT, Models.HANDHELD);
     }
 
     @Override
