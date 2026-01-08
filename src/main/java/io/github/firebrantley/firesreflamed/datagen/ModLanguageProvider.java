@@ -81,5 +81,9 @@ public class ModLanguageProvider extends FabricLanguageProvider {
         builder.add(ModItems.AQUAMARINE_CHESTPLATE, "Aquamarine Chestplate");
         builder.add(ModItems.AQUAMARINE_LEGGINGS, "Aquamarine Leggings");
         builder.add(ModItems.AQUAMARINE_BOOTS, "Aquamarine Boots");
+
+        // Misc Items
+        builder.add(ModItems.DRILL_BIT, "Drill Bit");
+        builder.add(ModItems.DRILL, "Drill");
     }
 }

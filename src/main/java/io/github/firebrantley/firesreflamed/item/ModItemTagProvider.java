@@ -26,7 +26,8 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
         getOrCreateTagBuilder(ItemTags.PICKAXES)
                 .add(ModItems.TITANIUM_PICKAXE)
                 .add(ModItems.STEEL_PICKAXE)
-                .add(ModItems.RUBY_PICKAXE);
+                .add(ModItems.RUBY_PICKAXE)
+                .add(ModItems.DRILL);
 
         // Shovels
         getOrCreateTagBuilder(ItemTags.SHOVELS)

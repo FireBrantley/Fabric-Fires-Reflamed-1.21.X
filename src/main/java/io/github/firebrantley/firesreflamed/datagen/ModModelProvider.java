@@ -70,6 +70,10 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.AQUAMARINE_CHESTPLATE, Models.GENERATED);
         itemModelGenerator.register(ModItems.AQUAMARINE_LEGGINGS, Models.GENERATED);
         itemModelGenerator.register(ModItems.AQUAMARINE_BOOTS, Models.GENERATED);
+
+        // Misc Items
+        itemModelGenerator.register(ModItems.DRILL_BIT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.DRILL, Models.HANDHELD);
     }
 
     @Override

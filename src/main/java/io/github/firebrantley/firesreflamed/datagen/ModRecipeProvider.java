@@ -210,6 +210,25 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 List.of(ModBlocks.AQUAMARINE_ORE),
                 RecipeCategory.MISC, ModItems.AQUAMARINE_SHARD,
                 0.8f, 100, "aquamarine");
+
+        // --- Misc Item Recipes ---
+        // Crafting
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.DRILL_BIT, 1)
+                .pattern(" N ")
+                .pattern("NIN")
+                .pattern("   ")
+                .input('I', ModItems.STEEL_INGOT)
+                .input('N', ModItems.STEEL_NUGGET)
+                .criterion(hasItem(ModItems.STEEL_INGOT), conditionsFromItem(ModItems.STEEL_INGOT))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.DRILL, 1)
+                .pattern("B  ")
+                .pattern(" G ")
+                .pattern("   ")
+                .input('B', ModItems.DRILL_BIT)
+                .input('G', Items.GOLD_BLOCK)
+                .criterion(hasItem(ModItems.STEEL_INGOT), conditionsFromItem(ModItems.STEEL_INGOT))
+                .offerTo(exporter);
     }
 
     // --- Helper Methods ---
@@ -259,8 +278,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
     private void createFlippedAxeRecipe(RecipeExporter exporter, ItemConvertible output, ItemConvertible input) {
         ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, output)
-                .pattern(" II") // Moved from "II " to " II"
-                .pattern(" SI") // Moved from "IS " to " SI"
+                .pattern(" II")
+                .pattern(" SI")
                 .pattern(" S ")
                 .input('I', input)
                 .input('S', Items.STICK)
@@ -281,7 +300,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
     private void createFlippedHoeRecipe(RecipeExporter exporter, ItemConvertible output, ItemConvertible input) {
         ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, output)
-                .pattern(" II") // Moved from "II " to " II"
+                .pattern(" II")
                 .pattern(" S ")
                 .pattern(" S ")
                 .input('I', input)

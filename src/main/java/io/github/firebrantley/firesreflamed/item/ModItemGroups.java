@@ -77,6 +77,10 @@ public class ModItemGroups {
                         entries.add(ModItems.AQUAMARINE_CHESTPLATE);
                         entries.add(ModItems.AQUAMARINE_LEGGINGS);
                         entries.add(ModItems.AQUAMARINE_BOOTS);
+
+                        // Misc Items
+                        entries.add(ModItems.DRILL_BIT);
+                        entries.add(ModItems.DRILL);
                     }).build());
 
     public static void registerItemGroups() {

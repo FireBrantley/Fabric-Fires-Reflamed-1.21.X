@@ -1,6 +1,7 @@
 package io.github.firebrantley.firesreflamed.item;
 
 import io.github.firebrantley.firesreflamed.FiresReflamed;
+import io.github.firebrantley.firesreflamed.item.custom.HammerItem;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -138,6 +139,14 @@ public class ModItems {
     public static final Item AQUAMARINE_BOOTS = registerItem("aquamarine_boots",
             new ArmorItem(ModArmorMaterials.AQUAMARINE_ARMOR_MATERIAL,
                     ArmorItem.Type.BOOTS, new Item.Settings().maxCount(1)));
+
+    // Misc Items
+    public static final Item DRILL_BIT = registerItem("drill_bit",
+            new Item(new Item.Settings()));
+    public static final Item DRILL = registerItem("drill",
+            new HammerItem(ModToolMaterials.STEEL, new Item.Settings()
+                    .attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterials.STEEL,
+                            -7, -2.8f))));
 
     // Helper method to register items
     private static Item registerItem(String name, Item item) {
