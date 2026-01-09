@@ -153,8 +153,8 @@ public class ModItems {
             "wooden_bat",
             new BatItem(
                     ToolMaterials.WOOD,
-                    2,
-                    -2.8f,
+                    5,
+                    -2.9f,
                     new Item.Settings()
             )
     );

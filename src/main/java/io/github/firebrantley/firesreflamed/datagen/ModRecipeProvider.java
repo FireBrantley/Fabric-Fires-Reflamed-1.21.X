@@ -9,6 +9,7 @@ import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
+import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.ItemTags;
@@ -229,10 +230,12 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('G', Items.GOLD_BLOCK)
                 .criterion(hasItem(ModItems.STEEL_INGOT), conditionsFromItem(ModItems.STEEL_INGOT))
                 .offerTo(exporter);
-        createBatRecipe(exporter,
+        createBatRecipe(
+                exporter,
                 ModItems.WOODEN_BAT,
-                Items.OAK_LOG,
-                Items.STICK);
+                Ingredient.fromTag(ItemTags.LOGS),
+                Items.STICK
+        );
     }
 
     // --- Helper Methods ---
@@ -367,7 +370,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
     private void createBatRecipe(
             RecipeExporter exporter,
             ItemConvertible output,
-            ItemConvertible blade,
+            Ingredient blade,
             ItemConvertible handle
     ) {
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, output)
@@ -376,7 +379,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern(" H ")
                 .input('B', blade)
                 .input('H', handle)
-                .criterion(hasItem(blade), conditionsFromItem(blade))
+                .criterion("has_blade", conditionsFromItem(handle))
                 .offerTo(exporter);
     }
 }
