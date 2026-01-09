@@ -26,6 +26,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.TITANIUM_AXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.TITANIUM_HOE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.TITANIUM_SWORD, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.TITANIUM_BAT, Models.HANDHELD);
 
         // Titanium Armor Set
         itemModelGenerator.register(ModItems.TITANIUM_HELMET, Models.GENERATED);
@@ -44,6 +45,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.STEEL_AXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.STEEL_HOE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.STEEL_SWORD, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.STEEL_BAT, Models.HANDHELD);
 
         // Steel Armor Set
         itemModelGenerator.register(ModItems.STEEL_HELMET, Models.GENERATED);
@@ -61,6 +63,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.RUBY_AXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.RUBY_HOE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.RUBY_SWORD, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.RUBY_BAT, Models.HANDHELD);
 
         // Aquamarine Items
         itemModelGenerator.register(ModItems.AQUAMARINE_SHARD, Models.GENERATED);

@@ -36,6 +36,15 @@ public class ModItems {
             new SwordItem(ModToolMaterials.TITANIUM, new Item.Settings()
                     .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.TITANIUM,
                             4, -2.4f))));
+    public static final Item TITANIUM_BAT = registerItem(
+            "titanium_bat",
+            new BatItem(
+                    ModToolMaterials.TITANIUM,
+                    2,
+                    -2.6f,
+                    new Item.Settings()
+            )
+    );
 
     //Titanium Armor Set
     public static final Item TITANIUM_HELMET = registerItem("titanium_helmet",
@@ -80,6 +89,15 @@ public class ModItems {
             new SwordItem(ModToolMaterials.STEEL, new Item.Settings()
                     .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.STEEL,
                             -4, -2.4f))));
+    public static final Item STEEL_BAT = registerItem(
+            "steel_bat",
+            new BatItem(
+                    ModToolMaterials.STEEL,
+                    -2,
+                    -2.8f,
+                    new Item.Settings()
+            )
+    );
 
     // Steel Armor Set
     public static final Item STEEL_HELMET = registerItem("steel_helmet",
@@ -122,6 +140,15 @@ public class ModItems {
             new SwordItem(ModToolMaterials.RUBY, new Item.Settings()
                     .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.RUBY,
                             -5, -2.4f))));
+    public static final Item RUBY_BAT = registerItem(
+            "ruby_bat",
+            new BatItem(
+                    ModToolMaterials.RUBY,
+                    0,
+                    -2.7f,
+                    new Item.Settings()
+            )
+    );
 
     // Aquamarine Items
     public static final Item AQUAMARINE_SHARD = registerItem("aquamarine_shard",

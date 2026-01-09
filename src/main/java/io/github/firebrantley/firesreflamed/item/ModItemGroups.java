@@ -28,6 +28,7 @@ public class ModItemGroups {
                         entries.add(ModItems.TITANIUM_AXE);
                         entries.add(ModItems.TITANIUM_HOE);
                         entries.add(ModItems.TITANIUM_SWORD);
+                        entries.add(ModItems.TITANIUM_BAT);
 
                         //Titanium Armor Set
                         entries.add(ModItems.TITANIUM_HELMET);
@@ -47,6 +48,7 @@ public class ModItemGroups {
                         entries.add(ModItems.STEEL_AXE);
                         entries.add(ModItems.STEEL_HOE);
                         entries.add(ModItems.STEEL_SWORD);
+                        entries.add(ModItems.STEEL_BAT);
 
                         // Steel Armor Set
                         entries.add(ModItems.STEEL_HELMET);
@@ -66,6 +68,7 @@ public class ModItemGroups {
                         entries.add(ModItems.RUBY_AXE);
                         entries.add(ModItems.RUBY_HOE);
                         entries.add(ModItems.RUBY_SWORD);
+                        entries.add(ModItems.RUBY_BAT);
 
                         // Aquamarine Items & Blocks
                         entries.add(ModBlocks.BLOCK_OF_AQUAMARINE);

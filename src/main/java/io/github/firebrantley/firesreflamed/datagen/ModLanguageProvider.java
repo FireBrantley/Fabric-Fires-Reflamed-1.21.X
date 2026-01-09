@@ -32,6 +32,7 @@ public class ModLanguageProvider extends FabricLanguageProvider {
         builder.add(ModItems.TITANIUM_AXE, "Titanium Axe");
         builder.add(ModItems.TITANIUM_HOE, "Titanium Hoe");
         builder.add(ModItems.TITANIUM_SWORD, "Titanium Sword");
+        builder.add(ModItems.TITANIUM_BAT, "Titanium Bat");
 
         // Titanium Armor Set
         builder.add(ModItems.TITANIUM_HELMET, "Titanium Helmet");
@@ -51,6 +52,7 @@ public class ModLanguageProvider extends FabricLanguageProvider {
         builder.add(ModItems.STEEL_AXE, "Steel Axe");
         builder.add(ModItems.STEEL_HOE, "Steel Hoe");
         builder.add(ModItems.STEEL_SWORD, "Steel Sword");
+        builder.add(ModItems.STEEL_BAT, "Steel Bat");
 
         // Steel Armor Set
         builder.add(ModItems.STEEL_HELMET, "Steel Helmet");
@@ -70,6 +72,7 @@ public class ModLanguageProvider extends FabricLanguageProvider {
         builder.add(ModItems.RUBY_AXE, "Ruby Axe");
         builder.add(ModItems.RUBY_HOE, "Ruby Hoe");
         builder.add(ModItems.RUBY_SWORD, "Ruby Sword");
+        builder.add(ModItems.RUBY_BAT, "Ruby Bat");
 
         // Aquamarine Items & Blocks
         builder.add(ModItems.AQUAMARINE_SHARD, "Aquamarine Shard");

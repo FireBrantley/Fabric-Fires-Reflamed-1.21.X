@@ -54,6 +54,12 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         createSwordRecipe(exporter,
                 ModItems.TITANIUM_SWORD,
                 ModItems.TITANIUM_INGOT);
+        createBatRecipe(
+                exporter,
+                ModItems.TITANIUM_BAT,
+                Ingredient.ofItems(ModBlocks.BLOCK_OF_TITANIUM),
+                ModItems.TITANIUM_INGOT
+        );
 
         createHelmetRecipe(exporter,
                 ModItems.TITANIUM_HELMET,
@@ -111,6 +117,12 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         createSwordRecipe(exporter,
                 ModItems.STEEL_SWORD,
                 ModItems.STEEL_INGOT);
+        createBatRecipe(
+                exporter,
+                ModItems.STEEL_BAT,
+                Ingredient.ofItems(ModBlocks.BLOCK_OF_STEEL),
+                ModItems.STEEL_INGOT
+        );
 
         createHelmetRecipe(exporter,
                 ModItems.STEEL_HELMET,
@@ -172,6 +184,12 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         createSwordRecipe(exporter,
                 ModItems.RUBY_SWORD,
                 ModItems.RUBY_GEM);
+        createBatRecipe(
+                exporter,
+                ModItems.RUBY_BAT,
+                Ingredient.ofItems(ModBlocks.BLOCK_OF_RUBY),
+                ModItems.RUBY_GEM
+        );
 
         // Smelting & Blasting
         offerSmelting(exporter,
