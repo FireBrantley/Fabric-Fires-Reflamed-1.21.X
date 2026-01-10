@@ -83,6 +83,14 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 List.of(ModItems.RAW_TITANIUM, ModBlocks.TITANIUM_ORE),
                 RecipeCategory.MISC, ModItems.TITANIUM_INGOT,
                 0.7f, 100, "titanium");
+        offerSmelting(exporter,
+                List.of(ModBlocks.DEEPSLATE_TITANIUM_ORE),
+                RecipeCategory.MISC, ModItems.TITANIUM_INGOT,
+                0.7f, 300, "titanium");
+        offerBlasting(exporter,
+                List.of(ModBlocks.DEEPSLATE_TITANIUM_ORE),
+                RecipeCategory.MISC, ModItems.TITANIUM_INGOT,
+                0.7f, 150, "titanium");
 
         // --- Steel Recipes ---
         // Crafting

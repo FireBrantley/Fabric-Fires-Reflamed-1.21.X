@@ -19,6 +19,7 @@ public class ModItemGroups {
                         // Titanium Items & Blocks
                         entries.add(ModBlocks.BLOCK_OF_TITANIUM);
                         entries.add(ModBlocks.TITANIUM_ORE);
+                        entries.add(ModBlocks.DEEPSLATE_TITANIUM_ORE);
                         entries.add(ModItems.RAW_TITANIUM);
                         entries.add(ModItems.TITANIUM_INGOT);
 

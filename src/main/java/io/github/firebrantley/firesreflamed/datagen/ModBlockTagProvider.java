@@ -18,6 +18,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         // Pickaxe Mineable
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
                 .add(ModBlocks.TITANIUM_ORE)
+                .add(ModBlocks.DEEPSLATE_TITANIUM_ORE)
                 .add(ModBlocks.BLOCK_OF_TITANIUM)
                 .add(ModBlocks.BLOCK_OF_STEEL)
                 .add(ModBlocks.RUBY_ORE)
@@ -35,6 +36,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         // Needs Diamond Tool
         getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(ModBlocks.TITANIUM_ORE)
+                .add(ModBlocks.DEEPSLATE_TITANIUM_ORE)
                 .add(ModBlocks.BLOCK_OF_TITANIUM)
                 .add(ModBlocks.AQUAMARINE_ORE)
                 .add(ModBlocks.BLOCK_OF_AQUAMARINE);

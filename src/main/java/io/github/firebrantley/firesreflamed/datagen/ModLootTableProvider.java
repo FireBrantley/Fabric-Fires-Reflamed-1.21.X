@@ -19,9 +19,9 @@ import net.minecraft.registry.RegistryWrapper;
 
 import java.util.concurrent.CompletableFuture;
 
-public class ModBlockLootTableProvider extends FabricBlockLootTableProvider {
+public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
-    public ModBlockLootTableProvider(
+    public ModLootTableProvider(
             FabricDataOutput output,
             CompletableFuture<RegistryWrapper.WrapperLookup> registries
     ) {
@@ -32,6 +32,7 @@ public class ModBlockLootTableProvider extends FabricBlockLootTableProvider {
     public void generate() {
         // Titanium Blocks
         addOreDrop(ModBlocks.TITANIUM_ORE, ModItems.RAW_TITANIUM);
+        addOreDrop(ModBlocks.DEEPSLATE_TITANIUM_ORE, ModItems.RAW_TITANIUM);
         addDrop(ModBlocks.BLOCK_OF_TITANIUM);
 
         // Steel Blocks

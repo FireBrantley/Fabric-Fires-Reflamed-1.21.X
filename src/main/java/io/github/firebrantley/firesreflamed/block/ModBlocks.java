@@ -19,6 +19,10 @@ public class ModBlocks {
             new ExperienceDroppingBlock(UniformIntProvider.create(2,5),
                     AbstractBlock.Settings.create().strength(3f)
             .requiresTool().sounds(BlockSoundGroup.STONE)));
+    public static final Block DEEPSLATE_TITANIUM_ORE = registerBlock("deepslate_titanium_ore",
+            new ExperienceDroppingBlock(UniformIntProvider.create(2,5),
+                    AbstractBlock.Settings.create().strength(4.5f)
+            .requiresTool().sounds(BlockSoundGroup.DEEPSLATE)));
     public static final Block BLOCK_OF_TITANIUM = registerBlock("block_of_titanium",
             new Block(AbstractBlock.Settings.create().strength(3)
             .requiresTool().sounds(BlockSoundGroup.NETHERITE)));

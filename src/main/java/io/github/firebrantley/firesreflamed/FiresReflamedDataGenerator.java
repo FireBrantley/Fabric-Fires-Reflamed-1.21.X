@@ -19,7 +19,8 @@ public class FiresReflamedDataGenerator implements DataGeneratorEntrypoint {
         pack.addProvider(ModModelProvider::new);
         pack.addProvider(ModLanguageProvider::new);
         pack.addProvider(ModRecipeProvider::new);
-        pack.addProvider(ModBlockLootTableProvider::new);
+        pack.addProvider(ModLootTableProvider::new);
+        pack.addProvider(ModRegistryDataGenerator::new);
     }
 
     @Override
