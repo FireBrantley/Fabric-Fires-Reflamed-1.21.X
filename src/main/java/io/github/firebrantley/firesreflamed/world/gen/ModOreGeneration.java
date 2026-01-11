@@ -10,7 +10,8 @@ public class ModOreGeneration {
         /* Example for individual Biomes
          * BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FOREST, BiomeKeys.PLAINS),
          * GenerationStep.Feature.UNDERGROUND_ORES,
-         *         ModPlacedFeatures.TITANIUM_ORE_PLACED_KEY); */
+         *         ModPlacedFeatures.TITANIUM_ORE_PLACED_KEY);
+         */
 
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
                 GenerationStep.Feature.UNDERGROUND_ORES,

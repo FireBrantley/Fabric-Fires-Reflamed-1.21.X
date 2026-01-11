@@ -2,6 +2,7 @@ package io.github.firebrantley.firesreflamed.datagen;
 
 import io.github.firebrantley.firesreflamed.block.ModBlocks;
 import io.github.firebrantley.firesreflamed.item.ModItems;
+import io.github.firebrantley.firesreflamed.util.ModTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.server.recipe.RecipeExporter;
@@ -12,7 +13,9 @@ import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.registry.tag.ItemTags;
+import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 
 import java.util.List;
@@ -238,6 +241,52 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 RecipeCategory.MISC, ModItems.AQUAMARINE_SHARD,
                 0.8f, 100, "aquamarine");
 
+        // --- Willow Recipes ---
+        // Crafting
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.WILLOW_PLANKS, 4)
+                .input(ModTags.Items.WILLOW_LOGS)
+                .criterion("has_willow_logs", conditionsFromTag(ModTags.Items.WILLOW_LOGS))
+                .offerTo(exporter);
+        createStairsRecipe(
+                ModBlocks.WILLOW_STAIRS,
+                Ingredient.ofItems(ModBlocks.WILLOW_PLANKS))
+                .criterion(hasItem(ModBlocks.WILLOW_PLANKS), conditionsFromItem(ModBlocks.WILLOW_PLANKS))
+                .offerTo(exporter);
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS,
+                ModBlocks.WILLOW_SLAB,
+                Ingredient.ofItems(ModBlocks.WILLOW_PLANKS))
+                .criterion(hasItem(ModBlocks.WILLOW_PLANKS), conditionsFromItem(ModBlocks.WILLOW_PLANKS))
+                .offerTo(exporter);
+        createFenceRecipe(
+                ModBlocks.WILLOW_FENCE,
+                Ingredient.ofItems(ModBlocks.WILLOW_PLANKS))
+                .criterion(hasItem(ModBlocks.WILLOW_PLANKS), conditionsFromItem(ModBlocks.WILLOW_PLANKS))
+                .offerTo(exporter);
+        createFenceGateRecipe(
+                ModBlocks.WILLOW_FENCE_GATE,
+                Ingredient.ofItems(ModBlocks.WILLOW_PLANKS))
+                .criterion(hasItem(ModBlocks.WILLOW_PLANKS), conditionsFromItem(ModBlocks.WILLOW_PLANKS))
+                .offerTo(exporter);
+        createDoorRecipe(
+                ModBlocks.WILLOW_DOOR,
+                Ingredient.ofItems(ModBlocks.WILLOW_PLANKS))
+                .criterion(hasItem(ModBlocks.WILLOW_PLANKS), conditionsFromItem(ModBlocks.WILLOW_PLANKS))
+                .offerTo(exporter);
+        createTrapdoorRecipe(
+                ModBlocks.WILLOW_TRAPDOOR,
+                Ingredient.ofItems(ModBlocks.WILLOW_PLANKS))
+                .criterion(hasItem(ModBlocks.WILLOW_PLANKS), conditionsFromItem(ModBlocks.WILLOW_PLANKS))
+                .offerTo(exporter);
+        createPressurePlateRecipe(RecipeCategory.REDSTONE,
+                ModBlocks.WILLOW_PRESSURE_PLATE,
+                Ingredient.ofItems(ModBlocks.WILLOW_PLANKS))
+                .criterion(hasItem(ModBlocks.WILLOW_PLANKS), conditionsFromItem(ModBlocks.WILLOW_PLANKS))
+                .offerTo(exporter);
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, ModBlocks.WILLOW_BUTTON, 1)
+                .input(ModBlocks.WILLOW_PLANKS)
+                .criterion(hasItem(ModBlocks.WILLOW_PLANKS), conditionsFromItem(ModBlocks.WILLOW_PLANKS))
+                .offerTo(exporter);
+
         // --- Misc Item Recipes ---
         // Crafting
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.DRILL_BIT, 1)
@@ -352,6 +401,22 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .offerTo(exporter);
     }
 
+    private void createBatRecipe(
+            RecipeExporter exporter,
+            ItemConvertible output,
+            Ingredient blade,
+            ItemConvertible handle
+    ) {
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, output)
+                .pattern(" B ")
+                .pattern(" B ")
+                .pattern(" H ")
+                .input('B', blade)
+                .input('H', handle)
+                .criterion("has_blade", conditionsFromItem(handle))
+                .offerTo(exporter);
+    }
+
     // Armor Recipe Templates
     private void createHelmetRecipe(RecipeExporter exporter, ItemConvertible output, ItemConvertible input) {
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, output)
@@ -390,22 +455,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("I I")
                 .input('I', input)
                 .criterion(hasItem(input), conditionsFromItem(input))
-                .offerTo(exporter);
-    }
-
-    private void createBatRecipe(
-            RecipeExporter exporter,
-            ItemConvertible output,
-            Ingredient blade,
-            ItemConvertible handle
-    ) {
-        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, output)
-                .pattern(" B ")
-                .pattern(" B ")
-                .pattern(" H ")
-                .input('B', blade)
-                .input('H', handle)
-                .criterion("has_blade", conditionsFromItem(handle))
                 .offerTo(exporter);
     }
 }

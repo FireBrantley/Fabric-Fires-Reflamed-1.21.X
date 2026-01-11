@@ -89,7 +89,20 @@ public class ModItemGroups {
                         entries.add(ModBlocks.WILLOW_WOOD);
                         entries.add(ModBlocks.STRIPPED_WILLOW_LOG);
                         entries.add(ModBlocks.STRIPPED_WILLOW_WOOD);
+
                         entries.add(ModBlocks.WILLOW_PLANKS);
+                        entries.add(ModBlocks.WILLOW_STAIRS);
+                        entries.add(ModBlocks.WILLOW_SLAB);
+
+                        entries.add(ModBlocks.WILLOW_FENCE);
+                        entries.add(ModBlocks.WILLOW_FENCE_GATE);
+
+                        entries.add(ModBlocks.WILLOW_DOOR);
+                        entries.add(ModBlocks.WILLOW_TRAPDOOR);
+
+                        entries.add(ModBlocks.WILLOW_PRESSURE_PLATE);
+                        entries.add(ModBlocks.WILLOW_BUTTON);
+
                         entries.add(ModBlocks.WILLOW_LEAVES);
                         entries.add(ModBlocks.WILLOW_SAPLING);
 

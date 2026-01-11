@@ -16,6 +16,8 @@ public class ModLanguageProvider extends FabricLanguageProvider {
 
     @Override
     public void generateTranslations(RegistryWrapper.WrapperLookup lookup, TranslationBuilder builder) {
+        // Tags
+        builder.add("tag.item.firesreflamed.willow_logs", "Willow Logs");
 
         // Item Group
         builder.add("itemGroup.firesreflamed.fires_reflamed", "Fire's Reflamed");
@@ -94,6 +96,14 @@ public class ModLanguageProvider extends FabricLanguageProvider {
         builder.add(ModBlocks.STRIPPED_WILLOW_LOG, "Stripped Willow Log");
         builder.add(ModBlocks.STRIPPED_WILLOW_WOOD, "Stripped Willow Wood");
         builder.add(ModBlocks.WILLOW_PLANKS, "Willow Planks");
+        builder.add(ModBlocks.WILLOW_STAIRS, "Willow Stairs");
+        builder.add(ModBlocks.WILLOW_SLAB, "Willow Slab");
+        builder.add(ModBlocks.WILLOW_FENCE, "Willow Fence");
+        builder.add(ModBlocks.WILLOW_FENCE_GATE, "Willow Fence Gate");
+        builder.add(ModBlocks.WILLOW_DOOR, "Willow Door");
+        builder.add(ModBlocks.WILLOW_TRAPDOOR, "Willow Trapdoor");
+        builder.add(ModBlocks.WILLOW_PRESSURE_PLATE, "Willow Pressure Plate");
+        builder.add(ModBlocks.WILLOW_BUTTON, "Willow Button");
         builder.add(ModBlocks.WILLOW_LEAVES, "Willow Leaves");
         builder.add(ModBlocks.WILLOW_SAPLING, "Willow Sapling");
 

@@ -1,11 +1,15 @@
 package io.github.firebrantley.firesreflamed.item;
 
 import io.github.firebrantley.firesreflamed.block.ModBlocks;
+import io.github.firebrantley.firesreflamed.util.ModTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
+import net.minecraft.item.Item;
+import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.ItemTags;
 
+import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
@@ -65,6 +69,11 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
         // --- Misc Tags ---
         // Wood
         getOrCreateTagBuilder(ItemTags.LOGS_THAT_BURN)
+                .add(ModBlocks.WILLOW_LOG.asItem())
+                .add(ModBlocks.WILLOW_WOOD.asItem())
+                .add(ModBlocks.STRIPPED_WILLOW_LOG.asItem())
+                .add(ModBlocks.STRIPPED_WILLOW_WOOD.asItem());
+        getOrCreateTagBuilder(ModTags.Items.WILLOW_LOGS)
                 .add(ModBlocks.WILLOW_LOG.asItem())
                 .add(ModBlocks.WILLOW_WOOD.asItem())
                 .add(ModBlocks.STRIPPED_WILLOW_LOG.asItem())

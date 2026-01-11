@@ -1,6 +1,7 @@
 package io.github.firebrantley.firesreflamed.datagen;
 
 import io.github.firebrantley.firesreflamed.block.ModBlocks;
+import io.github.firebrantley.firesreflamed.util.ModTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.registry.RegistryWrapper;
@@ -46,10 +47,18 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.DEEPSLATE_AQUAMARINE_ORE)
                 .add(ModBlocks.BLOCK_OF_AQUAMARINE);
 
-        getOrCreateTagBuilder(BlockTags.LOGS_THAT_BURN)
+        // --- Wood Tags ---
+        // Logs
+        getOrCreateTagBuilder(ModTags.Blocks.WILLOW_LOGS)
                 .add(ModBlocks.WILLOW_LOG)
                 .add(ModBlocks.WILLOW_WOOD)
                 .add(ModBlocks.STRIPPED_WILLOW_LOG)
                 .add(ModBlocks.STRIPPED_WILLOW_WOOD);
+        getOrCreateTagBuilder(BlockTags.LOGS_THAT_BURN)
+                .addTag(ModTags.Blocks.WILLOW_LOGS);
+        
+        // Fences
+        getOrCreateTagBuilder(BlockTags.WOODEN_FENCES).add(ModBlocks.WILLOW_FENCE);
+        getOrCreateTagBuilder(BlockTags.FENCE_GATES).add(ModBlocks.WILLOW_FENCE_GATE);
     }
 }

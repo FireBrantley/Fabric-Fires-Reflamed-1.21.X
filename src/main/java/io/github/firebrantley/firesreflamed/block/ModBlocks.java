@@ -23,13 +23,15 @@ public class ModBlocks {
                     AbstractBlock.Settings.create().strength(4.5f)
             .requiresTool().sounds(BlockSoundGroup.DEEPSLATE)));
     public static final Block BLOCK_OF_TITANIUM = registerBlock("block_of_titanium",
-            new Block(AbstractBlock.Settings.create().strength(3)
-            .requiresTool().sounds(BlockSoundGroup.NETHERITE)));
+            new Block(AbstractBlock.Settings.create()
+                    .strength(3)
+                    .requiresTool().sounds(BlockSoundGroup.NETHERITE)));
 
     // Steel
     public static final Block BLOCK_OF_STEEL = registerBlock("block_of_steel",
-            new Block(AbstractBlock.Settings.create().strength(5)
-            .requiresTool().sounds(BlockSoundGroup.METAL)));
+            new Block(AbstractBlock.Settings.create()
+                    .strength(5)
+                    .requiresTool().sounds(BlockSoundGroup.METAL)));
 
     // Ruby
     public static final Block RUBY_ORE = registerBlock("ruby_ore",
@@ -41,8 +43,10 @@ public class ModBlocks {
                     AbstractBlock.Settings.create().strength(4.5f)
             .requiresTool().sounds(BlockSoundGroup.DEEPSLATE)));
     public static final Block BLOCK_OF_RUBY = registerBlock("block_of_ruby",
-            new Block(AbstractBlock.Settings.create().strength(4)
-            .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)));
+            new Block(AbstractBlock.Settings.create()
+                    .strength(4)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.AMETHYST_BLOCK)));
 
     // Aquamarine
     public static final Block AQUAMARINE_ORE = registerBlock("aquamarine_ore",
@@ -54,26 +58,81 @@ public class ModBlocks {
                     AbstractBlock.Settings.create().strength(4.5f)
             .requiresTool().sounds(BlockSoundGroup.DEEPSLATE)));
     public static final Block BLOCK_OF_AQUAMARINE = registerBlock("block_of_aquamarine",
-            new Block(AbstractBlock.Settings.create().strength(4)
-            .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)));
+            new Block(AbstractBlock.Settings.create()
+                    .strength(4)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.AMETHYST_BLOCK)));
     
     // Willow
     public static final Block WILLOW_LOG = registerBlock("willow_log",
-            new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_LOG)));
+            new PillarBlock(
+                    AbstractBlock.Settings.copy(Blocks.OAK_LOG)));
     public static final Block WILLOW_WOOD = registerBlock("willow_wood",
-            new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_WOOD)));
+            new PillarBlock(
+                    AbstractBlock.Settings.copy(Blocks.OAK_WOOD)));
     public static final Block STRIPPED_WILLOW_LOG = registerBlock("stripped_willow_log",
-            new PillarBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_LOG)));
+            new PillarBlock(
+                    AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_LOG)));
     public static final Block STRIPPED_WILLOW_WOOD = registerBlock("stripped_willow_wood",
-            new PillarBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_WOOD)));
+            new PillarBlock(
+                    AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_WOOD)));
 
     public static final Block WILLOW_PLANKS = registerBlock("willow_planks",
-            new Block(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS)));
-    public static final Block WILLOW_LEAVES = registerBlock("willow_leaves",
-            new LeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES)));
+            new Block(
+                    AbstractBlock.Settings.copy(Blocks.OAK_PLANKS)));
 
+    public static final Block WILLOW_STAIRS = registerBlock("willow_stairs",
+            new StairsBlock(ModBlocks.WILLOW_PLANKS.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .strength(2f)));
+    public static final Block WILLOW_SLAB = registerBlock("willow_slab",
+            new SlabBlock(
+                    AbstractBlock.Settings.create().
+                            strength(2f)));
+
+    public static final Block WILLOW_FENCE = registerBlock("willow_fence",
+            new FenceBlock(
+                    AbstractBlock.Settings.create()
+                            .strength(2f)));
+    public static final Block WILLOW_FENCE_GATE = registerBlock("willow_fence_gate",
+            new FenceGateBlock(
+                    WoodType.OAK,
+                    AbstractBlock.Settings.create()
+                            .strength(2f)));
+
+    public static final Block WILLOW_DOOR = registerBlock("willow_door",
+            new DoorBlock(
+                    BlockSetType.OAK,
+                    AbstractBlock.Settings.create()
+                            .strength(2f)
+                            .nonOpaque()));
+    public static final Block WILLOW_TRAPDOOR = registerBlock("willow_trapdoor",
+            new TrapdoorBlock(
+                    BlockSetType.OAK,
+                    AbstractBlock.Settings.create()
+                            .strength(2f)
+                            .nonOpaque()));
+
+    public static final Block WILLOW_PRESSURE_PLATE = registerBlock("willow_pressure_plate",
+            new PressurePlateBlock(
+                    BlockSetType.OAK,
+                    AbstractBlock.Settings.create()
+                            .strength(2f)));
+    public static final Block WILLOW_BUTTON = registerBlock("willow_button",
+            new ButtonBlock(
+                    BlockSetType.OAK,
+                    30,
+                    AbstractBlock.Settings.create()
+                            .strength(2f)
+                            .noCollision()));
+
+    public static final Block WILLOW_LEAVES = registerBlock("willow_leaves",
+            new LeavesBlock(
+                    AbstractBlock.Settings.copy(Blocks.OAK_LEAVES)));
     public static final Block WILLOW_SAPLING = registerBlock("willow_sapling",
-            new SaplingBlock(ModSaplingGenerators.WILLOW, AbstractBlock.Settings.copy(Blocks.OAK_SAPLING)));
+            new SaplingBlock(
+                    ModSaplingGenerators.WILLOW,
+                    AbstractBlock.Settings.copy(Blocks.OAK_SAPLING)));
     
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);

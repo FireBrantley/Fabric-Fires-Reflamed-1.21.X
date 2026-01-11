@@ -83,6 +83,11 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
+        // Pools
+        BlockStateModelGenerator.BlockTexturePool willowPool =
+                blockStateModelGenerator
+                        .registerCubeAllModelTexturePool(ModBlocks.WILLOW_PLANKS);
+
         // Titanium Blocks
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TITANIUM_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DEEPSLATE_TITANIUM_ORE);
@@ -109,7 +114,18 @@ public class ModModelProvider extends FabricModelProvider {
                 .log(ModBlocks.STRIPPED_WILLOW_LOG)
                 .wood(ModBlocks.STRIPPED_WILLOW_WOOD);
 
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.WILLOW_PLANKS);
+        willowPool.stairs(ModBlocks.WILLOW_STAIRS);
+        willowPool.slab(ModBlocks.WILLOW_SLAB);
+
+        willowPool.fence(ModBlocks.WILLOW_FENCE);
+        willowPool.fenceGate(ModBlocks.WILLOW_FENCE_GATE);
+
+        blockStateModelGenerator.registerDoor(ModBlocks.WILLOW_DOOR);
+        blockStateModelGenerator.registerOrientableTrapdoor(ModBlocks.WILLOW_TRAPDOOR);
+
+        willowPool.pressurePlate(ModBlocks.WILLOW_PRESSURE_PLATE);
+        willowPool.button(ModBlocks.WILLOW_BUTTON);
+
         blockStateModelGenerator.registerSingleton(ModBlocks.WILLOW_LEAVES,
                 TexturedModel.LEAVES);
         blockStateModelGenerator.registerTintableCross(ModBlocks.WILLOW_SAPLING,
