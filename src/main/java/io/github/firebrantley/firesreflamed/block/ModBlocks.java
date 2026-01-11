@@ -1,9 +1,8 @@
 package io.github.firebrantley.firesreflamed.block;
 
 import io.github.firebrantley.firesreflamed.FiresReflamed;
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.ExperienceDroppingBlock;
+import io.github.firebrantley.firesreflamed.world.tree.ModSaplingGenerators;
+import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
@@ -37,6 +36,10 @@ public class ModBlocks {
             new ExperienceDroppingBlock(UniformIntProvider.create(3,7),
                     AbstractBlock.Settings.create().strength(4f)
             .requiresTool().sounds(BlockSoundGroup.STONE)));
+    public static final Block DEEPSLATE_RUBY_ORE = registerBlock("deepslate_ruby_ore",
+            new ExperienceDroppingBlock(UniformIntProvider.create(3,7),
+                    AbstractBlock.Settings.create().strength(4.5f)
+            .requiresTool().sounds(BlockSoundGroup.DEEPSLATE)));
     public static final Block BLOCK_OF_RUBY = registerBlock("block_of_ruby",
             new Block(AbstractBlock.Settings.create().strength(4)
             .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)));
@@ -46,17 +49,40 @@ public class ModBlocks {
             new ExperienceDroppingBlock(UniformIntProvider.create(3,7),
                     AbstractBlock.Settings.create().strength(4f)
             .requiresTool().sounds(BlockSoundGroup.STONE)));
+    public static final Block DEEPSLATE_AQUAMARINE_ORE = registerBlock("deepslate_aquamarine_ore",
+            new ExperienceDroppingBlock(UniformIntProvider.create(3,7),
+                    AbstractBlock.Settings.create().strength(4.5f)
+            .requiresTool().sounds(BlockSoundGroup.DEEPSLATE)));
     public static final Block BLOCK_OF_AQUAMARINE = registerBlock("block_of_aquamarine",
             new Block(AbstractBlock.Settings.create().strength(4)
             .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)));
+    
+    // Willow
+    public static final Block WILLOW_LOG = registerBlock("willow_log",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_LOG)));
+    public static final Block WILLOW_WOOD = registerBlock("willow_wood",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_WOOD)));
+    public static final Block STRIPPED_WILLOW_LOG = registerBlock("stripped_willow_log",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_LOG)));
+    public static final Block STRIPPED_WILLOW_WOOD = registerBlock("stripped_willow_wood",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_WOOD)));
 
+    public static final Block WILLOW_PLANKS = registerBlock("willow_planks",
+            new Block(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS)));
+    public static final Block WILLOW_LEAVES = registerBlock("willow_leaves",
+            new LeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES)));
+
+    public static final Block WILLOW_SAPLING = registerBlock("willow_sapling",
+            new SaplingBlock(ModSaplingGenerators.WILLOW, AbstractBlock.Settings.copy(Blocks.OAK_SAPLING)));
+    
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
         return Registry.register(Registries.BLOCK, Identifier.of(FiresReflamed.MOD_ID, name), block);
     }
 
     public static void registerBlockItem(String name, Block block) {
-        Registry.register(Registries.ITEM, Identifier.of(FiresReflamed.MOD_ID, name), new BlockItem(block, new Item.Settings()));
+        Registry.register(Registries.ITEM, Identifier.of(FiresReflamed.MOD_ID, name),
+                new BlockItem(block, new Item.Settings()));
     }
 
     public static void registerModBlocks() {

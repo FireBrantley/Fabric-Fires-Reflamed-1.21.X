@@ -9,7 +9,8 @@ import net.minecraft.registry.tag.BlockTags;
 import java.util.concurrent.CompletableFuture;
 
 public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
-    public ModBlockTagProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
+    public ModBlockTagProvider(FabricDataOutput output,
+                               CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
         super(output, registriesFuture);
     }
 
@@ -22,8 +23,10 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.BLOCK_OF_TITANIUM)
                 .add(ModBlocks.BLOCK_OF_STEEL)
                 .add(ModBlocks.RUBY_ORE)
+                .add(ModBlocks.DEEPSLATE_RUBY_ORE)
                 .add(ModBlocks.BLOCK_OF_RUBY)
                 .add(ModBlocks.AQUAMARINE_ORE)
+                .add(ModBlocks.DEEPSLATE_AQUAMARINE_ORE)
                 .add(ModBlocks.BLOCK_OF_AQUAMARINE);
 
         // --- Needs Tool Tags ---
@@ -31,6 +34,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.BLOCK_OF_STEEL)
                 .add(ModBlocks.RUBY_ORE)
+                .add(ModBlocks.DEEPSLATE_RUBY_ORE)
                 .add(ModBlocks.BLOCK_OF_RUBY);
 
         // Needs Diamond Tool
@@ -39,7 +43,13 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.DEEPSLATE_TITANIUM_ORE)
                 .add(ModBlocks.BLOCK_OF_TITANIUM)
                 .add(ModBlocks.AQUAMARINE_ORE)
+                .add(ModBlocks.DEEPSLATE_AQUAMARINE_ORE)
                 .add(ModBlocks.BLOCK_OF_AQUAMARINE);
 
+        getOrCreateTagBuilder(BlockTags.LOGS_THAT_BURN)
+                .add(ModBlocks.WILLOW_LOG)
+                .add(ModBlocks.WILLOW_WOOD)
+                .add(ModBlocks.STRIPPED_WILLOW_LOG)
+                .add(ModBlocks.STRIPPED_WILLOW_WOOD);
     }
 }

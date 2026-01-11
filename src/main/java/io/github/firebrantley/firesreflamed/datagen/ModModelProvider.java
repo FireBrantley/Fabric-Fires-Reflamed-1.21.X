@@ -7,6 +7,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Models;
+import net.minecraft.data.client.TexturedModel;
 
 public class ModModelProvider extends FabricModelProvider {
 
@@ -92,10 +93,27 @@ public class ModModelProvider extends FabricModelProvider {
 
         // Ruby Blocks
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RUBY_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DEEPSLATE_RUBY_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.BLOCK_OF_RUBY);
 
         // Aquamarine Blocks
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.AQUAMARINE_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DEEPSLATE_AQUAMARINE_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.BLOCK_OF_AQUAMARINE);
+
+        // Willow Blocks
+        blockStateModelGenerator.registerLog(ModBlocks.WILLOW_LOG)
+                .log(ModBlocks.WILLOW_LOG)
+                .wood(ModBlocks.WILLOW_WOOD);
+        blockStateModelGenerator.registerLog(ModBlocks.STRIPPED_WILLOW_LOG)
+                .log(ModBlocks.STRIPPED_WILLOW_LOG)
+                .wood(ModBlocks.STRIPPED_WILLOW_WOOD);
+
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.WILLOW_PLANKS);
+        blockStateModelGenerator.registerSingleton(ModBlocks.WILLOW_LEAVES,
+                TexturedModel.LEAVES);
+        blockStateModelGenerator.registerTintableCross(ModBlocks.WILLOW_SAPLING,
+                BlockStateModelGenerator
+                        .TintType.NOT_TINTED);
     }
 }

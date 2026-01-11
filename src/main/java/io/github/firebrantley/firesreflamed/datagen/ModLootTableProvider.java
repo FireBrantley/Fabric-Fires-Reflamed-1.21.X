@@ -42,13 +42,32 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addMultiDropOre(ModBlocks.RUBY_ORE,
                 ModItems.RUBY_CRYSTALS,
                 ModItems.RUBY_CRYSTALS);
+        addMultiDropOre(ModBlocks.DEEPSLATE_RUBY_ORE,
+                ModItems.RUBY_CRYSTALS,
+                ModItems.RUBY_CRYSTALS);
         addDrop(ModBlocks.BLOCK_OF_RUBY);
 
         // Aquamarine Blocks
         addMultiDropOre(ModBlocks.AQUAMARINE_ORE,
                 ModItems.AQUAMARINE_SHARD,
                 ModItems.AQUAMARINE_SHARD);
+        addMultiDropOre(ModBlocks.DEEPSLATE_AQUAMARINE_ORE,
+                ModItems.AQUAMARINE_SHARD,
+                ModItems.AQUAMARINE_SHARD);
         addDrop(ModBlocks.BLOCK_OF_AQUAMARINE);
+        
+        // Willow Blocks
+        addDrop(ModBlocks.WILLOW_LOG);
+        addDrop(ModBlocks.WILLOW_WOOD);
+        addDrop(ModBlocks.STRIPPED_WILLOW_LOG);
+        addDrop(ModBlocks.STRIPPED_WILLOW_WOOD);
+        addDrop(ModBlocks.WILLOW_PLANKS);
+        addDrop(ModBlocks.WILLOW_SAPLING);
+
+        addDrop(ModBlocks.WILLOW_LEAVES, leavesDrops(
+                ModBlocks.WILLOW_LEAVES,
+                ModBlocks.WILLOW_SAPLING,
+                    0.0625f));
     }
 
     // --- Helper Methods ---

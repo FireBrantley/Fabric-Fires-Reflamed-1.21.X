@@ -66,6 +66,7 @@ public class ModLanguageProvider extends FabricLanguageProvider {
         builder.add(ModItems.RUBY_CRYSTALS, "Ruby Crystals");
         builder.add(ModBlocks.BLOCK_OF_RUBY, "Block of Ruby");
         builder.add(ModBlocks.RUBY_ORE, "Ruby Ore");
+        builder.add(ModBlocks.DEEPSLATE_RUBY_ORE, "Deepslate Ruby Ore");
 
         // Ruby Tool Set
         builder.add(ModItems.RUBY_SHOVEL, "Ruby Shovel");
@@ -79,12 +80,22 @@ public class ModLanguageProvider extends FabricLanguageProvider {
         builder.add(ModItems.AQUAMARINE_SHARD, "Aquamarine Shard");
         builder.add(ModBlocks.BLOCK_OF_AQUAMARINE, "Block of Aquamarine");
         builder.add(ModBlocks.AQUAMARINE_ORE, "Aquamarine Ore");
+        builder.add(ModBlocks.DEEPSLATE_AQUAMARINE_ORE, "Deepslate Aquamarine Ore");
 
         // Aquamarine Armor Set
         builder.add(ModItems.AQUAMARINE_HELMET, "Aquamarine Helmet");
         builder.add(ModItems.AQUAMARINE_CHESTPLATE, "Aquamarine Chestplate");
         builder.add(ModItems.AQUAMARINE_LEGGINGS, "Aquamarine Leggings");
         builder.add(ModItems.AQUAMARINE_BOOTS, "Aquamarine Boots");
+
+        // Willow Blocks
+        builder.add(ModBlocks.WILLOW_LOG, "Willow Log");
+        builder.add(ModBlocks.WILLOW_WOOD, "Willow Wood");
+        builder.add(ModBlocks.STRIPPED_WILLOW_LOG, "Stripped Willow Log");
+        builder.add(ModBlocks.STRIPPED_WILLOW_WOOD, "Stripped Willow Wood");
+        builder.add(ModBlocks.WILLOW_PLANKS, "Willow Planks");
+        builder.add(ModBlocks.WILLOW_LEAVES, "Willow Leaves");
+        builder.add(ModBlocks.WILLOW_SAPLING, "Willow Sapling");
 
         // Misc Items
         builder.add(ModItems.DRILL_BIT, "Drill Bit");

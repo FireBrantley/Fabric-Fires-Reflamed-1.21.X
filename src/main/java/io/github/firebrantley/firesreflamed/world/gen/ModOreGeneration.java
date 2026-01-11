@@ -7,13 +7,22 @@ import net.minecraft.world.gen.GenerationStep;
 
 public class ModOreGeneration {
     public static void generateOres() {
-        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
-                GenerationStep.Feature.UNDERGROUND_ORES,
-                ModPlacedFeatures.TITANIUM_ORE_PLACED_KEY);
-
         /* Example for individual Biomes
          * BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FOREST, BiomeKeys.PLAINS),
          * GenerationStep.Feature.UNDERGROUND_ORES,
          *         ModPlacedFeatures.TITANIUM_ORE_PLACED_KEY); */
+
+        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
+                GenerationStep.Feature.UNDERGROUND_ORES,
+                ModPlacedFeatures.TITANIUM_ORE_PLACED_KEY);
+
+        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
+                GenerationStep.Feature.UNDERGROUND_ORES,
+                ModPlacedFeatures.RUBY_ORE_PLACED_KEY);
+
+        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
+                GenerationStep.Feature.UNDERGROUND_ORES,
+                ModPlacedFeatures.AQUAMARINE_ORE_PLACED_KEY);
+
     }
 }

@@ -61,5 +61,16 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.AQUAMARINE_CHESTPLATE)
                 .add(ModItems.AQUAMARINE_LEGGINGS)
                 .add(ModItems.AQUAMARINE_BOOTS);
+        
+        // --- Misc Tags ---
+        // Wood
+        getOrCreateTagBuilder(ItemTags.LOGS_THAT_BURN)
+                .add(ModBlocks.WILLOW_LOG.asItem())
+                .add(ModBlocks.WILLOW_WOOD.asItem())
+                .add(ModBlocks.STRIPPED_WILLOW_LOG.asItem())
+                .add(ModBlocks.STRIPPED_WILLOW_WOOD.asItem());
+
+        getOrCreateTagBuilder(ItemTags.PLANKS)
+                .add(ModBlocks.WILLOW_PLANKS.asItem());
     }
 }

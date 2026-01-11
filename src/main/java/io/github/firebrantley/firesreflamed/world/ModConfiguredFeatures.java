@@ -10,16 +10,29 @@ import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.structure.rule.RuleTest;
 import net.minecraft.structure.rule.TagMatchRuleTest;
 import net.minecraft.util.Identifier;
-import net.minecraft.world.gen.feature.ConfiguredFeature;
-import net.minecraft.world.gen.feature.Feature;
-import net.minecraft.world.gen.feature.FeatureConfig;
-import net.minecraft.world.gen.feature.OreFeatureConfig;
+import net.minecraft.util.math.intprovider.ConstantIntProvider;
+import net.minecraft.world.gen.feature.*;
+import net.minecraft.world.gen.feature.size.ThreeLayersFeatureSize;
+import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
+import net.minecraft.world.gen.foliage.BlobFoliagePlacer;
+import net.minecraft.world.gen.foliage.DarkOakFoliagePlacer;
+import net.minecraft.world.gen.stateprovider.BlockStateProvider;
+import net.minecraft.world.gen.trunk.DarkOakTrunkPlacer;
+import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
 
 import java.util.List;
+import java.util.OptionalInt;
 
 public class ModConfiguredFeatures {
-        public static final RegistryKey<ConfiguredFeature<?, ?>> TITANIUM_ORE_KEY =
-                registerKey("titanium_ore");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> TITANIUM_ORE_KEY =
+            registerKey("titanium_ore");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> RUBY_ORE_KEY =
+            registerKey("ruby_ore");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> AQUAMARINE_ORE_KEY =
+            registerKey("aquamarine_ore");
+
+    public static final RegistryKey<ConfiguredFeature<?, ?>> WILLOW_KEY =
+            registerKey("willow");
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
         RuleTest stoneReplaceables = new TagMatchRuleTest(BlockTags.STONE_ORE_REPLACEABLES);
@@ -30,10 +43,49 @@ public class ModConfiguredFeatures {
                                 ModBlocks.TITANIUM_ORE.getDefaultState()),
                         OreFeatureConfig.createTarget(deepslateReplaceables,
                                 ModBlocks.DEEPSLATE_TITANIUM_ORE.getDefaultState()));
+        List<OreFeatureConfig.Target> overworldRubyOres =
+                List.of(OreFeatureConfig.createTarget(stoneReplaceables,
+                                ModBlocks.RUBY_ORE.getDefaultState()),
+                        OreFeatureConfig.createTarget(deepslateReplaceables,
+                                ModBlocks.DEEPSLATE_RUBY_ORE.getDefaultState()));
+        List<OreFeatureConfig.Target> overworldAquamarineOres =
+                List.of(OreFeatureConfig.createTarget(stoneReplaceables,
+                                ModBlocks.AQUAMARINE_ORE.getDefaultState()),
+                        OreFeatureConfig.createTarget(deepslateReplaceables,
+                                ModBlocks.DEEPSLATE_AQUAMARINE_ORE.getDefaultState()));
+
+        // Ores
         register(context, TITANIUM_ORE_KEY,
                 Feature.ORE,
                 new OreFeatureConfig(overworldTitaniumOres,
-                        9));
+                        7));
+        register(context, RUBY_ORE_KEY,
+                Feature.ORE,
+                new OreFeatureConfig(overworldRubyOres,
+                        8));
+        register(context, AQUAMARINE_ORE_KEY,
+                Feature.ORE,
+                new OreFeatureConfig(overworldAquamarineOres,
+                        7));
+
+        // Willow Tree
+        register(context, WILLOW_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+                        BlockStateProvider.of(ModBlocks.WILLOW_LOG),
+                        new DarkOakTrunkPlacer(4, 2, 1),
+
+                        BlockStateProvider.of(ModBlocks.WILLOW_LEAVES),
+                        new DarkOakFoliagePlacer(
+                                ConstantIntProvider.create(0),
+                                ConstantIntProvider.create(0)),
+
+                        new ThreeLayersFeatureSize(
+                                1,
+                                1,
+                                0,
+                                1,
+                                2,
+                                OptionalInt.empty()))
+                .ignoreVines().build());
     }
 
     public static RegistryKey<ConfiguredFeature<?, ?>> registerKey(String name) {

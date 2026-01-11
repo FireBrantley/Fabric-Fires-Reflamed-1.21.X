@@ -17,7 +17,12 @@ import net.minecraft.world.gen.placementmodifier.PlacementModifier;
 import java.util.List;
 
 public class ModPlacedFeatures {
-    public static final RegistryKey<PlacedFeature> TITANIUM_ORE_PLACED_KEY = registerKey("titanium_ore_placed");
+    public static final RegistryKey<PlacedFeature> TITANIUM_ORE_PLACED_KEY =
+            registerKey("titanium_ore_placed");
+    public static final RegistryKey<PlacedFeature> RUBY_ORE_PLACED_KEY =
+            registerKey("ruby_ore_placed");
+    public static final RegistryKey<PlacedFeature> AQUAMARINE_ORE_PLACED_KEY =
+            registerKey("aquamarine_ore_placed");
 
     public static void bootstrap(Registerable<PlacedFeature> context) {
         var configuredFeatures = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
@@ -27,7 +32,19 @@ public class ModPlacedFeatures {
                 ModOrePlacement.modifiersWithCount(14,
                         HeightRangePlacementModifier.uniform(
                                 YOffset.fixed(-80),
-                                YOffset.fixed(24))));
+                                YOffset.fixed(32))));
+        register(context, RUBY_ORE_PLACED_KEY,
+                configuredFeatures.getOrThrow(ModConfiguredFeatures.RUBY_ORE_KEY),
+                ModOrePlacement.modifiersWithCount(14,
+                        HeightRangePlacementModifier.uniform(
+                                YOffset.fixed(-16),
+                                YOffset.fixed(64))));
+        register(context, AQUAMARINE_ORE_PLACED_KEY,
+                configuredFeatures.getOrThrow(ModConfiguredFeatures.AQUAMARINE_ORE_KEY),
+                ModOrePlacement.modifiersWithCount(14,
+                        HeightRangePlacementModifier.uniform(
+                                YOffset.fixed(-16),
+                                YOffset.fixed(48))));
     }
 
     public static RegistryKey<PlacedFeature> registerKey(String name) {

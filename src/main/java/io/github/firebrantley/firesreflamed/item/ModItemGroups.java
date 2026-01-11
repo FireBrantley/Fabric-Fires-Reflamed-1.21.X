@@ -60,6 +60,7 @@ public class ModItemGroups {
                         // Ruby Items & Blocks
                         entries.add(ModBlocks.BLOCK_OF_RUBY);
                         entries.add(ModBlocks.RUBY_ORE);
+                        entries.add(ModBlocks.DEEPSLATE_RUBY_ORE);
                         entries.add(ModItems.RUBY_CRYSTALS);
                         entries.add(ModItems.RUBY_GEM);
 
@@ -74,6 +75,7 @@ public class ModItemGroups {
                         // Aquamarine Items & Blocks
                         entries.add(ModBlocks.BLOCK_OF_AQUAMARINE);
                         entries.add(ModBlocks.AQUAMARINE_ORE);
+                        entries.add(ModBlocks.DEEPSLATE_AQUAMARINE_ORE);
                         entries.add(ModItems.AQUAMARINE_SHARD);
 
                         // Aquamarine Armor Set
@@ -81,6 +83,15 @@ public class ModItemGroups {
                         entries.add(ModItems.AQUAMARINE_CHESTPLATE);
                         entries.add(ModItems.AQUAMARINE_LEGGINGS);
                         entries.add(ModItems.AQUAMARINE_BOOTS);
+
+                        // Willow Items & Blocks
+                        entries.add(ModBlocks.WILLOW_LOG);
+                        entries.add(ModBlocks.WILLOW_WOOD);
+                        entries.add(ModBlocks.STRIPPED_WILLOW_LOG);
+                        entries.add(ModBlocks.STRIPPED_WILLOW_WOOD);
+                        entries.add(ModBlocks.WILLOW_PLANKS);
+                        entries.add(ModBlocks.WILLOW_LEAVES);
+                        entries.add(ModBlocks.WILLOW_SAPLING);
 
                         // Misc Items
                         entries.add(ModItems.DRILL_BIT);
