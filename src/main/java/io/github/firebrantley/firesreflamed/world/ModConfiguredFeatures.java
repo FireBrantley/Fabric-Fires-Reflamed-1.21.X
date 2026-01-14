@@ -2,7 +2,6 @@ package io.github.firebrantley.firesreflamed.world;
 
 import io.github.firebrantley.firesreflamed.FiresReflamed;
 import io.github.firebrantley.firesreflamed.block.ModBlocks;
-import net.minecraft.block.Blocks;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
@@ -13,15 +12,14 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.ConstantIntProvider;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.feature.size.ThreeLayersFeatureSize;
-import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
-import net.minecraft.world.gen.foliage.BlobFoliagePlacer;
 import net.minecraft.world.gen.foliage.DarkOakFoliagePlacer;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
 import net.minecraft.world.gen.trunk.DarkOakTrunkPlacer;
-import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
 
 import java.util.List;
 import java.util.OptionalInt;
+
+import static io.github.firebrantley.firesreflamed.world.ModFeatures.STRUCTURE_TREE;
 
 public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> TITANIUM_ORE_KEY =
@@ -69,23 +67,7 @@ public class ModConfiguredFeatures {
                         7));
 
         // Willow Tree
-        register(context, WILLOW_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
-                        BlockStateProvider.of(ModBlocks.WILLOW_LOG),
-                        new DarkOakTrunkPlacer(4, 2, 1),
-
-                        BlockStateProvider.of(ModBlocks.WILLOW_LEAVES),
-                        new DarkOakFoliagePlacer(
-                                ConstantIntProvider.create(0),
-                                ConstantIntProvider.create(0)),
-
-                        new ThreeLayersFeatureSize(
-                                1,
-                                1,
-                                0,
-                                1,
-                                2,
-                                OptionalInt.empty()))
-                .ignoreVines().build());
+        register(context, WILLOW_KEY, STRUCTURE_TREE, new DefaultFeatureConfig());
     }
 
     public static RegistryKey<ConfiguredFeature<?, ?>> registerKey(String name) {

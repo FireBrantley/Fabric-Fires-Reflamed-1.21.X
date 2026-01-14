@@ -104,6 +104,7 @@ public class ModLanguageProvider extends FabricLanguageProvider {
         builder.add(ModBlocks.WILLOW_TRAPDOOR, "Willow Trapdoor");
         builder.add(ModBlocks.WILLOW_PRESSURE_PLATE, "Willow Pressure Plate");
         builder.add(ModBlocks.WILLOW_BUTTON, "Willow Button");
+        builder.add(ModBlocks.HANGING_WILLOW_LEAVES, "Hanging Willow Leaves");
         builder.add(ModBlocks.WILLOW_LEAVES, "Willow Leaves");
         builder.add(ModBlocks.WILLOW_SAPLING, "Willow Sapling");
 

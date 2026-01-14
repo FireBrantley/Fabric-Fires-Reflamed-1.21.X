@@ -4,6 +4,7 @@ import io.github.firebrantley.firesreflamed.block.ModBlocks;
 import io.github.firebrantley.firesreflamed.item.ModItemGroups;
 import io.github.firebrantley.firesreflamed.item.ModItems;
 import io.github.firebrantley.firesreflamed.util.HammerUsageEvent;
+import io.github.firebrantley.firesreflamed.world.ModFeatures;
 import io.github.firebrantley.firesreflamed.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 
@@ -24,6 +25,8 @@ public class FiresReflamed implements ModInitializer {
         ModItemGroups.registerItemGroups();
         ModBlocks.registerModBlocks();
         ModItems.registerModItems();
+
+        ModFeatures.registerFeatures();
 
         PlayerBlockBreakEvents.BEFORE.register(new HammerUsageEvent());
 

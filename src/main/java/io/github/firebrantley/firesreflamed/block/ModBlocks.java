@@ -1,6 +1,7 @@
 package io.github.firebrantley.firesreflamed.block;
 
 import io.github.firebrantley.firesreflamed.FiresReflamed;
+import io.github.firebrantley.firesreflamed.block.custom.HangingMossBlock;
 import io.github.firebrantley.firesreflamed.world.tree.ModSaplingGenerators;
 import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
@@ -125,7 +126,16 @@ public class ModBlocks {
                     AbstractBlock.Settings.create()
                             .strength(2f)
                             .noCollision()));
-
+    public static final Block HANGING_WILLOW_LEAVES = registerBlock(
+            "hanging_willow_leaves",
+            new HangingMossBlock(
+                    AbstractBlock.Settings
+                            .copy(Blocks.VINE)
+                            .noCollision()
+                            .breakInstantly()
+                            .sounds(BlockSoundGroup.MOSS_CARPET)
+            )
+    );
     public static final Block WILLOW_LEAVES = registerBlock("willow_leaves",
             new LeavesBlock(
                     AbstractBlock.Settings.copy(Blocks.OAK_LEAVES)));

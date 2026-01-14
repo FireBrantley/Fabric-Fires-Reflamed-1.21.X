@@ -10,6 +10,7 @@ import net.minecraft.util.Identifier;
 public class ModTags {
     public static class Blocks {
         public static final TagKey<Block> WILLOW_LOGS = createTag("willow_logs");
+        public static final TagKey<Block> MOSS_PLACEABLE = createTag("moss_placeable");
 
         private static TagKey<Block> createTag(String name) {
             return TagKey.of(

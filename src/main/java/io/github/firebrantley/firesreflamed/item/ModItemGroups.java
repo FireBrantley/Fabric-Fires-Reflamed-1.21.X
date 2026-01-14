@@ -103,6 +103,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.WILLOW_PRESSURE_PLATE);
                         entries.add(ModBlocks.WILLOW_BUTTON);
 
+                        entries.add(ModBlocks.HANGING_WILLOW_LEAVES);
                         entries.add(ModBlocks.WILLOW_LEAVES);
                         entries.add(ModBlocks.WILLOW_SAPLING);
 

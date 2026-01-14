@@ -1,13 +1,13 @@
 package io.github.firebrantley.firesreflamed.datagen;
 
+import io.github.firebrantley.firesreflamed.FiresReflamed;
+import io.github.firebrantley.firesreflamed.block.custom.HangingMossBlock;
 import io.github.firebrantley.firesreflamed.item.ModItems;
 import io.github.firebrantley.firesreflamed.block.ModBlocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
-import net.minecraft.data.client.BlockStateModelGenerator;
-import net.minecraft.data.client.ItemModelGenerator;
-import net.minecraft.data.client.Models;
-import net.minecraft.data.client.TexturedModel;
+import net.minecraft.data.client.*;
+import net.minecraft.util.Identifier;
 
 public class ModModelProvider extends FabricModelProvider {
 
@@ -79,6 +79,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.DRILL_BIT, Models.GENERATED);
         itemModelGenerator.register(ModItems.DRILL, Models.HANDHELD);
         itemModelGenerator.register(ModItems.WOODEN_BAT, Models.HANDHELD);
+        itemModelGenerator.register(ModBlocks.HANGING_WILLOW_LEAVES.asItem(), Models.GENERATED);
     }
 
     @Override
@@ -126,6 +127,30 @@ public class ModModelProvider extends FabricModelProvider {
         willowPool.pressurePlate(ModBlocks.WILLOW_PRESSURE_PLATE);
         willowPool.button(ModBlocks.WILLOW_BUTTON);
 
+        blockStateModelGenerator.blockStateCollector.accept(
+                VariantsBlockStateSupplier.create(ModBlocks.HANGING_WILLOW_LEAVES)
+                        .coordinate(
+                                BlockStateModelGenerator.createBooleanModelMap(
+                                        HangingMossBlock.TIP,
+
+                                        // FALSE -> TIP MODEL (Creates hanging_willow_leaves_tip.json)
+                                        Models.CROSS.upload(
+                                                ModBlocks.HANGING_WILLOW_LEAVES,
+                                                "_tip",
+                                                TextureMap.cross(Identifier.of(FiresReflamed.MOD_ID, "block/hanging_willow_leaves_tip")),
+                                                blockStateModelGenerator.modelCollector
+                                        ),
+
+                                        // TRUE -> BASE MODEL (Creates hanging_willow_leaves.json)
+                                        // We removed the "_body" suffix here
+                                        Models.CROSS.upload(
+                                                ModBlocks.HANGING_WILLOW_LEAVES,
+                                                TextureMap.cross(Identifier.of(FiresReflamed.MOD_ID, "block/hanging_willow_leaves")),
+                                                blockStateModelGenerator.modelCollector
+                                        )
+                                )
+                        )
+        );
         blockStateModelGenerator.registerSingleton(ModBlocks.WILLOW_LEAVES,
                 TexturedModel.LEAVES);
         blockStateModelGenerator.registerTintableCross(ModBlocks.WILLOW_SAPLING,

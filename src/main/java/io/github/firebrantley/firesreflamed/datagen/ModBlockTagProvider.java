@@ -6,6 +6,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.registry.tag.ItemTags;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -60,5 +61,10 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         // Fences
         getOrCreateTagBuilder(BlockTags.WOODEN_FENCES).add(ModBlocks.WILLOW_FENCE);
         getOrCreateTagBuilder(BlockTags.FENCE_GATES).add(ModBlocks.WILLOW_FENCE_GATE);
+
+        // --- Misc Tags ---
+        getOrCreateTagBuilder(ModTags.Blocks.MOSS_PLACEABLE)
+                .add(ModBlocks.WILLOW_LOG)
+                .add(ModBlocks.WILLOW_LEAVES);
     }
 }
