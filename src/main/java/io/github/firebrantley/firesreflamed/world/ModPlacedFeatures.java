@@ -1,16 +1,14 @@
 package io.github.firebrantley.firesreflamed.world;
 
 import io.github.firebrantley.firesreflamed.FiresReflamed;
+import io.github.firebrantley.firesreflamed.block.ModBlocks;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.gen.YOffset;
-import net.minecraft.world.gen.feature.ConfiguredFeature;
-import net.minecraft.world.gen.feature.Feature;
-import net.minecraft.world.gen.feature.FeatureConfig;
-import net.minecraft.world.gen.feature.PlacedFeature;
+import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.placementmodifier.HeightRangePlacementModifier;
 import net.minecraft.world.gen.placementmodifier.PlacementModifier;
 
@@ -23,6 +21,9 @@ public class ModPlacedFeatures {
             registerKey("ruby_ore_placed");
     public static final RegistryKey<PlacedFeature> AQUAMARINE_ORE_PLACED_KEY =
             registerKey("aquamarine_ore_placed");
+
+    public static final RegistryKey<PlacedFeature> WILLOW_PLACED_KEY =
+            registerKey("willow_placed");
 
     public static void bootstrap(Registerable<PlacedFeature> context) {
         var configuredFeatures = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
@@ -45,6 +46,11 @@ public class ModPlacedFeatures {
                         HeightRangePlacementModifier.uniform(
                                 YOffset.fixed(-16),
                                 YOffset.fixed(48))));
+
+        register(context, WILLOW_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.WILLOW_KEY),
+                VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
+                        PlacedFeatures.createCountExtraModifier(0, 0.25f, 1),
+                        ModBlocks.WILLOW_SAPLING));
     }
 
     public static RegistryKey<PlacedFeature> registerKey(String name) {
