@@ -1,6 +1,8 @@
 plugins {
 	id 'net.fabricmc.fabric-loom-remap' version "${loom_version}"
 	id 'maven-publish'
+
+    id("org.moddedmc.wiki.toolkit") version "0.4.1"
 }
 
 version = project.mod_version
@@ -32,7 +34,6 @@ dependencies {
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-	
 }
 
 processResources {
@@ -81,4 +82,14 @@ publishing {
 		// The repositories here will be used for publishing your artifact, not for
 		// retrieving dependencies.
 	}
+}
+
+wiki {
+    docs {
+        // The name of the object (examplemod) should match the registered wiki project ID (if it exists).
+        firesreflamed {
+            // The path to the folder containing the documentation metadata file (sinytra-wiki.json)
+            root = file('docs')
+        }
+    }
 }
