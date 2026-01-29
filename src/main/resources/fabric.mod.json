@@ -16,7 +16,7 @@
     "issues": "https://github.com/FireBrantley/Fabric-Fires-Reflamed-1.21.X/issues"
   },
   "license": "MIT",
-  "icon": "assets/firesreflamed/icon.png",
+  "icon": "assets/firesreflamed/iconV2.png",
   "environment": "*",
   "entrypoints": {
     "main": [
