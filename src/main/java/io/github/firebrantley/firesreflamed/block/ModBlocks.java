@@ -143,7 +143,14 @@ public class ModBlocks {
             new SaplingBlock(
                     ModSaplingGenerators.WILLOW,
                     AbstractBlock.Settings.copy(Blocks.OAK_SAPLING)));
-    
+    public static final Block POTTED_WILLOW_SAPLING = registerBlock(
+            "potted_willow_sapling",
+            new FlowerPotBlock(
+                    ModBlocks.WILLOW_SAPLING,
+                    AbstractBlock.Settings.copy(Blocks.POTTED_OAK_SAPLING)
+            )
+    );
+
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
         return Registry.register(Registries.BLOCK, Identifier.of(FiresReflamed.MOD_ID, name), block);

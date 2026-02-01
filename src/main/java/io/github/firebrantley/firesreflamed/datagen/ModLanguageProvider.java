@@ -107,6 +107,7 @@ public class ModLanguageProvider extends FabricLanguageProvider {
         builder.add(ModBlocks.HANGING_WILLOW_LEAVES, "Hanging Willow Leaves");
         builder.add(ModBlocks.WILLOW_LEAVES, "Willow Leaves");
         builder.add(ModBlocks.WILLOW_SAPLING, "Willow Sapling");
+        builder.add(ModBlocks.POTTED_WILLOW_SAPLING, "Potted Willow Sapling");
 
         // Misc Items
         builder.add(ModItems.DRILL_BIT, "Drill Bit");

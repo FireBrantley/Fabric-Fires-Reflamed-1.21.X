@@ -82,6 +82,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
                 ModBlocks.WILLOW_SAPLING,
                     0.0625f));
         addDrop(ModBlocks.WILLOW_SAPLING);
+        addPottedPlantDrops(ModBlocks.POTTED_WILLOW_SAPLING);
     }
 
     // --- Helper Methods ---

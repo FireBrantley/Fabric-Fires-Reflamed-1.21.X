@@ -156,5 +156,15 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerTintableCross(ModBlocks.WILLOW_SAPLING,
                 BlockStateModelGenerator
                         .TintType.NOT_TINTED);
+        blockStateModelGenerator.blockStateCollector.accept(
+                BlockStateModelGenerator.createSingletonBlockState(
+                        ModBlocks.POTTED_WILLOW_SAPLING,
+                        Models.FLOWER_POT_CROSS.upload(
+                                ModBlocks.POTTED_WILLOW_SAPLING,
+                                TextureMap.plant(ModBlocks.WILLOW_SAPLING),
+                                blockStateModelGenerator.modelCollector
+                        )
+                )
+        );
     }
 }
