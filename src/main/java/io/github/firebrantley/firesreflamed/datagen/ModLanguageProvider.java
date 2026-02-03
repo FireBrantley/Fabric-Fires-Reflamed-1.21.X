@@ -109,6 +109,12 @@ public class ModLanguageProvider extends FabricLanguageProvider {
         builder.add(ModBlocks.WILLOW_SAPLING, "Willow Sapling");
         builder.add(ModBlocks.POTTED_WILLOW_SAPLING, "Potted Willow Sapling");
 
+        // Ice/Snow Blocks
+        builder.add(ModBlocks.ICE_BRICKS, "Ice Bricks");
+        builder.add(ModBlocks.PACKED_ICE_BRICKS, "Packed Ice Bricks");
+        builder.add(ModBlocks.BLUE_ICE_BRICKS, "Blue Ice Bricks");
+        builder.add(ModBlocks.SNOW_BRICKS, "Snow Bricks");
+
         // Misc Items
         builder.add(ModItems.DRILL_BIT, "Drill Bit");
         builder.add(ModItems.DRILL, "Drill");

@@ -151,6 +151,48 @@ public class ModBlocks {
             )
     );
 
+    // Misc.
+    //Ice
+    public static final Block ICE_BRICKS = registerBlock(
+            "ice_bricks",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .strength(0.5f)
+                            .sounds(BlockSoundGroup.GLASS)
+                            .slipperiness(0.98f)
+                            .requiresTool()
+            )
+    );
+    public static final Block PACKED_ICE_BRICKS = registerBlock(
+            "packed_ice_bricks",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .strength(0.5f)
+                            .sounds(BlockSoundGroup.GLASS)
+                            .slipperiness(0.98f)
+                            .requiresTool()
+            )
+    );
+    public static final Block BLUE_ICE_BRICKS = registerBlock(
+            "blue_ice_bricks",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .strength(0.2f)
+                            .sounds(BlockSoundGroup.GLASS)
+                            .slipperiness(0.989f)
+                            .requiresTool()
+            )
+    );
+    public static final Block SNOW_BRICKS = registerBlock(
+            "snow_bricks",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .strength(0.5f)
+                            .sounds(BlockSoundGroup.SNOW)
+                            .requiresTool()
+            )
+    );
+
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
         return Registry.register(Registries.BLOCK, Identifier.of(FiresReflamed.MOD_ID, name), block);

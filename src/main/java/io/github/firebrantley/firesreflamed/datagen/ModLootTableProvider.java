@@ -83,6 +83,12 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
                     0.0625f));
         addDrop(ModBlocks.WILLOW_SAPLING);
         addPottedPlantDrops(ModBlocks.POTTED_WILLOW_SAPLING);
+
+        // Ice/Snow Blocks
+        addDrop(ModBlocks.ICE_BRICKS);
+        addDrop(ModBlocks.PACKED_ICE_BRICKS);
+        addDrop(ModBlocks.BLUE_ICE_BRICKS);
+        addDrop(ModBlocks.SNOW_BRICKS);
     }
 
     // --- Helper Methods ---

@@ -88,6 +88,18 @@ public class ModModelProvider extends FabricModelProvider {
         BlockStateModelGenerator.BlockTexturePool willowPool =
                 blockStateModelGenerator
                         .registerCubeAllModelTexturePool(ModBlocks.WILLOW_PLANKS);
+        BlockStateModelGenerator.BlockTexturePool icePool =
+                blockStateModelGenerator
+                        .registerCubeAllModelTexturePool(ModBlocks.ICE_BRICKS);
+        BlockStateModelGenerator.BlockTexturePool packedicePool =
+                blockStateModelGenerator
+                        .registerCubeAllModelTexturePool(ModBlocks.PACKED_ICE_BRICKS);
+        BlockStateModelGenerator.BlockTexturePool blueicePool =
+                blockStateModelGenerator
+                        .registerCubeAllModelTexturePool(ModBlocks.BLUE_ICE_BRICKS);
+        BlockStateModelGenerator.BlockTexturePool snowPool =
+                blockStateModelGenerator
+                        .registerCubeAllModelTexturePool(ModBlocks.SNOW_BRICKS);
 
         // Titanium Blocks
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TITANIUM_ORE);

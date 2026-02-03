@@ -107,6 +107,12 @@ public class ModItemGroups {
                         entries.add(ModBlocks.WILLOW_LEAVES);
                         entries.add(ModBlocks.WILLOW_SAPLING);
 
+                        // Ice/Snow Blocks
+                        entries.add(ModBlocks.ICE_BRICKS);
+                        entries.add(ModBlocks.PACKED_ICE_BRICKS);
+                        entries.add(ModBlocks.BLUE_ICE_BRICKS);
+                        entries.add(ModBlocks.SNOW_BRICKS);
+
                         // Misc Items
                         entries.add(ModItems.DRILL_BIT);
                         entries.add(ModItems.DRILL);
