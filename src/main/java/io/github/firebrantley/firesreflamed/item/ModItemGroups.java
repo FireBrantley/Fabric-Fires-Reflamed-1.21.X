@@ -58,7 +58,7 @@ public class ModItemGroups {
                         entries.add(ModItems.STEEL_BOOTS);
 
                         // Ruby Items & Blocks
-                        entries.add(ModBlocks.BLOCK_OF_RUBY);
+                        entries.add(ModBlocks.RUBY_BRICKS);
                         entries.add(ModBlocks.RUBY_ORE);
                         entries.add(ModBlocks.DEEPSLATE_RUBY_ORE);
                         entries.add(ModItems.RUBY_CRYSTALS);

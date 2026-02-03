@@ -112,7 +112,10 @@ public class ModModelProvider extends FabricModelProvider {
         // Ruby Blocks
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RUBY_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DEEPSLATE_RUBY_ORE);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.BLOCK_OF_RUBY);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RUBY_BRICKS);
+        blockStateModelGenerator.registerTintableCross(ModBlocks.RUBY_GEM,
+                BlockStateModelGenerator
+                        .TintType.NOT_TINTED);
 
         // Aquamarine Blocks
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.AQUAMARINE_ORE);

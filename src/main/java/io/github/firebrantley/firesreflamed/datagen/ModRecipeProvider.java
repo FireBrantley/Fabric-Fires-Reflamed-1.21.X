@@ -13,9 +13,7 @@ import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
-import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.registry.tag.ItemTags;
-import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 
 import java.util.List;
@@ -162,7 +160,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         // Crafting
         offerReversibleCompactingRecipes(exporter,
                 RecipeCategory.MISC, ModItems.RUBY_GEM,
-                RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLOCK_OF_RUBY);
+                RecipeCategory.BUILDING_BLOCKS, ModBlocks.RUBY_BRICKS);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.RUBY_GEM, 1)
                 .pattern("R")
@@ -198,7 +196,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         createBatRecipe(
                 exporter,
                 ModItems.RUBY_BAT,
-                Ingredient.ofItems(ModBlocks.BLOCK_OF_RUBY),
+                Ingredient.ofItems(ModBlocks.RUBY_BRICKS),
                 ModItems.RUBY_GEM
         );
 

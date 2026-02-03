@@ -2,6 +2,7 @@ package io.github.firebrantley.firesreflamed.block;
 
 import io.github.firebrantley.firesreflamed.FiresReflamed;
 import io.github.firebrantley.firesreflamed.block.custom.HangingMossBlock;
+import io.github.firebrantley.firesreflamed.block.custom.RubyGemBlock;
 import io.github.firebrantley.firesreflamed.world.tree.ModSaplingGenerators;
 import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
@@ -43,11 +44,22 @@ public class ModBlocks {
             new ExperienceDroppingBlock(UniformIntProvider.create(3,7),
                     AbstractBlock.Settings.create().strength(4.5f)
             .requiresTool().sounds(BlockSoundGroup.DEEPSLATE)));
-    public static final Block BLOCK_OF_RUBY = registerBlock("block_of_ruby",
+    public static final Block RUBY_BRICKS = registerBlock("ruby_bricks",
             new Block(AbstractBlock.Settings.create()
                     .strength(4)
                     .requiresTool()
                     .sounds(BlockSoundGroup.AMETHYST_BLOCK)));
+    public static final Block RUBY_GEM = registerNonPickableBlock(
+            "ruby_gem",
+            new RubyGemBlock(
+                    AbstractBlock.Settings.create()
+                            .strength(1.0f, 1.0f)
+                            .sounds(BlockSoundGroup.AMETHYST_CLUSTER)
+                            .nonOpaque()
+                            .requiresTool()
+                            .luminance(state -> 7)
+            )
+    );
 
     // Aquamarine
     public static final Block AQUAMARINE_ORE = registerBlock("aquamarine_ore",
@@ -143,13 +155,14 @@ public class ModBlocks {
             new SaplingBlock(
                     ModSaplingGenerators.WILLOW,
                     AbstractBlock.Settings.copy(Blocks.OAK_SAPLING)));
-    public static final Block POTTED_WILLOW_SAPLING = registerBlock(
+    public static final Block POTTED_WILLOW_SAPLING = registerNonPickableBlock(
             "potted_willow_sapling",
             new FlowerPotBlock(
                     ModBlocks.WILLOW_SAPLING,
                     AbstractBlock.Settings.copy(Blocks.POTTED_OAK_SAPLING)
             )
     );
+
 
     // Misc.
     //Ice
@@ -202,6 +215,15 @@ public class ModBlocks {
         Registry.register(Registries.ITEM, Identifier.of(FiresReflamed.MOD_ID, name),
                 new BlockItem(block, new Item.Settings()));
     }
+
+    private static Block registerNonPickableBlock(String name, Block block) {
+        return Registry.register(
+                Registries.BLOCK,
+                Identifier.of(FiresReflamed.MOD_ID, name),
+                block
+        );
+    }
+
 
     public static void registerModBlocks() {
         FiresReflamed.LOGGER.info("Registering Blocks Items for " + FiresReflamed.MOD_ID);

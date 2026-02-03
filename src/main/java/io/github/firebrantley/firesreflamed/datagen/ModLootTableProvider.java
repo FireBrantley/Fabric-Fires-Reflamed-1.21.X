@@ -46,7 +46,8 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addMultiDropOre(ModBlocks.DEEPSLATE_RUBY_ORE,
                 ModItems.RUBY_CRYSTALS,
                 ModItems.RUBY_CRYSTALS);
-        addDrop(ModBlocks.BLOCK_OF_RUBY);
+        addDrop(ModBlocks.RUBY_BRICKS);
+        addDrop(ModBlocks.RUBY_GEM, ModItems.RUBY_GEM);
 
         // Aquamarine Blocks
         addMultiDropOre(ModBlocks.AQUAMARINE_ORE,
