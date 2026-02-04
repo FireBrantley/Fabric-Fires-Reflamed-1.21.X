@@ -44,6 +44,11 @@ public class ModBlocks {
             new ExperienceDroppingBlock(UniformIntProvider.create(3,7),
                     AbstractBlock.Settings.create().strength(4.5f)
             .requiresTool().sounds(BlockSoundGroup.DEEPSLATE)));
+    public static final Block BLOCK_OF_RUBY = registerBlock("block_of_ruby",
+            new Block(AbstractBlock.Settings.create()
+                    .strength(4)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.AMETHYST_BLOCK)));
     public static final Block RUBY_BRICKS = registerBlock("ruby_bricks",
             new Block(AbstractBlock.Settings.create()
                     .strength(4)
@@ -163,39 +168,7 @@ public class ModBlocks {
             )
     );
 
-
-    // Misc.
-    //Ice
-    public static final Block ICE_BRICKS = registerBlock(
-            "ice_bricks",
-            new Block(
-                    AbstractBlock.Settings.create()
-                            .strength(0.5f)
-                            .sounds(BlockSoundGroup.GLASS)
-                            .slipperiness(0.98f)
-                            .requiresTool()
-            )
-    );
-    public static final Block PACKED_ICE_BRICKS = registerBlock(
-            "packed_ice_bricks",
-            new Block(
-                    AbstractBlock.Settings.create()
-                            .strength(0.5f)
-                            .sounds(BlockSoundGroup.GLASS)
-                            .slipperiness(0.98f)
-                            .requiresTool()
-            )
-    );
-    public static final Block BLUE_ICE_BRICKS = registerBlock(
-            "blue_ice_bricks",
-            new Block(
-                    AbstractBlock.Settings.create()
-                            .strength(0.2f)
-                            .sounds(BlockSoundGroup.GLASS)
-                            .slipperiness(0.989f)
-                            .requiresTool()
-            )
-    );
+    // Snow
     public static final Block SNOW_BRICKS = registerBlock(
             "snow_bricks",
             new Block(

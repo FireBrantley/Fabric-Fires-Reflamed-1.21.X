@@ -9,15 +9,9 @@ import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.structure.rule.RuleTest;
 import net.minecraft.structure.rule.TagMatchRuleTest;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.math.intprovider.ConstantIntProvider;
 import net.minecraft.world.gen.feature.*;
-import net.minecraft.world.gen.feature.size.ThreeLayersFeatureSize;
-import net.minecraft.world.gen.foliage.DarkOakFoliagePlacer;
-import net.minecraft.world.gen.stateprovider.BlockStateProvider;
-import net.minecraft.world.gen.trunk.DarkOakTrunkPlacer;
 
 import java.util.List;
-import java.util.OptionalInt;
 
 import static io.github.firebrantley.firesreflamed.world.ModFeatures.STRUCTURE_TREE;
 
@@ -56,7 +50,7 @@ public class ModConfiguredFeatures {
         register(context, TITANIUM_ORE_KEY,
                 Feature.ORE,
                 new OreFeatureConfig(overworldTitaniumOres,
-                        7));
+                        10));
         register(context, RUBY_ORE_KEY,
                 Feature.ORE,
                 new OreFeatureConfig(overworldRubyOres,

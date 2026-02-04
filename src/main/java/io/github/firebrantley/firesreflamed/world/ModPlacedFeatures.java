@@ -30,7 +30,7 @@ public class ModPlacedFeatures {
 
         register(context, TITANIUM_ORE_PLACED_KEY,
                 configuredFeatures.getOrThrow(ModConfiguredFeatures.TITANIUM_ORE_KEY),
-                ModOrePlacement.modifiersWithCount(14,
+                ModOrePlacement.modifiersWithCount(12,
                         HeightRangePlacementModifier.uniform(
                                 YOffset.fixed(-80),
                                 YOffset.fixed(32))));

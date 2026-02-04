@@ -88,15 +88,6 @@ public class ModModelProvider extends FabricModelProvider {
         BlockStateModelGenerator.BlockTexturePool willowPool =
                 blockStateModelGenerator
                         .registerCubeAllModelTexturePool(ModBlocks.WILLOW_PLANKS);
-        BlockStateModelGenerator.BlockTexturePool icePool =
-                blockStateModelGenerator
-                        .registerCubeAllModelTexturePool(ModBlocks.ICE_BRICKS);
-        BlockStateModelGenerator.BlockTexturePool packedicePool =
-                blockStateModelGenerator
-                        .registerCubeAllModelTexturePool(ModBlocks.PACKED_ICE_BRICKS);
-        BlockStateModelGenerator.BlockTexturePool blueicePool =
-                blockStateModelGenerator
-                        .registerCubeAllModelTexturePool(ModBlocks.BLUE_ICE_BRICKS);
         BlockStateModelGenerator.BlockTexturePool snowPool =
                 blockStateModelGenerator
                         .registerCubeAllModelTexturePool(ModBlocks.SNOW_BRICKS);
@@ -112,6 +103,7 @@ public class ModModelProvider extends FabricModelProvider {
         // Ruby Blocks
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RUBY_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DEEPSLATE_RUBY_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.BLOCK_OF_RUBY);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RUBY_BRICKS);
         blockStateModelGenerator.registerTintableCross(ModBlocks.RUBY_GEM,
                 BlockStateModelGenerator

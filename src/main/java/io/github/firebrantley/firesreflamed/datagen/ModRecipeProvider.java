@@ -5,6 +5,7 @@ import io.github.firebrantley.firesreflamed.item.ModItems;
 import io.github.firebrantley.firesreflamed.util.ModTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
+import net.minecraft.block.Blocks;
 import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
@@ -18,8 +19,6 @@ import net.minecraft.util.Identifier;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
-
-import static org.spongepowered.asm.mixin.FabricUtil.getModId;
 
 public class ModRecipeProvider extends FabricRecipeProvider {
     public ModRecipeProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
@@ -160,7 +159,22 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         // Crafting
         offerReversibleCompactingRecipes(exporter,
                 RecipeCategory.MISC, ModItems.RUBY_GEM,
-                RecipeCategory.BUILDING_BLOCKS, ModBlocks.RUBY_BRICKS);
+                RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLOCK_OF_RUBY);
+        /* ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.RUBY_BRICKS, 4)
+                .pattern("RR")
+                .pattern("RR")
+                .input('R', ModBlocks.BLOCK_OF_RUBY)
+                .criterion(hasItem(ModItems.RUBY_CRYSTALS), conditionsFromItem(ModItems.RUBY_CRYSTALS))
+                .offerTo(exporter,
+                        Identifier.of(
+                                "firesreflamed",
+                                getItemPath(ModBlocks.RUBY_BRICKS))); */
+
+        offer2x2CompactingRecipe(exporter,
+                RecipeCategory.BUILDING_BLOCKS,
+                ModBlocks.RUBY_BRICKS,
+                ModBlocks.BLOCK_OF_RUBY
+        );
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.RUBY_GEM, 1)
                 .pattern("R")
@@ -196,8 +210,15 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         createBatRecipe(
                 exporter,
                 ModItems.RUBY_BAT,
-                Ingredient.ofItems(ModBlocks.RUBY_BRICKS),
+                Ingredient.ofItems(ModBlocks.BLOCK_OF_RUBY),
                 ModItems.RUBY_GEM
+        );
+
+        // Stonecutter
+        offerStonecuttingRecipe(exporter,
+                RecipeCategory.BUILDING_BLOCKS,
+                ModBlocks.RUBY_BRICKS,
+                ModBlocks.BLOCK_OF_RUBY
         );
 
         // Smelting & Blasting
@@ -284,6 +305,15 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input(ModBlocks.WILLOW_PLANKS)
                 .criterion(hasItem(ModBlocks.WILLOW_PLANKS), conditionsFromItem(ModBlocks.WILLOW_PLANKS))
                 .offerTo(exporter);
+
+        // --- Snow Recipes ---
+        // Crafting
+        offer2x2CompactingRecipe(exporter,
+                RecipeCategory.BUILDING_BLOCKS,
+                ModBlocks.SNOW_BRICKS,
+                Blocks.SNOW_BLOCK
+        );
+
 
         // --- Misc Item Recipes ---
         // Crafting

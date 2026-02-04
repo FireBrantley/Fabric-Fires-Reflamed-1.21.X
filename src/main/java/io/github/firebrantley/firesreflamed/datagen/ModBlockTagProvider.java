@@ -25,15 +25,12 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.BLOCK_OF_STEEL)
                 .add(ModBlocks.RUBY_ORE)
                 .add(ModBlocks.DEEPSLATE_RUBY_ORE)
+                .add(ModBlocks.BLOCK_OF_RUBY)
                 .add(ModBlocks.RUBY_BRICKS)
                 .add(ModBlocks.RUBY_GEM)
                 .add(ModBlocks.AQUAMARINE_ORE)
                 .add(ModBlocks.DEEPSLATE_AQUAMARINE_ORE)
-                .add(ModBlocks.BLOCK_OF_AQUAMARINE)
-                .add(ModBlocks.ICE_BRICKS)
-                .add(ModBlocks.PACKED_ICE_BRICKS)
-                .add(ModBlocks.BLUE_ICE_BRICKS);
-
+                .add(ModBlocks.BLOCK_OF_AQUAMARINE);
         // Shovel Mineable
         getOrCreateTagBuilder(BlockTags.SHOVEL_MINEABLE)
                 .add(ModBlocks.SNOW_BRICKS);
@@ -44,6 +41,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.BLOCK_OF_STEEL)
                 .add(ModBlocks.RUBY_ORE)
                 .add(ModBlocks.DEEPSLATE_RUBY_ORE)
+                .add(ModBlocks.BLOCK_OF_RUBY)
                 .add(ModBlocks.RUBY_BRICKS)
                 .add(ModBlocks.RUBY_GEM);
 

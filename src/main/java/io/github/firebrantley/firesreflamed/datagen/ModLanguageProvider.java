@@ -66,6 +66,7 @@ public class ModLanguageProvider extends FabricLanguageProvider {
         // Ruby Items & Blocks
         builder.add(ModItems.RUBY_GEM, "Ruby Gem");
         builder.add(ModItems.RUBY_CRYSTALS, "Ruby Crystals");
+        builder.add(ModBlocks.BLOCK_OF_RUBY, "Block of Ruby");
         builder.add(ModBlocks.RUBY_BRICKS, "Ruby Bricks");
         builder.add(ModBlocks.RUBY_ORE, "Ruby Ore");
         builder.add(ModBlocks.DEEPSLATE_RUBY_ORE, "Deepslate Ruby Ore");
@@ -110,10 +111,7 @@ public class ModLanguageProvider extends FabricLanguageProvider {
         builder.add(ModBlocks.WILLOW_SAPLING, "Willow Sapling");
         builder.add(ModBlocks.POTTED_WILLOW_SAPLING, "Potted Willow Sapling");
 
-        // Ice/Snow Blocks
-        builder.add(ModBlocks.ICE_BRICKS, "Ice Bricks");
-        builder.add(ModBlocks.PACKED_ICE_BRICKS, "Packed Ice Bricks");
-        builder.add(ModBlocks.BLUE_ICE_BRICKS, "Blue Ice Bricks");
+        // Snow Blocks
         builder.add(ModBlocks.SNOW_BRICKS, "Snow Bricks");
 
         // Misc Items

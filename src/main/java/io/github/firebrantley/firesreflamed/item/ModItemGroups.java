@@ -58,6 +58,7 @@ public class ModItemGroups {
                         entries.add(ModItems.STEEL_BOOTS);
 
                         // Ruby Items & Blocks
+                        entries.add(ModBlocks.BLOCK_OF_RUBY);
                         entries.add(ModBlocks.RUBY_BRICKS);
                         entries.add(ModBlocks.RUBY_ORE);
                         entries.add(ModBlocks.DEEPSLATE_RUBY_ORE);
@@ -107,10 +108,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.WILLOW_LEAVES);
                         entries.add(ModBlocks.WILLOW_SAPLING);
 
-                        // Ice/Snow Blocks
-                        entries.add(ModBlocks.ICE_BRICKS);
-                        entries.add(ModBlocks.PACKED_ICE_BRICKS);
-                        entries.add(ModBlocks.BLUE_ICE_BRICKS);
+                        // Snow Blocks
                         entries.add(ModBlocks.SNOW_BRICKS);
 
                         // Misc Items

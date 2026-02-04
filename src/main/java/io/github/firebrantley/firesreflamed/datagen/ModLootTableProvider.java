@@ -46,6 +46,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addMultiDropOre(ModBlocks.DEEPSLATE_RUBY_ORE,
                 ModItems.RUBY_CRYSTALS,
                 ModItems.RUBY_CRYSTALS);
+        addDrop(ModBlocks.BLOCK_OF_RUBY);
         addDrop(ModBlocks.RUBY_BRICKS);
         addDrop(ModBlocks.RUBY_GEM, ModItems.RUBY_GEM);
 
@@ -85,10 +86,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.WILLOW_SAPLING);
         addPottedPlantDrops(ModBlocks.POTTED_WILLOW_SAPLING);
 
-        // Ice/Snow Blocks
-        addDrop(ModBlocks.ICE_BRICKS);
-        addDrop(ModBlocks.PACKED_ICE_BRICKS);
-        addDrop(ModBlocks.BLUE_ICE_BRICKS);
+        // Snow Blocks
         addDrop(ModBlocks.SNOW_BRICKS);
     }
 
