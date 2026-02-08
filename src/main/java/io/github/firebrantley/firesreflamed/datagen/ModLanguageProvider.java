@@ -70,7 +70,7 @@ public class ModLanguageProvider extends FabricLanguageProvider {
         builder.add(ModBlocks.RUBY_BRICKS, "Ruby Bricks");
         builder.add(ModBlocks.RUBY_ORE, "Ruby Ore");
         builder.add(ModBlocks.DEEPSLATE_RUBY_ORE, "Deepslate Ruby Ore");
-        builder.add(ModBlocks.RUBY_GEM, "Ruby Gem");
+        builder.add(ModBlocks.RUBY_CLUSTER, "Ruby Cluster");
 
         // Ruby Tool Set
         builder.add(ModItems.RUBY_SHOVEL, "Ruby Shovel");

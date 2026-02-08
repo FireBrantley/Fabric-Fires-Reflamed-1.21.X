@@ -2,7 +2,7 @@ package io.github.firebrantley.firesreflamed.block;
 
 import io.github.firebrantley.firesreflamed.FiresReflamed;
 import io.github.firebrantley.firesreflamed.block.custom.HangingMossBlock;
-import io.github.firebrantley.firesreflamed.block.custom.RubyGemBlock;
+import io.github.firebrantley.firesreflamed.block.custom.RubyClusterBlock;
 import io.github.firebrantley.firesreflamed.world.tree.ModSaplingGenerators;
 import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
@@ -54,9 +54,9 @@ public class ModBlocks {
                     .strength(4)
                     .requiresTool()
                     .sounds(BlockSoundGroup.AMETHYST_BLOCK)));
-    public static final Block RUBY_GEM = registerNonPickableBlock(
-            "ruby_gem",
-            new RubyGemBlock(
+    public static final Block RUBY_CLUSTER = registerBlock(
+            "ruby_cluster",
+            new RubyClusterBlock(
                     AbstractBlock.Settings.create()
                             .strength(1.0f, 1.0f)
                             .sounds(BlockSoundGroup.AMETHYST_CLUSTER)

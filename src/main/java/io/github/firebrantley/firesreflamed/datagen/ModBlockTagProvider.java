@@ -27,7 +27,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.DEEPSLATE_RUBY_ORE)
                 .add(ModBlocks.BLOCK_OF_RUBY)
                 .add(ModBlocks.RUBY_BRICKS)
-                .add(ModBlocks.RUBY_GEM)
+                .add(ModBlocks.RUBY_CLUSTER)
                 .add(ModBlocks.AQUAMARINE_ORE)
                 .add(ModBlocks.DEEPSLATE_AQUAMARINE_ORE)
                 .add(ModBlocks.BLOCK_OF_AQUAMARINE);
@@ -43,7 +43,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.DEEPSLATE_RUBY_ORE)
                 .add(ModBlocks.BLOCK_OF_RUBY)
                 .add(ModBlocks.RUBY_BRICKS)
-                .add(ModBlocks.RUBY_GEM);
+                .add(ModBlocks.RUBY_CLUSTER);
 
         // Needs Diamond Tool
         getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL)

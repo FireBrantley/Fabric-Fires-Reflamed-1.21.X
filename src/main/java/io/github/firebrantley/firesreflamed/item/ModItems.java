@@ -3,7 +3,6 @@ package io.github.firebrantley.firesreflamed.item;
 import io.github.firebrantley.firesreflamed.FiresReflamed;
 import io.github.firebrantley.firesreflamed.item.custom.BatItem;
 import io.github.firebrantley.firesreflamed.item.custom.HammerItem;
-import io.github.firebrantley.firesreflamed.item.custom.RubyGemItem;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -44,6 +43,7 @@ public class ModItems {
                     2,
                     -2.6f,
                     new Item.Settings()
+                            .maxCount(1)
             )
     );
 
@@ -97,6 +97,7 @@ public class ModItems {
                     -2,
                     -2.8f,
                     new Item.Settings()
+                            .maxCount(1)
             )
     );
 
@@ -118,7 +119,7 @@ public class ModItems {
     public static final Item RUBY_CRYSTALS = registerItem("ruby_crystals",
             new Item(new Item.Settings()));
     public static final Item RUBY_GEM = registerItem("ruby_gem",
-            new RubyGemItem(new Item.Settings()));
+            new Item(new Item.Settings()));
 
     // Ruby Tool Set
     public static final Item RUBY_SHOVEL = registerItem("ruby_shovel",
@@ -147,7 +148,7 @@ public class ModItems {
                     ModToolMaterials.RUBY,
                     0,
                     -2.7f,
-                    new Item.Settings()
+                    new Item.Settings().maxCount(1)
             )
     );
 
@@ -183,7 +184,7 @@ public class ModItems {
                     ToolMaterials.WOOD,
                     5,
                     -2.9f,
-                    new Item.Settings()
+                    new Item.Settings().maxCount(1)
             )
     );
 

@@ -160,7 +160,17 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerReversibleCompactingRecipes(exporter,
                 RecipeCategory.MISC, ModItems.RUBY_GEM,
                 RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLOCK_OF_RUBY);
-        /* ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.RUBY_BRICKS, 4)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.RUBY_CLUSTER)
+                .pattern(" R ")
+                .pattern("RRR")
+                .input('R', ModItems.RUBY_GEM)
+                .criterion(hasItem(ModItems.RUBY_CRYSTALS), conditionsFromItem(ModItems.RUBY_CRYSTALS))
+                .offerTo(exporter,
+                        Identifier.of(
+                                "firesreflamed",
+                                getItemPath(ModBlocks.RUBY_CLUSTER)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.RUBY_BRICKS, 4)
                 .pattern("RR")
                 .pattern("RR")
                 .input('R', ModBlocks.BLOCK_OF_RUBY)
@@ -168,13 +178,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .offerTo(exporter,
                         Identifier.of(
                                 "firesreflamed",
-                                getItemPath(ModBlocks.RUBY_BRICKS))); */
-
-        offer2x2CompactingRecipe(exporter,
-                RecipeCategory.BUILDING_BLOCKS,
-                ModBlocks.RUBY_BRICKS,
-                ModBlocks.BLOCK_OF_RUBY
-        );
+                                getItemPath(ModBlocks.RUBY_BRICKS)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.RUBY_GEM, 1)
                 .pattern("R")
