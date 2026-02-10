@@ -48,6 +48,9 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
                 ModItems.RUBY_CRYSTALS);
         addDrop(ModBlocks.BLOCK_OF_RUBY);
         addDrop(ModBlocks.RUBY_BRICKS);
+        addDrop(ModBlocks.RUBY_BRICK_STAIRS);
+        addDrop(ModBlocks.RUBY_BRICK_SLAB);
+        addDrop(ModBlocks.RUBY_BRICK_WALL);
         addDrop(ModBlocks.RUBY_CLUSTER);
 
         // Aquamarine Blocks
@@ -88,6 +91,9 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
         // Snow Blocks
         addDrop(ModBlocks.SNOW_BRICKS);
+        addDrop(ModBlocks.SNOW_BRICK_STAIRS);
+        addDrop(ModBlocks.SNOW_BRICK_SLAB);
+        addDrop(ModBlocks.SNOW_BRICK_WALL);
     }
 
     // --- Helper Methods ---

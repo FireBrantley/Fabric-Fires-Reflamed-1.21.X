@@ -60,6 +60,9 @@ public class ModItemGroups {
                         // Ruby Items & Blocks
                         entries.add(ModBlocks.BLOCK_OF_RUBY);
                         entries.add(ModBlocks.RUBY_BRICKS);
+                        entries.add(ModBlocks.RUBY_BRICK_STAIRS);
+                        entries.add(ModBlocks.RUBY_BRICK_SLAB);
+                        entries.add(ModBlocks.RUBY_BRICK_WALL);
                         entries.add(ModBlocks.RUBY_CLUSTER);
                         entries.add(ModBlocks.RUBY_ORE);
                         entries.add(ModBlocks.DEEPSLATE_RUBY_ORE);
@@ -111,6 +114,9 @@ public class ModItemGroups {
 
                         // Snow Blocks
                         entries.add(ModBlocks.SNOW_BRICKS);
+                        entries.add(ModBlocks.SNOW_BRICK_STAIRS);
+                        entries.add(ModBlocks.SNOW_BRICK_SLAB);
+                        entries.add(ModBlocks.SNOW_BRICK_WALL);
 
                         // Misc Items
                         entries.add(ModItems.DRILL_BIT);

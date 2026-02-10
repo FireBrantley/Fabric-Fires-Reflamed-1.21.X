@@ -27,13 +27,19 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.DEEPSLATE_RUBY_ORE)
                 .add(ModBlocks.BLOCK_OF_RUBY)
                 .add(ModBlocks.RUBY_BRICKS)
+                .add(ModBlocks.RUBY_BRICK_STAIRS)
+                .add(ModBlocks.RUBY_BRICK_SLAB)
+                .add(ModBlocks.RUBY_BRICK_WALL)
                 .add(ModBlocks.RUBY_CLUSTER)
                 .add(ModBlocks.AQUAMARINE_ORE)
                 .add(ModBlocks.DEEPSLATE_AQUAMARINE_ORE)
                 .add(ModBlocks.BLOCK_OF_AQUAMARINE);
         // Shovel Mineable
         getOrCreateTagBuilder(BlockTags.SHOVEL_MINEABLE)
-                .add(ModBlocks.SNOW_BRICKS);
+                .add(ModBlocks.SNOW_BRICKS)
+                .add(ModBlocks.SNOW_BRICK_STAIRS)
+                .add(ModBlocks.SNOW_BRICK_SLAB)
+                .add(ModBlocks.SNOW_BRICK_WALL);
 
         // --- Needs Tool Tags ---
         // Needs Iron Tool
@@ -43,6 +49,9 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.DEEPSLATE_RUBY_ORE)
                 .add(ModBlocks.BLOCK_OF_RUBY)
                 .add(ModBlocks.RUBY_BRICKS)
+                .add(ModBlocks.RUBY_BRICK_STAIRS)
+                .add(ModBlocks.RUBY_BRICK_SLAB)
+                .add(ModBlocks.RUBY_BRICK_WALL)
                 .add(ModBlocks.RUBY_CLUSTER);
 
         // Needs Diamond Tool
@@ -63,12 +72,20 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.STRIPPED_WILLOW_WOOD);
         getOrCreateTagBuilder(BlockTags.LOGS_THAT_BURN)
                 .addTag(ModTags.Blocks.WILLOW_LOGS);
-        
-        // Fences
-        getOrCreateTagBuilder(BlockTags.WOODEN_FENCES).add(ModBlocks.WILLOW_FENCE);
-        getOrCreateTagBuilder(BlockTags.FENCE_GATES).add(ModBlocks.WILLOW_FENCE_GATE);
 
         // --- Misc Tags ---
+        // Fences
+        getOrCreateTagBuilder(BlockTags.WOODEN_FENCES)
+                .add(ModBlocks.WILLOW_FENCE);
+        getOrCreateTagBuilder(BlockTags.FENCE_GATES)
+                .add(ModBlocks.WILLOW_FENCE_GATE);
+
+        // Walls
+        getOrCreateTagBuilder(BlockTags.WALLS)
+                .add(ModBlocks.SNOW_BRICK_WALL)
+                .add(ModBlocks.RUBY_BRICK_WALL);
+
+        // Moss Placeables
         getOrCreateTagBuilder(ModTags.Blocks.MOSS_PLACEABLE)
                 .add(ModBlocks.WILLOW_LOG)
                 .add(ModBlocks.WILLOW_LEAVES);

@@ -88,6 +88,9 @@ public class ModModelProvider extends FabricModelProvider {
         BlockStateModelGenerator.BlockTexturePool willowPool =
                 blockStateModelGenerator
                         .registerCubeAllModelTexturePool(ModBlocks.WILLOW_PLANKS);
+        BlockStateModelGenerator.BlockTexturePool rubyPool =
+                blockStateModelGenerator
+                        .registerCubeAllModelTexturePool(ModBlocks.RUBY_BRICKS);
         BlockStateModelGenerator.BlockTexturePool snowPool =
                 blockStateModelGenerator
                         .registerCubeAllModelTexturePool(ModBlocks.SNOW_BRICKS);
@@ -104,7 +107,9 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RUBY_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DEEPSLATE_RUBY_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.BLOCK_OF_RUBY);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RUBY_BRICKS);
+        rubyPool.stairs(ModBlocks.RUBY_BRICK_STAIRS);
+        rubyPool.slab(ModBlocks.RUBY_BRICK_SLAB);
+        rubyPool.wall(ModBlocks.RUBY_BRICK_WALL);
         blockStateModelGenerator.registerAmethyst(ModBlocks.RUBY_CLUSTER);
         blockStateModelGenerator.registerItemModel(ModBlocks.RUBY_CLUSTER);
 
@@ -172,5 +177,10 @@ public class ModModelProvider extends FabricModelProvider {
                         )
                 )
         );
+
+        // Snow Blocks
+        snowPool.stairs(ModBlocks.SNOW_BRICK_STAIRS);
+        snowPool.slab(ModBlocks.SNOW_BRICK_SLAB);
+        snowPool.wall(ModBlocks.SNOW_BRICK_WALL);
     }
 }

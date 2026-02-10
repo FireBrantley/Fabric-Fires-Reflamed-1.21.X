@@ -54,6 +54,25 @@ public class ModBlocks {
                     .strength(4)
                     .requiresTool()
                     .sounds(BlockSoundGroup.AMETHYST_BLOCK)));
+    public static final Block RUBY_BRICK_STAIRS = registerBlock("ruby_stairs",
+            new StairsBlock(
+                    ModBlocks.RUBY_BRICKS.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .strength(4)
+                            .requiresTool()
+                            .sounds(BlockSoundGroup.AMETHYST_BLOCK)));
+    public static final Block RUBY_BRICK_SLAB = registerBlock("ruby_slab",
+            new SlabBlock(
+                    AbstractBlock.Settings.create()
+                            .strength(4)
+                            .requiresTool()
+                            .sounds(BlockSoundGroup.AMETHYST_BLOCK)));
+    public static final Block RUBY_BRICK_WALL = registerBlock("ruby_wall",
+            new WallBlock(
+                    AbstractBlock.Settings.create()
+                            .strength(4)
+                            .requiresTool()
+                            .sounds(BlockSoundGroup.AMETHYST_BLOCK)));
     public static final Block RUBY_CLUSTER = registerBlock(
             "ruby_cluster",
             new RubyClusterBlock(
@@ -172,6 +191,34 @@ public class ModBlocks {
     public static final Block SNOW_BRICKS = registerBlock(
             "snow_bricks",
             new Block(
+                    AbstractBlock.Settings.create()
+                            .strength(0.5f)
+                            .sounds(BlockSoundGroup.SNOW)
+                            .requiresTool()
+            )
+    );
+    public static final Block SNOW_BRICK_STAIRS = registerBlock(
+            "snow_brick_stairs",
+            new StairsBlock(
+                    ModBlocks.SNOW_BRICKS.getDefaultState(),
+                    AbstractBlock.Settings.create()
+                            .strength(0.5f)
+                            .sounds(BlockSoundGroup.SNOW)
+                            .requiresTool()
+            )
+    );
+    public static final Block SNOW_BRICK_SLAB = registerBlock(
+            "snow_brick_slab",
+            new SlabBlock(
+                    AbstractBlock.Settings.create()
+                            .strength(0.5f)
+                            .sounds(BlockSoundGroup.SNOW)
+                            .requiresTool()
+            )
+    );
+    public static final Block SNOW_BRICK_WALL = registerBlock(
+            "snow_brick_wall",
+            new WallBlock(
                     AbstractBlock.Settings.create()
                             .strength(0.5f)
                             .sounds(BlockSoundGroup.SNOW)
