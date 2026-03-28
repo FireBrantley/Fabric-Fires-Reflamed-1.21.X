@@ -21,8 +21,8 @@ public class ModTags {
     }
 
     public static class Items {
-        // Recipes MUST use these Item tags
         public static final TagKey<Item> WILLOW_LOGS = createItemTag("willow_logs");
+        public static final TagKey<Item> BATS = createItemTag("bats");
 
         private static TagKey<Item> createItemTag(String name) {
             return TagKey.of(RegistryKeys.ITEM, Identifier.of(FiresReflamed.MOD_ID, name));
