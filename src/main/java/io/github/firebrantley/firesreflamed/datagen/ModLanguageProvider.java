@@ -24,6 +24,7 @@ public class ModLanguageProvider extends FabricLanguageProvider {
 
         // Titanium Items & Blocks
         builder.add(ModItems.TITANIUM_INGOT, "Titanium Ingot");
+        builder.add(ModItems.TITANIUM_NUGGET, "Titanium Nugget");
         builder.add(ModItems.RAW_TITANIUM, "Raw Titanium");
         builder.add(ModBlocks.BLOCK_OF_TITANIUM, "Block of Titanium");
         builder.add(ModBlocks.TITANIUM_ORE, "Titanium Ore");

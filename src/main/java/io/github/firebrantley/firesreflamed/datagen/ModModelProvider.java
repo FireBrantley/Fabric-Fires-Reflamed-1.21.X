@@ -20,6 +20,7 @@ public class ModModelProvider extends FabricModelProvider {
         // Titanium Items
         itemModelGenerator.register(ModItems.RAW_TITANIUM, Models.GENERATED);
         itemModelGenerator.register(ModItems.TITANIUM_INGOT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.TITANIUM_NUGGET, Models.GENERATED);
 
         // Titanium Tool Set
         itemModelGenerator.register(ModItems.TITANIUM_SHOVEL, Models.HANDHELD);

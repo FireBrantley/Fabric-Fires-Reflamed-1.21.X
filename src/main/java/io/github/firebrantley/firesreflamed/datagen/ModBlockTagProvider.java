@@ -24,6 +24,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
             Identifier.of("c", "clusters")
     );
 
+    /* Hypothetical cross-mod compat tags
     // c: convention tags
     public static final TagKey<Block> C_ORES_TITANIUM = TagKey.of(
             RegistryKeys.BLOCK, Identifier.of("c", "ores/titanium"));
@@ -44,7 +45,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
     public static final TagKey<Block> C_ORES = TagKey.of(
             RegistryKeys.BLOCK, Identifier.of("c", "ores"));
     public static final TagKey<Block> C_STORAGE_BLOCKS = TagKey.of(
-            RegistryKeys.BLOCK, Identifier.of("c", "storage_blocks"));
+            RegistryKeys.BLOCK, Identifier.of("c", "storage_blocks")); */
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
@@ -187,6 +188,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.FLOWER_POTS)
                 .add(ModBlocks.POTTED_WILLOW_SAPLING);
 
+        /* Hypothetical cross-mod compat tags
         // c: ore and storage block convention tags (cross-mod compat)
         getOrCreateTagBuilder(C_ORES_TITANIUM)
                 .add(ModBlocks.TITANIUM_ORE)
@@ -215,6 +217,6 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .addTag(C_STORAGE_BLOCKS_TITANIUM)
                 .addTag(C_STORAGE_BLOCKS_STEEL)
                 .addTag(C_STORAGE_BLOCKS_RUBY)
-                .addTag(C_STORAGE_BLOCKS_AQUAMARINE);
+                .addTag(C_STORAGE_BLOCKS_AQUAMARINE); */
     }
 }

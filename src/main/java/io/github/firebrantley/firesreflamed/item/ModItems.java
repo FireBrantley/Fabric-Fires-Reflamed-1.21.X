@@ -14,6 +14,8 @@ public class ModItems {
             new Item(new Item.Settings()));
     public static final  Item TITANIUM_INGOT = registerItem("titanium_ingot",
             new Item(new Item.Settings()));
+    public static final  Item TITANIUM_NUGGET = registerItem("titanium_nugget",
+            new Item(new Item.Settings()));
 
     //Titanium Tool Set
     public static final Item TITANIUM_SHOVEL = registerItem("titanium_shovel",

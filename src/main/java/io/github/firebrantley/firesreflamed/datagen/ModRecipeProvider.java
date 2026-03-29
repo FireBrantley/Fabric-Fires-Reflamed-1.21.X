@@ -32,6 +32,11 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerReversibleCompactingRecipes(exporter,
                 RecipeCategory.MISC, ModItems.TITANIUM_INGOT,
                 RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLOCK_OF_TITANIUM);
+        offerReversibleCompactingRecipes(exporter,
+                RecipeCategory.MISC, ModItems.TITANIUM_NUGGET,
+                RecipeCategory.MISC, ModItems.TITANIUM_INGOT,
+                "titanium_ingot_from_nuggets", null, // Names for Ingot
+                "titanium_nugget_from_ingot", null);  // Names for Nugget
 
         createShovelRecipe(exporter,
                 ModItems.TITANIUM_SHOVEL,

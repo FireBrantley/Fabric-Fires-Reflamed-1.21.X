@@ -22,6 +22,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.DEEPSLATE_TITANIUM_ORE);
                         entries.add(ModItems.RAW_TITANIUM);
                         entries.add(ModItems.TITANIUM_INGOT);
+                        entries.add(ModItems.TITANIUM_NUGGET);
 
                         //Titanium Tool Set
                         entries.add(ModItems.TITANIUM_SHOVEL);

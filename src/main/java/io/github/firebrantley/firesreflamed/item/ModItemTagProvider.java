@@ -26,6 +26,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
             Identifier.of("c", "clusters")
     );
 
+    /* Hypothetical cross-mod compat tags
     // c: material convention tags
     public static final TagKey<Item> C_INGOTS_TITANIUM = TagKey.of(
             RegistryKeys.ITEM, Identifier.of("c", "ingots/titanium"));
@@ -50,7 +51,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
     public static final TagKey<Item> C_GEMS = TagKey.of(
             RegistryKeys.ITEM, Identifier.of("c", "gems"));
     public static final TagKey<Item> C_SHARDS = TagKey.of(
-            RegistryKeys.ITEM, Identifier.of("c", "shards"));
+            RegistryKeys.ITEM, Identifier.of("c", "shards")); */
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
@@ -264,6 +265,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
         getOrCreateTagBuilder(C_CLUSTERS)
                 .add(ModBlocks.RUBY_CLUSTER.asItem());
 
+        /* Hypothetical cross-mod compat tags
         // c: material convention tags (cross-mod compat)
         getOrCreateTagBuilder(C_INGOTS_TITANIUM)
                 .add(ModItems.TITANIUM_INGOT);
@@ -290,6 +292,6 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
         getOrCreateTagBuilder(C_GEMS)
                 .addTag(C_GEMS_RUBY);
         getOrCreateTagBuilder(C_SHARDS)
-                .addTag(C_SHARDS_AQUAMARINE);
+                .addTag(C_SHARDS_AQUAMARINE); */
     }
 }
