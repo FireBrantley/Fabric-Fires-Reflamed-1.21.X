@@ -108,6 +108,21 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 RecipeCategory.MISC, ModItems.STEEL_INGOT,
                 "steel_ingot_from_nuggets", null, // Names for Ingot
                 "steel_nugget_from_ingot", null);  // Names for Nugget
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.STEEL_CHAIN)
+                .pattern("I")
+                .pattern("I")
+                .pattern("I")
+                .input('I', ModItems.STEEL_INGOT)
+                .criterion(hasItem(ModItems.STEEL_INGOT), conditionsFromItem(ModItems.STEEL_INGOT))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.STEEL_LANTERN)
+                .pattern("NNN")
+                .pattern("NTN")
+                .pattern("NNN")
+                .input('N', ModItems.STEEL_NUGGET)
+                .input('T', Items.TORCH)
+                .criterion(hasItem(ModItems.STEEL_NUGGET), conditionsFromItem(ModItems.STEEL_NUGGET))
+                .offerTo(exporter);
 
         createShovelRecipe(exporter,
                 ModItems.STEEL_SHOVEL,
@@ -169,7 +184,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern(" R ")
                 .pattern("RRR")
                 .input('R', ModItems.RUBY_GEM)
-                .criterion(hasItem(ModItems.RUBY_CRYSTALS), conditionsFromItem(ModItems.RUBY_CRYSTALS))
+                .criterion(hasItem(ModItems.STEEL_NUGGET), conditionsFromItem(ModItems.STEEL_NUGGET))
                 .offerTo(exporter,
                         Identifier.of(
                                 "firesreflamed",
@@ -179,7 +194,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("RR")
                 .pattern("RR")
                 .input('R', ModBlocks.BLOCK_OF_RUBY)
-                .criterion(hasItem(ModItems.RUBY_CRYSTALS), conditionsFromItem(ModItems.RUBY_CRYSTALS))
+                .criterion(hasItem(ModItems.STEEL_NUGGET), conditionsFromItem(ModItems.STEEL_NUGGET))
                 .offerTo(exporter,
                         Identifier.of(
                                 "firesreflamed",
@@ -188,8 +203,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.RUBY_GEM, 1)
                 .pattern("R")
                 .pattern("R")
-                .input('R', ModItems.RUBY_CRYSTALS)
-                .criterion(hasItem(ModItems.RUBY_CRYSTALS), conditionsFromItem(ModItems.RUBY_CRYSTALS))
+                .input('R', ModItems.STEEL_NUGGET)
+                .criterion(hasItem(ModItems.STEEL_NUGGET), conditionsFromItem(ModItems.STEEL_NUGGET))
                 .offerTo(exporter,
                         Identifier.of(
                                 "firesreflamed",

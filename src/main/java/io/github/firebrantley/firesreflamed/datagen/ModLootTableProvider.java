@@ -38,6 +38,8 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
         // Steel Blocks
         addDrop(ModBlocks.BLOCK_OF_STEEL);
+        addDrop(ModBlocks.STEEL_CHAIN);
+        addDrop(ModBlocks.STEEL_LANTERN);
 
         // Ruby Blocks
         addMultiDropOre(ModBlocks.RUBY_ORE,

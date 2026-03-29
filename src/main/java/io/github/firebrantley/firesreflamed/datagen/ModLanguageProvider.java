@@ -49,6 +49,8 @@ public class ModLanguageProvider extends FabricLanguageProvider {
         builder.add(ModItems.STEEL_NUGGET, "Steel Nugget");
         builder.add(ModItems.CARBONIZED_IRON, "Carbonized Iron");
         builder.add(ModBlocks.BLOCK_OF_STEEL, "Block of Steel");
+        builder.add(ModBlocks.STEEL_CHAIN, "Steel Chain");
+        builder.add(ModBlocks.STEEL_LANTERN, "Steel Lantern");
 
         // Steel Tool Set
         builder.add(ModItems.STEEL_SHOVEL, "Steel Shovel");

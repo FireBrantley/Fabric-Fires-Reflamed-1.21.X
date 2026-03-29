@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/chain",
+  "textures": {
+    "all": "firesreflamed:block/steel_chain",
+    "particle": "firesreflamed:block/steel_chain"
+  }
+}

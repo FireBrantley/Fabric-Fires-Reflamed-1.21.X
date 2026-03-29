@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "firesreflamed:block/steel_chain",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "firesreflamed:block/steel_chain"
+    },
+    "axis=z": {
+      "model": "firesreflamed:block/steel_chain",
+      "x": 90
+    }
+  }
+}

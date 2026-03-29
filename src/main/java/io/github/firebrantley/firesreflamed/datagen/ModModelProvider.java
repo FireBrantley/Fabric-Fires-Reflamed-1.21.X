@@ -40,6 +40,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.CARBONIZED_IRON, Models.GENERATED);
         itemModelGenerator.register(ModItems.STEEL_INGOT, Models.GENERATED);
         itemModelGenerator.register(ModItems.STEEL_NUGGET, Models.GENERATED);
+        itemModelGenerator.register(ModBlocks.STEEL_CHAIN.asItem(), Models.GENERATED);
 
         // Steel Tool Set
         itemModelGenerator.register(ModItems.STEEL_SHOVEL, Models.HANDHELD);
@@ -103,6 +104,7 @@ public class ModModelProvider extends FabricModelProvider {
 
         // Steel Blocks
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.BLOCK_OF_STEEL);
+        blockStateModelGenerator.registerLantern(ModBlocks.STEEL_LANTERN);
 
         // Ruby Blocks
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RUBY_ORE);

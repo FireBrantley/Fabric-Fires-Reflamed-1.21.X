@@ -43,6 +43,8 @@ public class ModItemGroups {
                         entries.add(ModItems.CARBONIZED_IRON);
                         entries.add(ModItems.STEEL_INGOT);
                         entries.add(ModItems.STEEL_NUGGET);
+                        entries.add(ModBlocks.STEEL_CHAIN);
+                        entries.add(ModBlocks.STEEL_LANTERN);
 
                         // Steel Tool Set
                         entries.add(ModItems.STEEL_SHOVEL);

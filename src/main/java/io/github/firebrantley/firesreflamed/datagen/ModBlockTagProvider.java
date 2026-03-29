@@ -65,7 +65,9 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.RUBY_CLUSTER)
                 .add(ModBlocks.AQUAMARINE_ORE)
                 .add(ModBlocks.DEEPSLATE_AQUAMARINE_ORE)
-                .add(ModBlocks.BLOCK_OF_AQUAMARINE);
+                .add(ModBlocks.BLOCK_OF_AQUAMARINE)
+                .add(ModBlocks.STEEL_CHAIN)
+                .add(ModBlocks.STEEL_LANTERN);
         // Axe Mineable
         getOrCreateTagBuilder(BlockTags.AXE_MINEABLE)
                 .addTag(BlockTags.WOODEN_DOORS)

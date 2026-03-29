@@ -34,6 +34,24 @@ public class ModBlocks {
             new Block(AbstractBlock.Settings.create()
                     .strength(5)
                     .requiresTool().sounds(BlockSoundGroup.METAL)));
+    public static final Block STEEL_CHAIN = registerBlock("steel_chain",
+            new ChainBlock(
+                    AbstractBlock.Settings.create()
+                            .strength(5)
+                            .requiresTool()
+                            .sounds(BlockSoundGroup.CHAIN)
+            )
+    );
+    public static final Block STEEL_LANTERN = registerBlock("steel_lantern",
+            new LanternBlock(
+                    AbstractBlock.Settings.create()
+                            .strength(3.5f)
+                            .requiresTool()
+                            .sounds(BlockSoundGroup.LANTERN)
+                            .luminance(state -> 15)
+                            .nonOpaque()
+            )
+    );
 
     // Ruby
     public static final Block RUBY_ORE = registerBlock("ruby_ore",
