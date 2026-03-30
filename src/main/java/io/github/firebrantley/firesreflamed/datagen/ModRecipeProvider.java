@@ -123,6 +123,12 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('T', Items.TORCH)
                 .criterion(hasItem(ModItems.STEEL_NUGGET), conditionsFromItem(ModItems.STEEL_NUGGET))
                 .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.STEEL_BARS, 16)
+                .pattern("III")
+                .pattern("III")
+                .input('I', ModItems.STEEL_INGOT)
+                .criterion(hasItem(ModItems.STEEL_INGOT), conditionsFromItem(ModItems.STEEL_INGOT))
+                .offerTo(exporter);
 
         createShovelRecipe(exporter,
                 ModItems.STEEL_SHOVEL,

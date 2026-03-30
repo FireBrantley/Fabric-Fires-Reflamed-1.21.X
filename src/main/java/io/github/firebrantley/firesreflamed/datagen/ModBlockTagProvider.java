@@ -67,7 +67,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.DEEPSLATE_AQUAMARINE_ORE)
                 .add(ModBlocks.BLOCK_OF_AQUAMARINE)
                 .add(ModBlocks.STEEL_CHAIN)
-                .add(ModBlocks.STEEL_LANTERN);
+                .add(ModBlocks.STEEL_LANTERN)
+                .add(ModBlocks.STEEL_BARS);
         // Axe Mineable
         getOrCreateTagBuilder(BlockTags.AXE_MINEABLE)
                 .addTag(BlockTags.WOODEN_DOORS)
@@ -96,6 +97,9 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         // Needs Iron Tool
         getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.BLOCK_OF_STEEL)
+                .add(ModBlocks.STEEL_CHAIN)
+                .add(ModBlocks.STEEL_LANTERN)
+                .add(ModBlocks.STEEL_BARS)
                 .add(ModBlocks.RUBY_ORE)
                 .add(ModBlocks.DEEPSLATE_RUBY_ORE)
                 .add(ModBlocks.BLOCK_OF_RUBY)
@@ -175,7 +179,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         // Walls
         getOrCreateTagBuilder(BlockTags.WALLS)
                 .add(ModBlocks.SNOW_BRICK_WALL)
-                .add(ModBlocks.RUBY_BRICK_WALL);
+                .add(ModBlocks.RUBY_BRICK_WALL)
+                .add(ModBlocks.STEEL_BARS);
 
         // Moss Placeables
         getOrCreateTagBuilder(ModTags.Blocks.MOSS_PLACEABLE)

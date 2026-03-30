@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/iron_bars_cap",
+  "textures": {
+    "bars": "firesreflamed:block/steel_bars",
+    "edge": "firesreflamed:block/steel_bars"
+  }
+}
