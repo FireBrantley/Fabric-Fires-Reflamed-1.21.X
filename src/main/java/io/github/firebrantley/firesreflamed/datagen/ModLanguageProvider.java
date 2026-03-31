@@ -99,7 +99,7 @@ public class ModLanguageProvider extends FabricLanguageProvider {
         builder.add(ModItems.AQUAMARINE_LEGGINGS, "Aquamarine Leggings");
         builder.add(ModItems.AQUAMARINE_BOOTS, "Aquamarine Boots");
 
-        // Willow Blocks
+        // Willow Blocks & Items
         builder.add(ModBlocks.WILLOW_LOG, "Willow Log");
         builder.add(ModBlocks.WILLOW_WOOD, "Willow Wood");
         builder.add(ModBlocks.STRIPPED_WILLOW_LOG, "Stripped Willow Log");
@@ -117,6 +117,8 @@ public class ModLanguageProvider extends FabricLanguageProvider {
         builder.add(ModBlocks.WILLOW_LEAVES, "Willow Leaves");
         builder.add(ModBlocks.WILLOW_SAPLING, "Willow Sapling");
         builder.add(ModBlocks.POTTED_WILLOW_SAPLING, "Potted Willow Sapling");
+        builder.add(ModItems.WILLOW_BOAT, "Willow Boat");
+        builder.add(ModItems.WILLOW_CHEST_BOAT, "Willow Chest Boat");
 
         // Snow Blocks
         builder.add(ModBlocks.SNOW_BRICKS, "Snow Bricks");

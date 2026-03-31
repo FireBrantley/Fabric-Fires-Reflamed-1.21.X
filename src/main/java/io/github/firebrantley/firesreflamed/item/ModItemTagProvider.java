@@ -265,6 +265,13 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
         getOrCreateTagBuilder(C_CLUSTERS)
                 .add(ModBlocks.RUBY_CLUSTER.asItem());
 
+        // Boats
+        getOrCreateTagBuilder(ItemTags.BOATS)
+                .add(ModItems.WILLOW_BOAT)
+                .add(ModItems.WILLOW_CHEST_BOAT);
+        getOrCreateTagBuilder(ItemTags.CHEST_BOATS)
+                .add(ModItems.WILLOW_CHEST_BOAT);
+
         /* Hypothetical cross-mod compat tags
         // c: material convention tags (cross-mod compat)
         getOrCreateTagBuilder(C_INGOTS_TITANIUM)

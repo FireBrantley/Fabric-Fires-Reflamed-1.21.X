@@ -1,6 +1,7 @@
 package io.github.firebrantley.firesreflamed;
 
 import io.github.firebrantley.firesreflamed.block.ModBlocks;
+import io.github.firebrantley.firesreflamed.entity.ModBoats;
 import io.github.firebrantley.firesreflamed.item.ModItemGroups;
 import io.github.firebrantley.firesreflamed.item.ModItems;
 import io.github.firebrantley.firesreflamed.util.HammerUsageEvent;
@@ -25,6 +26,7 @@ public class FiresReflamed implements ModInitializer {
         ModItemGroups.registerItemGroups();
         ModBlocks.registerModBlocks();
         ModItems.registerModItems();
+        ModBoats.registerBoats();
 
         ModFeatures.registerFeatures();
 

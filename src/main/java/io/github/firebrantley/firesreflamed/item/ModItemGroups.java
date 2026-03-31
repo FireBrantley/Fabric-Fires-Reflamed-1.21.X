@@ -116,6 +116,9 @@ public class ModItemGroups {
                         entries.add(ModBlocks.WILLOW_LEAVES);
                         entries.add(ModBlocks.WILLOW_SAPLING);
 
+                        entries.add(ModItems.WILLOW_BOAT);
+                        entries.add(ModItems.WILLOW_CHEST_BOAT);
+
                         // Snow Blocks
                         entries.add(ModBlocks.SNOW_BRICKS);
                         entries.add(ModBlocks.SNOW_BRICK_STAIRS);

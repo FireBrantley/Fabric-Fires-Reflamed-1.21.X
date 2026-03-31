@@ -76,6 +76,10 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.AQUAMARINE_CHESTPLATE, Models.GENERATED);
         itemModelGenerator.register(ModItems.AQUAMARINE_LEGGINGS, Models.GENERATED);
         itemModelGenerator.register(ModItems.AQUAMARINE_BOOTS, Models.GENERATED);
+        
+        // Willow Items
+        itemModelGenerator.register(ModItems.WILLOW_BOAT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.WILLOW_CHEST_BOAT, Models.GENERATED);
 
         // Misc Items
         itemModelGenerator.register(ModItems.DRILL_BIT, Models.GENERATED);

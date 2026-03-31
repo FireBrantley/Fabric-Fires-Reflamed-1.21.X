@@ -1,6 +1,8 @@
 package io.github.firebrantley.firesreflamed.item;
 
+import com.terraformersmc.terraform.boat.api.item.TerraformBoatItemHelper;
 import io.github.firebrantley.firesreflamed.FiresReflamed;
+import io.github.firebrantley.firesreflamed.entity.ModBoats;
 import io.github.firebrantley.firesreflamed.item.custom.BatItem;
 import io.github.firebrantley.firesreflamed.item.custom.HammerItem;
 import net.minecraft.item.*;
@@ -171,6 +173,12 @@ public class ModItems {
     public static final Item AQUAMARINE_BOOTS = registerItem("aquamarine_boots",
             new ArmorItem(ModArmorMaterials.AQUAMARINE_ARMOR_MATERIAL,
                     ArmorItem.Type.BOOTS, new Item.Settings().maxCount(1)));
+
+    // Willow Items
+    public static final Item WILLOW_BOAT = TerraformBoatItemHelper.registerBoatItem(
+            ModBoats.WILLOW_BOAT_ID, ModBoats.WILLOW_BOAT_KEY, false);
+    public static final Item WILLOW_CHEST_BOAT = TerraformBoatItemHelper.registerBoatItem(
+            ModBoats.WILLOW_CHEST_BOAT_ID, ModBoats.WILLOW_BOAT_KEY, true);
 
     // Misc Items
     public static final Item DRILL_BIT = registerItem("drill_bit",

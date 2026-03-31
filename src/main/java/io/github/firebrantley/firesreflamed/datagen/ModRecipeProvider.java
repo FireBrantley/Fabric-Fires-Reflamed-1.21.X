@@ -335,6 +335,18 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input(ModBlocks.WILLOW_PLANKS)
                 .criterion(hasItem(ModBlocks.WILLOW_PLANKS), conditionsFromItem(ModBlocks.WILLOW_PLANKS))
                 .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TRANSPORTATION, ModItems.WILLOW_BOAT, 1)
+                .pattern("P P")
+                .pattern("PPP")
+                .input('P', ModBlocks.WILLOW_PLANKS)
+                .criterion(hasItem(Items.WATER_BUCKET), conditionsFromItem(Items.WATER_BUCKET))
+                .offerTo(exporter);
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.TRANSPORTATION, ModItems.WILLOW_CHEST_BOAT, 1)
+                .input(Items.CHEST)
+                .input(ModItems.WILLOW_BOAT)
+                .criterion(hasItem(ModItems.WILLOW_BOAT), conditionsFromItem(ModItems.WILLOW_BOAT))
+                .criterion(hasItem(Items.WATER_BUCKET), conditionsFromItem(Items.WATER_BUCKET))
+                .offerTo(exporter);
 
         // --- Snow Recipes ---
         // Crafting
