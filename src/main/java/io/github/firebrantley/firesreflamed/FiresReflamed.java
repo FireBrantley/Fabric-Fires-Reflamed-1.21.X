@@ -40,6 +40,11 @@ public class FiresReflamed implements ModInitializer {
         FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.STRIPPED_WILLOW_LOG, 5, 5);
         FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.STRIPPED_WILLOW_WOOD, 5, 5);
         FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.WILLOW_PLANKS, 5, 20);
+        FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.WILLOW_STAIRS, 5, 20);
+        FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.WILLOW_SLAB, 5, 20);
+        FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.WILLOW_FENCE, 5, 20);
+        FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.WILLOW_FENCE_GATE, 5, 20);
         FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.WILLOW_LEAVES, 30, 60);
+        FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.HANGING_WILLOW_LEAVES, 30, 60);
 	}
 }
