@@ -1,10 +1,15 @@
 package io.github.firebrantley.firesreflamed.block;
 
+import com.terraformersmc.terraform.sign.api.block.TerraformHangingSignBlock;
+import com.terraformersmc.terraform.sign.api.block.TerraformSignBlock;
+import com.terraformersmc.terraform.sign.api.block.TerraformWallHangingSignBlock;
+import com.terraformersmc.terraform.sign.api.block.TerraformWallSignBlock;
 import io.github.firebrantley.firesreflamed.FiresReflamed;
 import io.github.firebrantley.firesreflamed.block.custom.HangingMossBlock;
 import io.github.firebrantley.firesreflamed.block.custom.RubyClusterBlock;
 import io.github.firebrantley.firesreflamed.world.tree.ModSaplingGenerators;
 import net.minecraft.block.*;
+import net.minecraft.block.enums.NoteBlockInstrument;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
@@ -212,6 +217,43 @@ public class ModBlocks {
                     AbstractBlock.Settings.copy(Blocks.POTTED_OAK_SAPLING)
             )
     );
+
+    private static final Identifier WILLOW_SIGN_TEXTURE = Identifier.of(FiresReflamed.MOD_ID, "entity/signs/willow");
+    private static final Identifier WILLOW_HANGING_SIGN_TEXTURE = Identifier.of(FiresReflamed.MOD_ID, "entity/signs/hanging/willow");
+    private static final Identifier WILLOW_HANGING_SIGN_GUI_TEXTURE = Identifier.of(FiresReflamed.MOD_ID, "textures/gui/hanging_signs/willow");
+
+    public static final TerraformSignBlock WILLOW_SIGN = (TerraformSignBlock) registerBlock("willow_sign",
+            new TerraformSignBlock(WILLOW_SIGN_TEXTURE,
+                    AbstractBlock.Settings.create()
+                            .solid()
+                            .instrument(NoteBlockInstrument.BASS)
+                            .noCollision()
+                            .strength(1.0F)
+                            .burnable()));
+    public static final TerraformWallSignBlock WILLOW_WALL_SIGN = (TerraformWallSignBlock) registerBlock("willow_wall_sign",
+            new TerraformWallSignBlock(WILLOW_SIGN_TEXTURE,
+                    AbstractBlock.Settings.create()
+                            .solid()
+                            .instrument(NoteBlockInstrument.BASS)
+                            .noCollision()
+                            .strength(1.0F)
+                            .burnable()));
+    public static final TerraformHangingSignBlock WILLOW_HANGING_SIGN = (TerraformHangingSignBlock) registerBlock("willow_hanging_sign",
+            new TerraformHangingSignBlock(WILLOW_HANGING_SIGN_TEXTURE, WILLOW_HANGING_SIGN_GUI_TEXTURE,
+                    AbstractBlock.Settings.create()
+                            .solid()
+                            .instrument(NoteBlockInstrument.BASS)
+                            .noCollision()
+                            .strength(1.0F)
+                            .burnable()));
+    public static final TerraformWallHangingSignBlock WILLOW_WALL_HANGING_SIGN = (TerraformWallHangingSignBlock) registerBlock("willow_wall_hanging_sign",
+            new TerraformWallHangingSignBlock(WILLOW_HANGING_SIGN_TEXTURE, WILLOW_HANGING_SIGN_GUI_TEXTURE,
+                    AbstractBlock.Settings.create()
+                            .solid()
+                            .instrument(NoteBlockInstrument.BASS)
+                            .noCollision()
+                            .strength(1.0F)
+                            .burnable()));
 
     // Snow
     public static final Block SNOW_BRICKS = registerBlock(

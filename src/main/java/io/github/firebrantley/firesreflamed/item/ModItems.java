@@ -2,6 +2,7 @@ package io.github.firebrantley.firesreflamed.item;
 
 import com.terraformersmc.terraform.boat.api.item.TerraformBoatItemHelper;
 import io.github.firebrantley.firesreflamed.FiresReflamed;
+import io.github.firebrantley.firesreflamed.block.ModBlocks;
 import io.github.firebrantley.firesreflamed.entity.ModBoats;
 import io.github.firebrantley.firesreflamed.item.custom.BatItem;
 import io.github.firebrantley.firesreflamed.item.custom.HammerItem;
@@ -175,6 +176,11 @@ public class ModItems {
                     ArmorItem.Type.BOOTS, new Item.Settings().maxCount(1)));
 
     // Willow Items
+    public static final SignItem WILLOW_SIGN = (SignItem) registerItem("willow_sign",
+            new SignItem(new Item.Settings().maxCount(16), ModBlocks.WILLOW_SIGN, ModBlocks.WILLOW_WALL_SIGN));
+
+    public static final HangingSignItem WILLOW_HANGING_SIGN = (HangingSignItem) registerItem("willow_hanging_sign",
+            new HangingSignItem(ModBlocks.WILLOW_HANGING_SIGN, ModBlocks.WILLOW_WALL_HANGING_SIGN, new Item.Settings().maxCount(16)));
     public static final Item WILLOW_BOAT = TerraformBoatItemHelper.registerBoatItem(
             ModBoats.WILLOW_BOAT_ID, ModBoats.WILLOW_BOAT_KEY, false);
     public static final Item WILLOW_CHEST_BOAT = TerraformBoatItemHelper.registerBoatItem(

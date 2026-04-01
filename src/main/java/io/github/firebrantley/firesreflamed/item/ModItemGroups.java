@@ -116,6 +116,8 @@ public class ModItemGroups {
                         entries.add(ModBlocks.WILLOW_LEAVES);
                         entries.add(ModBlocks.WILLOW_SAPLING);
 
+                        entries.add(ModItems.WILLOW_SIGN);
+                        entries.add(ModItems.WILLOW_HANGING_SIGN);
                         entries.add(ModItems.WILLOW_BOAT);
                         entries.add(ModItems.WILLOW_CHEST_BOAT);
 

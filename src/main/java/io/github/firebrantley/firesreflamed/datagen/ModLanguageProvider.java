@@ -117,6 +117,8 @@ public class ModLanguageProvider extends FabricLanguageProvider {
         builder.add(ModBlocks.WILLOW_LEAVES, "Willow Leaves");
         builder.add(ModBlocks.WILLOW_SAPLING, "Willow Sapling");
         builder.add(ModBlocks.POTTED_WILLOW_SAPLING, "Potted Willow Sapling");
+        builder.add(ModItems.WILLOW_SIGN, "Willow Sign");
+        builder.add(ModItems.WILLOW_HANGING_SIGN, "Willow Hanging Sign");
         builder.add(ModItems.WILLOW_BOAT, "Willow Boat");
         builder.add(ModItems.WILLOW_CHEST_BOAT, "Willow Chest Boat");
 

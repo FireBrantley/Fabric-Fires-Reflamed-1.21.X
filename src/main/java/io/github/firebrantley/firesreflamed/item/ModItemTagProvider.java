@@ -194,7 +194,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
         getOrCreateTagBuilder(C_TOOLS)
                 .addTag(ModTags.Items.BATS);
 
-        // --- Misc Tags ---
+        // --- Wooden Tags ---
         // Wood
         getOrCreateTagBuilder(ItemTags.LOGS_THAT_BURN)
                 .add(ModBlocks.WILLOW_LOG.asItem())
@@ -261,9 +261,11 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
         getOrCreateTagBuilder(ItemTags.TRAPDOORS)
                 .add(ModBlocks.WILLOW_TRAPDOOR.asItem());
 
-        // Clusters
-        getOrCreateTagBuilder(C_CLUSTERS)
-                .add(ModBlocks.RUBY_CLUSTER.asItem());
+        // Signs
+        getOrCreateTagBuilder(ItemTags.SIGNS)
+                .add(ModItems.WILLOW_SIGN);
+        getOrCreateTagBuilder(ItemTags.HANGING_SIGNS)
+                .add(ModItems.WILLOW_HANGING_SIGN);
 
         // Boats
         getOrCreateTagBuilder(ItemTags.BOATS)
@@ -271,6 +273,10 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.WILLOW_CHEST_BOAT);
         getOrCreateTagBuilder(ItemTags.CHEST_BOATS)
                 .add(ModItems.WILLOW_CHEST_BOAT);
+
+        // Clusters
+        getOrCreateTagBuilder(C_CLUSTERS)
+                .add(ModBlocks.RUBY_CLUSTER.asItem());
 
         /* Hypothetical cross-mod compat tags
         // c: material convention tags (cross-mod compat)

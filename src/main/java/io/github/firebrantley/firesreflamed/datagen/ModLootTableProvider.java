@@ -92,6 +92,11 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.WILLOW_SAPLING);
         addPottedPlantDrops(ModBlocks.POTTED_WILLOW_SAPLING);
 
+        addDrop(ModBlocks.WILLOW_SIGN, ModItems.WILLOW_SIGN);
+        addDrop(ModBlocks.WILLOW_WALL_SIGN, ModItems.WILLOW_SIGN);
+        addDrop(ModBlocks.WILLOW_HANGING_SIGN, ModItems.WILLOW_HANGING_SIGN);
+        addDrop(ModBlocks.WILLOW_WALL_HANGING_SIGN, ModItems.WILLOW_HANGING_SIGN);
+
         // Snow Blocks
         addDrop(ModBlocks.SNOW_BRICKS);
         addDrop(ModBlocks.SNOW_BRICK_STAIRS);

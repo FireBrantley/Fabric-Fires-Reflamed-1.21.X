@@ -335,6 +335,25 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input(ModBlocks.WILLOW_PLANKS)
                 .criterion(hasItem(ModBlocks.WILLOW_PLANKS), conditionsFromItem(ModBlocks.WILLOW_PLANKS))
                 .offerTo(exporter);
+         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModItems.WILLOW_SIGN, 3)
+                .pattern("WWW")
+                .pattern("WWW")
+                .pattern(" S ")
+                 .input('W', ModBlocks.WILLOW_PLANKS)
+                 .input('S', Items.STICK)
+                .criterion(hasItem(ModBlocks.WILLOW_PLANKS), conditionsFromItem(ModBlocks.WILLOW_PLANKS))
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModItems.WILLOW_HANGING_SIGN, 6)
+                .pattern("C C")
+                .pattern("WWW")
+                .pattern("WWW")
+                .input('W', ModBlocks.WILLOW_PLANKS)
+                .input('C', Items.CHAIN)
+                .criterion(hasItem(ModBlocks.STRIPPED_WILLOW_LOG), conditionsFromItem(ModBlocks.STRIPPED_WILLOW_LOG))
+                .criterion(hasItem(Items.CHAIN), conditionsFromItem(Items.CHAIN))
+                .offerTo(exporter);
         ShapedRecipeJsonBuilder.create(RecipeCategory.TRANSPORTATION, ModItems.WILLOW_BOAT, 1)
                 .pattern("P P")
                 .pattern("PPP")

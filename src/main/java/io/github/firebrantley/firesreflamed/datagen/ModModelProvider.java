@@ -7,6 +7,7 @@ import io.github.firebrantley.firesreflamed.block.ModBlocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.*;
+import net.minecraft.data.family.BlockFamily;
 import net.minecraft.util.Identifier;
 
 public class ModModelProvider extends FabricModelProvider {
@@ -91,9 +92,6 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         // Pools
-        BlockStateModelGenerator.BlockTexturePool willowPool =
-                blockStateModelGenerator
-                        .registerCubeAllModelTexturePool(ModBlocks.WILLOW_PLANKS);
         BlockStateModelGenerator.BlockTexturePool rubyPool =
                 blockStateModelGenerator
                         .registerCubeAllModelTexturePool(ModBlocks.RUBY_BRICKS);
@@ -132,19 +130,6 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerLog(ModBlocks.STRIPPED_WILLOW_LOG)
                 .log(ModBlocks.STRIPPED_WILLOW_LOG)
                 .wood(ModBlocks.STRIPPED_WILLOW_WOOD);
-
-        willowPool.stairs(ModBlocks.WILLOW_STAIRS);
-        willowPool.slab(ModBlocks.WILLOW_SLAB);
-
-        willowPool.fence(ModBlocks.WILLOW_FENCE);
-        willowPool.fenceGate(ModBlocks.WILLOW_FENCE_GATE);
-
-        blockStateModelGenerator.registerDoor(ModBlocks.WILLOW_DOOR);
-        blockStateModelGenerator.registerOrientableTrapdoor(ModBlocks.WILLOW_TRAPDOOR);
-
-        willowPool.pressurePlate(ModBlocks.WILLOW_PRESSURE_PLATE);
-        willowPool.button(ModBlocks.WILLOW_BUTTON);
-
         blockStateModelGenerator.blockStateCollector.accept(
                 VariantsBlockStateSupplier.create(ModBlocks.HANGING_WILLOW_LEAVES)
                         .coordinate(
@@ -184,6 +169,24 @@ public class ModModelProvider extends FabricModelProvider {
                         )
                 )
         );
+
+        blockStateModelGenerator.registerHangingSign(ModBlocks.STRIPPED_WILLOW_LOG, ModBlocks.WILLOW_HANGING_SIGN, ModBlocks.WILLOW_WALL_HANGING_SIGN);
+
+        var exampleFamily = new BlockFamily.Builder(ModBlocks.WILLOW_PLANKS)
+                .button(ModBlocks.WILLOW_BUTTON)
+                .fence(ModBlocks.WILLOW_FENCE)
+                .fenceGate(ModBlocks.WILLOW_FENCE_GATE)
+                .pressurePlate(ModBlocks.WILLOW_PRESSURE_PLATE)
+                .sign(ModBlocks.WILLOW_SIGN, ModBlocks.WILLOW_WALL_SIGN)
+                .slab(ModBlocks.WILLOW_SLAB)
+                .stairs(ModBlocks.WILLOW_STAIRS)
+                .door(ModBlocks.WILLOW_DOOR)
+                .trapdoor(ModBlocks.WILLOW_TRAPDOOR)
+                .group("wooden")
+                .unlockCriterionName("has_planks")
+                .build();
+        blockStateModelGenerator.registerCubeAllModelTexturePool(exampleFamily.getBaseBlock())
+                .family(exampleFamily);
 
         // Snow Blocks
         snowPool.stairs(ModBlocks.SNOW_BRICK_STAIRS);
