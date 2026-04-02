@@ -6,9 +6,7 @@ import io.github.firebrantley.firesreflamed.util.ModTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.block.Blocks;
-import net.minecraft.data.server.recipe.RecipeExporter;
-import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
-import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
+import net.minecraft.data.server.recipe.*;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
@@ -190,7 +188,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern(" R ")
                 .pattern("RRR")
                 .input('R', ModItems.RUBY_GEM)
-                .criterion(hasItem(ModItems.STEEL_NUGGET), conditionsFromItem(ModItems.STEEL_NUGGET))
+                .criterion(hasItem(ModItems.RUBY_GEM), conditionsFromItem(ModItems.RUBY_GEM))
                 .offerTo(exporter,
                         Identifier.of(
                                 "firesreflamed",
@@ -200,17 +198,30 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("RR")
                 .pattern("RR")
                 .input('R', ModBlocks.BLOCK_OF_RUBY)
-                .criterion(hasItem(ModItems.STEEL_NUGGET), conditionsFromItem(ModItems.STEEL_NUGGET))
+                .criterion(hasItem(ModItems.RUBY_GEM), conditionsFromItem(ModItems.RUBY_GEM))
                 .offerTo(exporter,
                         Identifier.of(
                                 "firesreflamed",
                                 getItemPath(ModBlocks.RUBY_BRICKS)));
+        createStairsRecipe(
+                ModBlocks.RUBY_BRICK_STAIRS,
+                Ingredient.ofItems(ModBlocks.RUBY_BRICKS))
+                .criterion(hasItem(ModBlocks.RUBY_BRICKS), conditionsFromItem(ModBlocks.RUBY_BRICKS))
+                .offerTo(exporter);
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS,
+                ModBlocks.RUBY_BRICK_SLAB,
+                Ingredient.ofItems(ModBlocks.RUBY_BRICKS))
+                .criterion(hasItem(ModBlocks.RUBY_BRICKS), conditionsFromItem(ModBlocks.RUBY_BRICKS))
+                .offerTo(exporter);
+        createWallRecipe(exporter,
+                ModBlocks.RUBY_BRICK_WALL,
+                ModBlocks.RUBY_BRICKS);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.RUBY_GEM, 1)
                 .pattern("R")
                 .pattern("R")
-                .input('R', ModItems.STEEL_NUGGET)
-                .criterion(hasItem(ModItems.STEEL_NUGGET), conditionsFromItem(ModItems.STEEL_NUGGET))
+                .input('R', ModItems.RUBY_CRYSTALS)
+                .criterion(hasItem(ModItems.RUBY_CRYSTALS), conditionsFromItem(ModItems.RUBY_CRYSTALS))
                 .offerTo(exporter,
                         Identifier.of(
                                 "firesreflamed",
@@ -245,10 +256,27 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         );
 
         // Stonecutter
-        offerStonecuttingRecipe(exporter,
+        offerMultiStonecuttingRecipes(
+                exporter,
                 RecipeCategory.BUILDING_BLOCKS,
-                ModBlocks.RUBY_BRICKS,
+                List.of(
+                        StonecuttingOutput.of(ModBlocks.RUBY_BRICKS),
+                        StonecuttingOutput.of(ModBlocks.RUBY_BRICK_SLAB, 2),
+                        StonecuttingOutput.of(ModBlocks.RUBY_BRICK_STAIRS),
+                        StonecuttingOutput.of(ModBlocks.RUBY_BRICK_WALL)
+                ),
                 ModBlocks.BLOCK_OF_RUBY
+        );
+
+        offerMultiStonecuttingRecipes(
+                exporter,
+                RecipeCategory.BUILDING_BLOCKS,
+                List.of(
+                        StonecuttingOutput.of(ModBlocks.RUBY_BRICK_SLAB, 2),
+                        StonecuttingOutput.of(ModBlocks.RUBY_BRICK_STAIRS),
+                        StonecuttingOutput.of(ModBlocks.RUBY_BRICK_WALL)
+                ),
+                ModBlocks.RUBY_BRICKS
         );
 
         // Smelting & Blasting
@@ -260,6 +288,14 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 List.of(ModBlocks.RUBY_ORE),
                 RecipeCategory.MISC, ModItems.RUBY_GEM,
                 1.0f, 100, "ruby");
+        offerSmelting(exporter,
+                List.of(ModBlocks.DEEPSLATE_RUBY_ORE),
+                RecipeCategory.MISC, ModItems.RUBY_GEM,
+                1.0f, 300, "ruby");
+        offerBlasting(exporter,
+                List.of(ModBlocks.DEEPSLATE_RUBY_ORE),
+                RecipeCategory.MISC, ModItems.RUBY_GEM,
+                1.0f, 150, "ruby");
 
         // --- Aquamarine Recipes ---
         // Crafting
@@ -289,6 +325,14 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 List.of(ModBlocks.AQUAMARINE_ORE),
                 RecipeCategory.MISC, ModItems.AQUAMARINE_SHARD,
                 0.8f, 100, "aquamarine");
+        offerSmelting(exporter,
+                List.of(ModBlocks.DEEPSLATE_AQUAMARINE_ORE),
+                RecipeCategory.MISC, ModItems.AQUAMARINE_SHARD,
+                1.0f, 300, "aquamarine");
+        offerBlasting(exporter,
+                List.of(ModBlocks.DEEPSLATE_AQUAMARINE_ORE),
+                RecipeCategory.MISC, ModItems.AQUAMARINE_SHARD,
+                1.0f, 150, "aquamarine");
 
         // --- Willow Recipes ---
         // Crafting
@@ -349,7 +393,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("C C")
                 .pattern("WWW")
                 .pattern("WWW")
-                .input('W', ModBlocks.WILLOW_PLANKS)
+                .input('W', ModBlocks.STRIPPED_WILLOW_LOG)
                 .input('C', Items.CHAIN)
                 .criterion(hasItem(ModBlocks.STRIPPED_WILLOW_LOG), conditionsFromItem(ModBlocks.STRIPPED_WILLOW_LOG))
                 .criterion(hasItem(Items.CHAIN), conditionsFromItem(Items.CHAIN))
@@ -374,7 +418,42 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 ModBlocks.SNOW_BRICKS,
                 Blocks.SNOW_BLOCK
         );
+        createStairsRecipe(
+                ModBlocks.SNOW_BRICK_STAIRS,
+                Ingredient.ofItems(ModBlocks.SNOW_BRICKS))
+                .criterion(hasItem(ModBlocks.SNOW_BRICKS), conditionsFromItem(ModBlocks.SNOW_BRICKS))
+                .offerTo(exporter);
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS,
+                ModBlocks.SNOW_BRICK_SLAB,
+                Ingredient.ofItems(ModBlocks.SNOW_BRICKS))
+                .criterion(hasItem(ModBlocks.SNOW_BRICKS), conditionsFromItem(ModBlocks.SNOW_BRICKS))
+                .offerTo(exporter);
+        createWallRecipe(exporter,
+                ModBlocks.SNOW_BRICK_WALL,
+                ModBlocks.SNOW_BRICKS);
 
+        // Stonecutter
+        offerMultiStonecuttingRecipes(
+                exporter,
+                RecipeCategory.BUILDING_BLOCKS,
+                List.of(
+                        StonecuttingOutput.of(ModBlocks.SNOW_BRICKS),
+                        StonecuttingOutput.of(ModBlocks.SNOW_BRICK_SLAB, 2),
+                        StonecuttingOutput.of(ModBlocks.SNOW_BRICK_STAIRS),
+                        StonecuttingOutput.of(ModBlocks.SNOW_BRICK_WALL)
+                ),
+                Blocks.SNOW_BLOCK
+        );
+        offerMultiStonecuttingRecipes(
+                exporter,
+                RecipeCategory.BUILDING_BLOCKS,
+                List.of(
+                        StonecuttingOutput.of(ModBlocks.SNOW_BRICK_SLAB, 2),
+                        StonecuttingOutput.of(ModBlocks.SNOW_BRICK_STAIRS),
+                        StonecuttingOutput.of(ModBlocks.SNOW_BRICK_WALL)
+                ),
+                ModBlocks.SNOW_BRICKS
+        );
 
         // --- Misc Item Recipes ---
         // Crafting
@@ -392,7 +471,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("   ")
                 .input('B', ModItems.DRILL_BIT)
                 .input('G', Items.GOLD_BLOCK)
-                .criterion(hasItem(ModItems.STEEL_INGOT), conditionsFromItem(ModItems.STEEL_INGOT))
+                .criterion(hasItem(ModItems.DRILL_BIT), conditionsFromItem(ModItems.DRILL_BIT))
                 .offerTo(exporter);
         createBatRecipe(
                 exporter,
@@ -410,6 +489,63 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input(ItemTags.COALS)
                 .criterion(hasItem(ironInput), conditionsFromItem(ironInput))
                 .offerTo(exporter);
+    }
+
+    public record StonecuttingOutput(ItemConvertible item, int count) {
+
+        /** Convenience factory for a single-output (count = 1). */
+        public static StonecuttingOutput of(ItemConvertible item) {
+            return new StonecuttingOutput(item, 1);
+        }
+
+        /** Convenience factory for a custom count. */
+        public static StonecuttingOutput of(ItemConvertible item, int count) {
+            return new StonecuttingOutput(item, count);
+        }
+    }
+
+    private void offerMultiStonecuttingRecipes(
+            RecipeExporter exporter,
+            RecipeCategory category,
+            List<StonecuttingOutput> outputs,
+            ItemConvertible... inputs
+    ) {
+        for (ItemConvertible input : inputs) {
+            for (StonecuttingOutput output : outputs) {
+                StonecuttingRecipeJsonBuilder
+                        .createStonecutting(
+                                Ingredient.ofItems(input.asItem()),
+                                category,
+                                output.item(),
+                                output.count()
+                        )
+                        .criterion(
+                                RecipeProvider.hasItem(input),
+                                RecipeProvider.conditionsFromItem(input)
+                        )
+                        .offerTo(
+                                exporter,
+                                RecipeProvider.getItemPath(output.item()) + "_from_" +
+                                        RecipeProvider.getItemPath(input) + "_stonecutting"
+                        );
+            }
+        }
+    }
+
+    private void createWallRecipe(
+            RecipeExporter exporter,
+            ItemConvertible output,
+            ItemConvertible input
+    ) {
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, output, 6)
+                .pattern("RRR")
+                .pattern("RRR")
+                .input('R', input)
+                .criterion(hasItem(input), conditionsFromItem(input))
+                .offerTo(exporter,
+                        Identifier.of(
+                                "firesreflamed",
+                                getItemPath(output)));
     }
 
     // Tool Recipe Templates
@@ -546,4 +682,5 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(input), conditionsFromItem(input))
                 .offerTo(exporter);
     }
+
 }
