@@ -45,7 +45,6 @@ public class ModItemGroups {
                         entries.add(ModItems.STEEL_NUGGET);
                         entries.add(ModBlocks.STEEL_CHAIN);
                         entries.add(ModBlocks.STEEL_LANTERN);
-                        entries.add(ModBlocks.STEEL_BARS);
 
                         // Steel Tool Set
                         entries.add(ModItems.STEEL_SHOVEL);

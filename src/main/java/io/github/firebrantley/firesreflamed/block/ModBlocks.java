@@ -57,14 +57,6 @@ public class ModBlocks {
                             .nonOpaque()
             )
     );
-    public static final Block STEEL_BARS = registerBlock("steel_bars",
-            new PaneBlock(
-                    AbstractBlock.Settings.create()
-                            .strength(5f)
-                            .requiresTool()
-                            .sounds(BlockSoundGroup.METAL)
-            )
-    );
 
     // Ruby
     public static final Block RUBY_ORE = registerBlock("ruby_ore",
