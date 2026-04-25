@@ -1,8 +1,10 @@
 {
   "id": "firesreflamed",
   "platforms": {
-    "modrinth": "reflamed"
+    "modrinth": "fires-reflamed"
   },
   "modid": "firesreflamed",
-  "owners": [ "firebrantley" ]
+  "owners": [
+    "firebrantley"
+  ]
 }
