@@ -22,12 +22,28 @@ repositories {
         name = 'TerraformersMC'
         url = 'https://maven.terraformersmc.com/'
     }
+
+    maven {
+        name = 'Sinytra'
+        url = 'https://maven.sinytra.org'
+    }
 }
 
 fabricApi {
 	configureDataGeneration {
 		client = true
 	}
+}
+
+loom {
+    runs {
+        wikiExportClient {
+            inherit client
+            configName = "Wiki Export Client"
+            runDir = "run"
+            vmArgs "-Ditem_asset_export.render.namespaces=firesreflamed"
+        }
+    }
 }
 
 dependencies {
@@ -41,6 +57,9 @@ dependencies {
 
     modImplementation "com.terraformersmc.terraform-api:terraform-wood-api-v1:${project.terraform_wood_api_version}"
     include "com.terraformersmc.terraform-api:terraform-wood-api-v1:${project.terraform_wood_api_version}"
+
+    // Sinytra Wiki Data Exporter - only runs at runtime for exporting wiki assets
+    modRuntimeOnly "org.sinytra:item-asset-export-fabric:1.0.2+1.21"
 }
 
 processResources {
