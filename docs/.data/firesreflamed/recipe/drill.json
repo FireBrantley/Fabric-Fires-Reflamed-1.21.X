@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "firesreflamed:drill_bit"
+    },
+    "G": {
+      "item": "minecraft:gold_block"
+    }
+  },
+  "pattern": [
+    "B  ",
+    " G ",
+    "   "
+  ],
+  "result": {
+    "count": 1,
+    "id": "firesreflamed:drill"
+  }
+}

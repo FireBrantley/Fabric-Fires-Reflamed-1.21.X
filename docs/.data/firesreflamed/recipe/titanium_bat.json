@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "B": {
+      "item": "firesreflamed:block_of_titanium"
+    },
+    "H": {
+      "item": "firesreflamed:titanium_ingot"
+    }
+  },
+  "pattern": [
+    " B ",
+    " B ",
+    " H "
+  ],
+  "result": {
+    "count": 1,
+    "id": "firesreflamed:titanium_bat"
+  }
+}

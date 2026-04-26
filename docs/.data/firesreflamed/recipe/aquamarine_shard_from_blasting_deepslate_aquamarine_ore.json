@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 150,
+  "experience": 1.0,
+  "group": "aquamarine",
+  "ingredient": {
+    "item": "firesreflamed:deepslate_aquamarine_ore"
+  },
+  "result": {
+    "id": "firesreflamed:aquamarine_shard"
+  }
+}

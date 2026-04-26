@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "firesreflamed:block_of_aquamarine"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "firesreflamed:aquamarine_shard"
+  }
+}

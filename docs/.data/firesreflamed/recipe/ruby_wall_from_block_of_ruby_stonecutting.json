@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "firesreflamed:block_of_ruby"
+  },
+  "result": {
+    "count": 1,
+    "id": "firesreflamed:ruby_wall"
+  }
+}
