@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "B": {
+      "item": "firesreflamed:block_of_steel"
+    },
+    "H": {
+      "item": "firesreflamed:steel_ingot"
+    }
+  },
+  "pattern": [
+    " B ",
+    " B ",
+    " H "
+  ],
+  "result": {
+    "count": 1,
+    "id": "firesreflamed:steel_bat"
+  }
+}

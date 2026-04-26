@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:chest"
+    },
+    {
+      "item": "firesreflamed:willow_boat"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "firesreflamed:willow_chest_boat"
+  }
+}

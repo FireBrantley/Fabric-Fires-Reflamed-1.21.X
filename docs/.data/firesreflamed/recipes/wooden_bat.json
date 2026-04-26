@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "B": {
+      "tag": "minecraft:logs"
+    },
+    "H": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    " B ",
+    " B ",
+    " H "
+  ],
+  "result": {
+    "count": 1,
+    "id": "firesreflamed:wooden_bat"
+  }
+}
