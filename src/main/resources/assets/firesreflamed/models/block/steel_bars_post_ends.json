@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/iron_bars_post_ends",
-  "textures": {
-    "edge": "firesreflamed:block/steel_bars"
-  }
-}

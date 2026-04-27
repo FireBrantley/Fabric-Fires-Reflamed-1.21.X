@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:item/iron_bars",
-  "textures": {
-    "layer0": "firesreflamed:block/steel_bars"
-  }
-}
