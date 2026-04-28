@@ -5,7 +5,9 @@ import io.github.firebrantley.firesreflamed.FiresReflamed;
 import io.github.firebrantley.firesreflamed.block.ModBlocks;
 import io.github.firebrantley.firesreflamed.entity.ModBoats;
 import io.github.firebrantley.firesreflamed.item.custom.BatItem;
+import io.github.firebrantley.firesreflamed.item.custom.CopperBucketItem;
 import io.github.firebrantley.firesreflamed.item.custom.HammerItem;
+import net.minecraft.fluid.Fluids;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -201,6 +203,19 @@ public class ModItems {
                     5,
                     -2.9f,
                     new Item.Settings().maxCount(1)
+            )
+    );
+
+    public static final Item COPPER_BUCKET = registerItem("copper_bucket",
+            new CopperBucketItem(Fluids.EMPTY, () -> ModItems.COPPER_WATER_BUCKET, new Item.Settings()
+                    .maxCount(16)
+            )
+    );
+
+    public static final Item COPPER_WATER_BUCKET = registerItem("copper_water_bucket",
+            new CopperBucketItem(Fluids.WATER, () -> ModItems.COPPER_WATER_BUCKET, new Item.Settings()
+                    .maxCount(1)
+                    .recipeRemainder(COPPER_BUCKET)
             )
     );
 

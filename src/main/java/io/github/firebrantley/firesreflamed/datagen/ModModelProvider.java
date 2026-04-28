@@ -87,6 +87,8 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.DRILL, Models.HANDHELD);
         itemModelGenerator.register(ModItems.WOODEN_BAT, Models.HANDHELD);
         itemModelGenerator.register(ModBlocks.HANGING_WILLOW_LEAVES.asItem(), Models.GENERATED);
+        itemModelGenerator.register(ModItems.COPPER_BUCKET, Models.GENERATED);
+        itemModelGenerator.register(ModItems.COPPER_WATER_BUCKET, Models.GENERATED);
     }
 
     @Override
