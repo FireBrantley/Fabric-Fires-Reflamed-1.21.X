@@ -3,7 +3,7 @@
   "category": "building",
   "key": {
     "W": {
-      "item": "firesreflamed:willow_log"
+      "item": "firesreflamed:stripped_willow_log"
     }
   },
   "pattern": [
@@ -12,6 +12,6 @@
   ],
   "result": {
     "count": 1,
-    "id": "firesreflamed:willow_wood"
+    "id": "firesreflamed:stripped_willow_wood"
   }
 }

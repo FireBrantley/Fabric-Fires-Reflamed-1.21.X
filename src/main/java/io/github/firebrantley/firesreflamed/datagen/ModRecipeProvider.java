@@ -335,7 +335,13 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.WILLOW_WOOD)
                 .pattern("WW")
                 .pattern("WW")
-                .input('W', ModTags.Items.WILLOW_LOGS)
+                .input('W', ModBlocks.WILLOW_LOG)
+                .criterion("has_willow_logs", conditionsFromTag(ModTags.Items.WILLOW_LOGS))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.STRIPPED_WILLOW_WOOD)
+                .pattern("WW")
+                .pattern("WW")
+                .input('W', ModBlocks.STRIPPED_WILLOW_LOG)
                 .criterion("has_willow_logs", conditionsFromTag(ModTags.Items.WILLOW_LOGS))
                 .offerTo(exporter);
         ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.WILLOW_PLANKS, 4)
