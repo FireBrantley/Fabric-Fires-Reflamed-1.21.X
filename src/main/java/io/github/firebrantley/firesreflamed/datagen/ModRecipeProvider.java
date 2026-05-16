@@ -97,7 +97,11 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
         // --- Steel Recipes ---
         // Crafting
-        createCarbonizedIronRecipe(exporter, ModItems.CARBONIZED_IRON, Items.IRON_NUGGET);
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CARBONIZED_IRON)
+                .input(Items.IRON_NUGGET)
+                .input(ItemTags.COALS)
+                .criterion(hasItem(Items.IRON_NUGGET), conditionsFromItem(Items.IRON_NUGGET))
+                .offerTo(exporter);
         offerReversibleCompactingRecipes(exporter,
                 RecipeCategory.MISC, ModItems.STEEL_INGOT,
                 RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLOCK_OF_STEEL);
@@ -252,7 +256,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         // Stonecutter
         offerMultiStonecuttingRecipes(
                 exporter,
-                RecipeCategory.BUILDING_BLOCKS,
                 List.of(
                         StonecuttingOutput.of(ModBlocks.RUBY_BRICKS),
                         StonecuttingOutput.of(ModBlocks.RUBY_BRICK_SLAB, 2),
@@ -264,7 +267,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
         offerMultiStonecuttingRecipes(
                 exporter,
-                RecipeCategory.BUILDING_BLOCKS,
                 List.of(
                         StonecuttingOutput.of(ModBlocks.RUBY_BRICK_SLAB, 2),
                         StonecuttingOutput.of(ModBlocks.RUBY_BRICK_STAIRS),
@@ -330,6 +332,12 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
         // --- Willow Recipes ---
         // Crafting
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.WILLOW_WOOD)
+                .pattern("WW")
+                .pattern("WW")
+                .input('W', ModTags.Items.WILLOW_LOGS)
+                .criterion("has_willow_logs", conditionsFromTag(ModTags.Items.WILLOW_LOGS))
+                .offerTo(exporter);
         ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.WILLOW_PLANKS, 4)
                 .input(ModTags.Items.WILLOW_LOGS)
                 .criterion("has_willow_logs", conditionsFromTag(ModTags.Items.WILLOW_LOGS))
@@ -429,7 +437,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         // Stonecutter
         offerMultiStonecuttingRecipes(
                 exporter,
-                RecipeCategory.BUILDING_BLOCKS,
                 List.of(
                         StonecuttingOutput.of(ModBlocks.SNOW_BRICKS),
                         StonecuttingOutput.of(ModBlocks.SNOW_BRICK_SLAB, 2),
@@ -440,7 +447,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         );
         offerMultiStonecuttingRecipes(
                 exporter,
-                RecipeCategory.BUILDING_BLOCKS,
                 List.of(
                         StonecuttingOutput.of(ModBlocks.SNOW_BRICK_SLAB, 2),
                         StonecuttingOutput.of(ModBlocks.SNOW_BRICK_STAIRS),
@@ -476,15 +482,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
     }
 
     // --- Helper Methods ---
-    // Misc Recipe Templates
-    private void createCarbonizedIronRecipe(RecipeExporter exporter, ItemConvertible output, ItemConvertible ironInput) {
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, output)
-                .input(ironInput)
-                .input(ItemTags.COALS)
-                .criterion(hasItem(ironInput), conditionsFromItem(ironInput))
-                .offerTo(exporter);
-    }
-
     public record StonecuttingOutput(ItemConvertible item, int count) {
 
         /** Convenience factory for a single-output (count = 1). */
@@ -500,7 +497,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
     private void offerMultiStonecuttingRecipes(
             RecipeExporter exporter,
-            RecipeCategory category,
             List<StonecuttingOutput> outputs,
             ItemConvertible... inputs
     ) {
@@ -509,7 +505,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 StonecuttingRecipeJsonBuilder
                         .createStonecutting(
                                 Ingredient.ofItems(input.asItem()),
-                                category,
+                                RecipeCategory.BUILDING_BLOCKS,
                                 output.item(),
                                 output.count()
                         )

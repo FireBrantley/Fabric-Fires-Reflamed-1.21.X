@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "W": {
+      "tag": "firesreflamed:willow_logs"
+    }
+  },
+  "pattern": [
+    "WW",
+    "WW"
+  ],
+  "result": {
+    "count": 1,
+    "id": "firesreflamed:willow_wood"
+  }
+}
