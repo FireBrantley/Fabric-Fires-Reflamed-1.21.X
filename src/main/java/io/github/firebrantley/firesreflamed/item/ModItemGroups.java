@@ -130,8 +130,6 @@ public class ModItemGroups {
                         entries.add(ModItems.DRILL_BIT);
                         entries.add(ModItems.DRILL);
                         entries.add(ModItems.WOODEN_BAT);
-                        entries.add(ModItems.COPPER_BUCKET);
-                        entries.add(ModItems.COPPER_WATER_BUCKET);
                     }).build());
 
     public static void registerItemGroups() {
