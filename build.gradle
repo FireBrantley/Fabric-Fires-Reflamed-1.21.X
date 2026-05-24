@@ -27,6 +27,16 @@ repositories {
         name = 'Sinytra'
         url = 'https://maven.sinytra.org'
     }
+
+    maven {
+        name = 'Shedaniel'
+        url = 'https://maven.shedaniel.me/'
+    }
+
+    maven {
+        name = 'JitPack'
+        url = 'https://jitpack.io'
+    }
 }
 
 fabricApi {
@@ -51,6 +61,9 @@ dependencies {
     minecraft "com.mojang:minecraft:${project.minecraft_version}"
     mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+    modImplementation("me.shedaniel.cloth:cloth-config-fabric:${project.cloth_config_version}") {
+        exclude(group: "net.fabricmc.fabric-api")
+    }
 
     // Fabric API. This is technically optional, but you probably want it anyway.
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
@@ -60,6 +73,10 @@ dependencies {
 
     // Sinytra Wiki Data Exporter - only runs at runtime for exporting wiki assets
     modRuntimeOnly "org.sinytra:item-asset-export-fabric:1.0.2+1.21"
+
+
+    modImplementation "com.github.cech12.BucketLib:fabric:${project.bucketlib_version}"
+    include "com.github.cech12.BucketLib:fabric:${project.bucketlib_version}"
 }
 
 processResources {

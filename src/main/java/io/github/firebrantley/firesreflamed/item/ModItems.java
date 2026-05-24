@@ -1,6 +1,8 @@
 package io.github.firebrantley.firesreflamed.item;
 
 import com.terraformersmc.terraform.boat.api.item.TerraformBoatItemHelper;
+import de.cech12.bucketlib.api.BucketLibApi;
+import de.cech12.bucketlib.api.item.UniversalBucketItem;
 import io.github.firebrantley.firesreflamed.FiresReflamed;
 import io.github.firebrantley.firesreflamed.block.ModBlocks;
 import io.github.firebrantley.firesreflamed.entity.ModBoats;
@@ -204,6 +206,10 @@ public class ModItems {
             )
     );
 
+    public static final Item COPPER_BUCKET = registerItem("copper_bucket",
+            new UniversalBucketItem(new UniversalBucketItem.Properties()
+                    .tab(ModItemGroupKeys.FIRES_REFLAMED)));
+
     // Helper method to register items
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(FiresReflamed.MOD_ID, name), item);
@@ -211,5 +217,7 @@ public class ModItems {
 
     public static void registerModItems() {
         FiresReflamed.LOGGER.info("Registering Mod Items for " + FiresReflamed.MOD_ID);
+
+        BucketLibApi.registerBucket(Identifier.of(FiresReflamed.MOD_ID, "copper_bucket"));
     }
 }

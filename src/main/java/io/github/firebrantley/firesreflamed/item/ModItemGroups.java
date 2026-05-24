@@ -12,7 +12,7 @@ import net.minecraft.util.Identifier;
 
 public class ModItemGroups {
     public static final ItemGroup FIRES_REFLAMED = Registry.register(Registries.ITEM_GROUP,
-            Identifier.of(FiresReflamed.MOD_ID, "fires_reflamed"),
+            ModItemGroupKeys.FIRES_REFLAMED,
             FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.RAW_TITANIUM))
                     .displayName(Text.translatable("itemGroup.firesreflamed.fires_reflamed"))
                     .entries((displayContext, entries) -> {
@@ -133,7 +133,6 @@ public class ModItemGroups {
                     }).build());
 
     public static void registerItemGroups() {
-
         FiresReflamed.LOGGER.info("Register Item Groups for " + FiresReflamed.MOD_ID);
     }
 }

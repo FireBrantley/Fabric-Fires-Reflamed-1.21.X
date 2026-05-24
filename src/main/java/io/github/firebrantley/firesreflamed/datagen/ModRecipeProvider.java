@@ -485,6 +485,12 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 Ingredient.fromTag(ItemTags.LOGS),
                 Items.STICK
         );
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.COPPER_BUCKET)
+                .pattern("C C")
+                .pattern(" C ")
+                .input('C', Items.COPPER_INGOT)
+                .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.COPPER_INGOT))
+                .offerTo(exporter);
     }
 
     // --- Helper Methods ---

@@ -1,0 +1,7 @@
+{
+  "parent": "bucketlib:item/universal_bucket",
+  "textures": {
+    "base": "firesreflamed:item/copper_bucket",
+    "lowerBase": "firesreflamed:item/copper_bucket"
+  }
+}

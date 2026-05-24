@@ -131,5 +131,8 @@ public class ModLanguageProvider extends FabricLanguageProvider {
         builder.add(ModItems.DRILL_BIT, "Drill Bit");
         builder.add(ModItems.DRILL, "Drill");
         builder.add(ModItems.WOODEN_BAT, "Wooden Bat");
+        builder.add(ModItems.COPPER_BUCKET, "Copper Bucket");
+        builder.add("item.firesreflamed.copper_bucket.filled", "Copper %s Bucket");
+        builder.add("item.firesreflamed.copper_bucket.entity", "Copper Bucket of %s");
     }
 }
