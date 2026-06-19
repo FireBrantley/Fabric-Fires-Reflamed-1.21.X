@@ -141,6 +141,8 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.TITANIUM_SWORD)
                 .add(ModItems.STEEL_SWORD)
                 .add(ModItems.RUBY_SWORD);
+        getOrCreateTagBuilder(ItemTags.DURABILITY_ENCHANTABLE)
+                .add(ModItems.COPPER_BUCKET);
 
         // Enchantability - Armor
         getOrCreateTagBuilder(ItemTags.ARMOR_ENCHANTABLE)
@@ -277,34 +279,5 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
         // Clusters
         getOrCreateTagBuilder(C_CLUSTERS)
                 .add(ModBlocks.RUBY_CLUSTER.asItem());
-
-        /* Hypothetical cross-mod compat tags
-        // c: material convention tags (cross-mod compat)
-        getOrCreateTagBuilder(C_INGOTS_TITANIUM)
-                .add(ModItems.TITANIUM_INGOT);
-        getOrCreateTagBuilder(C_INGOTS_STEEL)
-                .add(ModItems.STEEL_INGOT);
-        getOrCreateTagBuilder(C_RAW_MATERIALS_TITANIUM)
-                .add(ModItems.RAW_TITANIUM);
-        getOrCreateTagBuilder(C_NUGGETS_STEEL)
-                .add(ModItems.STEEL_NUGGET);
-        getOrCreateTagBuilder(C_GEMS_RUBY)
-                .add(ModItems.RUBY_GEM)
-                .add(ModItems.RUBY_CRYSTALS);
-        getOrCreateTagBuilder(C_SHARDS_AQUAMARINE)
-                .add(ModItems.AQUAMARINE_SHARD);
-
-        // Broad parent c: tags (for mods that check the top-level tag)
-        getOrCreateTagBuilder(C_INGOTS)
-                .addTag(C_INGOTS_TITANIUM)
-                .addTag(C_INGOTS_STEEL);
-        getOrCreateTagBuilder(C_RAW_MATERIALS)
-                .addTag(C_RAW_MATERIALS_TITANIUM);
-        getOrCreateTagBuilder(C_NUGGETS)
-                .addTag(C_NUGGETS_STEEL);
-        getOrCreateTagBuilder(C_GEMS)
-                .addTag(C_GEMS_RUBY);
-        getOrCreateTagBuilder(C_SHARDS)
-                .addTag(C_SHARDS_AQUAMARINE); */
     }
 }

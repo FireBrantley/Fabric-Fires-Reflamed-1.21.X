@@ -15,34 +15,95 @@ import net.minecraft.util.Identifier;
 
 public class ModItems {
     //Titanium Items
-    public static final  Item RAW_TITANIUM = registerItem("raw_titanium",
-            new Item(new Item.Settings()));
-    public static final  Item TITANIUM_INGOT = registerItem("titanium_ingot",
-            new Item(new Item.Settings()));
-    public static final  Item TITANIUM_NUGGET = registerItem("titanium_nugget",
-            new Item(new Item.Settings()));
+    public static final  Item RAW_TITANIUM = registerItem(
+            "raw_titanium",
+            new Item(
+                    new Item.Settings()
+            )
+    );
+    public static final  Item TITANIUM_INGOT = registerItem(
+            "titanium_ingot",
+            new Item(
+                    new Item.Settings()
+            )
+    );
+    public static final  Item TITANIUM_NUGGET = registerItem(
+            "titanium_nugget",
+            new Item(
+                    new Item.Settings()
+            )
+    );
 
     //Titanium Tool Set
-    public static final Item TITANIUM_SHOVEL = registerItem("titanium_shovel",
-            new ShovelItem(ModToolMaterials.TITANIUM, new Item.Settings()
-                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.TITANIUM,
-                            -2, -2.4f))));
-    public static final Item TITANIUM_PICKAXE = registerItem("titanium_pickaxe",
-            new PickaxeItem(ModToolMaterials.TITANIUM, new Item.Settings()
-                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.TITANIUM,
-                            -3, -2.8f))));
+    public static final Item TITANIUM_SHOVEL = registerItem(
+            "titanium_shovel",
+            new ShovelItem(
+                    ModToolMaterials.TITANIUM,
+                    new Item.Settings()
+                            .attributeModifiers(
+                                    ShovelItem.createAttributeModifiers(
+                                            ModToolMaterials.TITANIUM,
+                                            -2,
+                                            -2.4f
+                                    )
+                            )
+            )
+    );
+    public static final Item TITANIUM_PICKAXE = registerItem(
+            "titanium_pickaxe",
+            new PickaxeItem(
+                    ModToolMaterials.TITANIUM,
+                    new Item.Settings()
+                            .attributeModifiers(
+                                    PickaxeItem.createAttributeModifiers(
+                                            ModToolMaterials.TITANIUM,
+                                            -3,
+                                            -2.8f
+                                    )
+                            )
+            )
+    );
     public static final Item TITANIUM_AXE = registerItem("titanium_axe",
-            new AxeItem(ModToolMaterials.TITANIUM, new Item.Settings()
-                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.TITANIUM,
-                            7, -3.0f))));
-    public static final Item TITANIUM_HOE = registerItem("titanium_hoe",
-            new HoeItem(ModToolMaterials.TITANIUM, new Item.Settings()
-                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.TITANIUM,
-                            -9, -2.4f))));
-    public static final Item TITANIUM_SWORD = registerItem("titanium_sword",
-            new SwordItem(ModToolMaterials.TITANIUM, new Item.Settings()
-                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.TITANIUM,
-                            4, -2.4f))));
+            new AxeItem(
+                    ModToolMaterials.TITANIUM,
+                    new Item.Settings()
+                            .attributeModifiers(
+                                    AxeItem.createAttributeModifiers(
+                                            ModToolMaterials.TITANIUM,
+                                            7,
+                                            -3.0f
+                                    )
+                            )
+            )
+    );
+    public static final Item TITANIUM_HOE = registerItem(
+            "titanium_hoe",
+            new HoeItem(
+                    ModToolMaterials.TITANIUM,
+                    new Item.Settings()
+                            .attributeModifiers(
+                                    HoeItem.createAttributeModifiers(
+                                            ModToolMaterials.TITANIUM,
+                                            -9,
+                                            -2.4f
+                                    )
+                            )
+            )
+    );
+    public static final Item TITANIUM_SWORD = registerItem(
+            "titanium_sword",
+            new SwordItem(
+                    ModToolMaterials.TITANIUM,
+                    new Item.Settings()
+                            .attributeModifiers(
+                                    SwordItem.createAttributeModifiers(
+                                            ModToolMaterials.TITANIUM,
+                                            4,
+                                            -2.4f
+                                    )
+                            )
+            )
+    );
     public static final Item TITANIUM_BAT = registerItem(
             "titanium_bat",
             new BatItem(
@@ -55,48 +116,134 @@ public class ModItems {
     );
 
     //Titanium Armor Set
-    public static final Item TITANIUM_HELMET = registerItem("titanium_helmet",
-            new ArmorItem(ModArmorMaterials.TITANIUM_ARMOR_MATERIAL,
-                    ArmorItem.Type.HELMET, new Item.Settings().maxCount(1)));
-    public static final Item TITANIUM_CHESTPLATE = registerItem("titanium_chestplate",
-            new ArmorItem(ModArmorMaterials.TITANIUM_ARMOR_MATERIAL,
-                    ArmorItem.Type.CHESTPLATE, new Item.Settings().maxCount(1)));
-    public static final Item TITANIUM_LEGGINGS = registerItem("titanium_leggings",
-            new ArmorItem(ModArmorMaterials.TITANIUM_ARMOR_MATERIAL,
-                    ArmorItem.Type.LEGGINGS, new Item.Settings().maxCount(1)));
-    public static final Item TITANIUM_BOOTS = registerItem("titanium_boots",
-            new ArmorItem(ModArmorMaterials.TITANIUM_ARMOR_MATERIAL,
-                    ArmorItem.Type.BOOTS, new Item.Settings().maxCount(1)));
+    public static final Item TITANIUM_HELMET = registerItem(
+            "titanium_helmet",
+            new ArmorItem(
+                    ModArmorMaterials.TITANIUM_ARMOR_MATERIAL,
+                    ArmorItem.Type.HELMET,
+                    new Item.Settings()
+                            .maxCount(1)
+            )
+    );
+    public static final Item TITANIUM_CHESTPLATE = registerItem(
+            "titanium_chestplate",
+            new ArmorItem(
+                    ModArmorMaterials.TITANIUM_ARMOR_MATERIAL,
+                    ArmorItem.Type.CHESTPLATE,
+                    new Item.Settings()
+                            .maxCount(1)
+            )
+    );
+    public static final Item TITANIUM_LEGGINGS = registerItem(
+            "titanium_leggings",
+            new ArmorItem(
+                    ModArmorMaterials.TITANIUM_ARMOR_MATERIAL,
+                    ArmorItem.Type.LEGGINGS,
+                    new Item.Settings()
+                            .maxCount(1)
+            )
+    );
+    public static final Item TITANIUM_BOOTS = registerItem(
+            "titanium_boots",
+            new ArmorItem(
+                    ModArmorMaterials.TITANIUM_ARMOR_MATERIAL,
+                    ArmorItem.Type.BOOTS,
+                    new Item.Settings()
+                            .maxCount(1)
+            )
+    );
 
     // Steel Items
-    public static final Item CARBONIZED_IRON = registerItem("carbonized_iron",
-            new Item(new Item.Settings()));
-    public static final Item STEEL_INGOT = registerItem("steel_ingot",
-            new Item(new Item.Settings()));
-    public static final Item STEEL_NUGGET = registerItem("steel_nugget",
-            new Item(new Item.Settings()));
+    public static final Item CARBONIZED_IRON = registerItem(
+            "carbonized_iron",
+            new Item(
+                    new Item.Settings()
+            )
+    );
+    public static final Item STEEL_INGOT = registerItem(
+            "steel_ingot",
+            new Item(
+                    new Item.Settings()
+            )
+    );
+    public static final Item STEEL_NUGGET = registerItem(
+            "steel_nugget",
+            new Item(
+                    new Item.Settings()
+            )
+    );
 
     // Steel Tool Set
-    public static final Item STEEL_SHOVEL = registerItem("steel_shovel",
-            new ShovelItem(ModToolMaterials.STEEL, new Item.Settings()
-                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.STEEL,
-                            -7, -2.4f))));
-    public static final Item STEEL_PICKAXE = registerItem("steel_pickaxe",
-            new PickaxeItem(ModToolMaterials.STEEL, new Item.Settings()
-                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.STEEL,
-                            -7, -2.8f))));
-    public static final Item STEEL_AXE = registerItem("steel_axe",
-            new AxeItem(ModToolMaterials.STEEL, new Item.Settings()
-                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.STEEL,
-                            -7, -3.0f))));
-    public static final Item STEEL_HOE = registerItem("steel_hoe",
-            new HoeItem(ModToolMaterials.STEEL, new Item.Settings()
-                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.STEEL,
-                            -8, -2.4f))));
-    public static final Item STEEL_SWORD = registerItem("steel_sword",
-            new SwordItem(ModToolMaterials.STEEL, new Item.Settings()
-                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.STEEL,
-                            -4, -2.4f))));
+    public static final Item STEEL_SHOVEL = registerItem(
+            "steel_shovel",
+            new ShovelItem(
+                    ModToolMaterials.STEEL,
+                    new Item.Settings()
+                            .attributeModifiers(
+                                    ShovelItem.createAttributeModifiers(
+                                            ModToolMaterials.STEEL,
+                                            -7,
+                                            -2.4f
+                                    )
+                            )
+            )
+    );
+    public static final Item STEEL_PICKAXE = registerItem(
+            "steel_pickaxe",
+            new PickaxeItem(
+                    ModToolMaterials.STEEL,
+                    new Item.Settings()
+                            .attributeModifiers(
+                                    PickaxeItem.createAttributeModifiers(
+                                            ModToolMaterials.STEEL,
+                                            -7,
+                                            -2.8f
+                                    )
+                            )
+            )
+    );
+    public static final Item STEEL_AXE = registerItem(
+            "steel_axe",
+            new AxeItem(
+                    ModToolMaterials.STEEL,
+                    new Item.Settings()
+                            .attributeModifiers(
+                                    AxeItem.createAttributeModifiers(
+                                            ModToolMaterials.STEEL,
+                                            -7,
+                                            -3.0f
+                                    )
+                            )
+            )
+    );
+    public static final Item STEEL_HOE = registerItem(
+            "steel_hoe",
+            new HoeItem(
+                    ModToolMaterials.STEEL,
+                    new Item.Settings()
+                            .attributeModifiers(
+                                    HoeItem.createAttributeModifiers(
+                                            ModToolMaterials.STEEL,
+                                            -8,
+                                            -2.4f
+                                    )
+                            )
+            )
+    );
+    public static final Item STEEL_SWORD = registerItem(
+            "steel_sword",
+            new SwordItem(
+                    ModToolMaterials.STEEL,
+                    new Item.Settings()
+                            .attributeModifiers(
+                                    SwordItem.createAttributeModifiers(
+                                            ModToolMaterials.STEEL,
+                                            -4,
+                                            -2.4f
+                                    )
+                            )
+            )
+    );
     public static final Item STEEL_BAT = registerItem(
             "steel_bat",
             new BatItem(
@@ -109,92 +256,238 @@ public class ModItems {
     );
 
     // Steel Armor Set
-    public static final Item STEEL_HELMET = registerItem("steel_helmet",
-            new ArmorItem(ModArmorMaterials.STEEL_ARMOR_MATERIAL,
-                    ArmorItem.Type.HELMET, new Item.Settings().maxCount(1)));
-    public static final Item STEEL_CHESTPLATE = registerItem("steel_chestplate",
-            new ArmorItem(ModArmorMaterials.STEEL_ARMOR_MATERIAL,
-                    ArmorItem.Type.CHESTPLATE, new Item.Settings().maxCount(1)));
-    public static final Item STEEL_LEGGINGS = registerItem("steel_leggings",
-            new ArmorItem(ModArmorMaterials.STEEL_ARMOR_MATERIAL,
-                    ArmorItem.Type.LEGGINGS, new Item.Settings().maxCount(1)));
-    public static final Item STEEL_BOOTS = registerItem("steel_boots",
-            new ArmorItem(ModArmorMaterials.STEEL_ARMOR_MATERIAL,
-                    ArmorItem.Type.BOOTS, new Item.Settings().maxCount(1)));
+    public static final Item STEEL_HELMET = registerItem(
+            "steel_helmet",
+            new ArmorItem(
+                    ModArmorMaterials.STEEL_ARMOR_MATERIAL,
+                    ArmorItem.Type.HELMET,
+                    new Item.Settings()
+                            .maxCount(1)
+            )
+
+    );
+    public static final Item STEEL_CHESTPLATE = registerItem(
+            "steel_chestplate",
+            new ArmorItem(
+                    ModArmorMaterials.STEEL_ARMOR_MATERIAL,
+                    ArmorItem.Type.CHESTPLATE,
+                    new Item.Settings()
+                            .maxCount(1)
+            )
+    );
+    public static final Item STEEL_LEGGINGS = registerItem(
+            "steel_leggings",
+            new ArmorItem(
+                    ModArmorMaterials.STEEL_ARMOR_MATERIAL,
+                    ArmorItem.Type.LEGGINGS,
+                    new Item.Settings()
+                            .maxCount(1)
+            )
+    );
+    public static final Item STEEL_BOOTS = registerItem(
+            "steel_boots",
+            new ArmorItem(
+                    ModArmorMaterials.STEEL_ARMOR_MATERIAL,
+                    ArmorItem.Type.BOOTS,
+                    new Item.Settings()
+                            .maxCount(1)
+            )
+    );
 
     // Ruby Items
-    public static final Item RUBY_CRYSTALS = registerItem("ruby_crystals",
-            new Item(new Item.Settings()));
-    public static final Item RUBY_GEM = registerItem("ruby_gem",
-            new Item(new Item.Settings()));
+    public static final Item RUBY_CRYSTALS = registerItem(
+            "ruby_crystals",
+            new Item(
+                    new Item.Settings()
+            )
+    );
+    public static final Item RUBY_GEM = registerItem(
+            "ruby_gem",
+            new Item(
+                    new Item.Settings()
+            )
+    );
 
     // Ruby Tool Set
-    public static final Item RUBY_SHOVEL = registerItem("ruby_shovel",
-            new ShovelItem(ModToolMaterials.RUBY, new Item.Settings()
-                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.RUBY,
-                            -6, -2.4f))));
-    public static final Item RUBY_PICKAXE = registerItem("ruby_pickaxe",
-            new PickaxeItem(ModToolMaterials.RUBY, new Item.Settings()
-                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.RUBY,
-                            -7, -2.8f))));
-    public static final Item RUBY_AXE = registerItem("ruby_axe",
-            new AxeItem(ModToolMaterials.RUBY, new Item.Settings()
-                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.RUBY,
-                            -2, -3.0f))));
-    public static final Item RUBY_HOE = registerItem("ruby_hoe",
-            new HoeItem(ModToolMaterials.RUBY, new Item.Settings()
-                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.RUBY,
-                            -10, -2.4f))));
-    public static final Item RUBY_SWORD = registerItem("ruby_sword",
-            new SwordItem(ModToolMaterials.RUBY, new Item.Settings()
-                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.RUBY,
-                            -5, -2.4f))));
+    public static final Item RUBY_SHOVEL = registerItem(
+            "ruby_shovel",
+            new ShovelItem(
+                    ModToolMaterials.RUBY,
+                    new Item.Settings()
+                            .attributeModifiers(
+                                    ShovelItem.createAttributeModifiers(
+                                            ModToolMaterials.RUBY,
+                                            -6,
+                                            -2.4f
+                                    )
+                            )
+            )
+    );
+    public static final Item RUBY_PICKAXE = registerItem(
+            "ruby_pickaxe",
+            new PickaxeItem(
+                    ModToolMaterials.RUBY,
+                    new Item.Settings()
+                            .attributeModifiers(
+                                    PickaxeItem.createAttributeModifiers(
+                                            ModToolMaterials.RUBY,
+                                            -7,
+                                            -2.8f
+                                    )
+                            )
+            )
+    );
+    public static final Item RUBY_AXE = registerItem(
+            "ruby_axe",
+            new AxeItem(
+                    ModToolMaterials.RUBY,
+                    new Item.Settings()
+                            .attributeModifiers(
+                                    AxeItem.createAttributeModifiers(
+                                            ModToolMaterials.RUBY,
+                                            -2,
+                                            -3.0f
+                                    )
+                            )
+            )
+    );
+    public static final Item RUBY_HOE = registerItem(
+            "ruby_hoe",
+            new HoeItem(
+                    ModToolMaterials.RUBY,
+                    new Item.Settings()
+                            .attributeModifiers(
+                                    HoeItem.createAttributeModifiers(
+                                            ModToolMaterials.RUBY,
+                                            -10,
+                                            -2.4f
+                                    )
+                            )
+            )
+    );
+    public static final Item RUBY_SWORD = registerItem(
+            "ruby_sword",
+            new SwordItem(
+                    ModToolMaterials.RUBY,
+                    new Item.Settings()
+                            .attributeModifiers(
+                                    SwordItem.createAttributeModifiers(
+                                            ModToolMaterials.RUBY,
+                                            -5,
+                                            -2.4f
+                                    )
+                            )
+            )
+    );
     public static final Item RUBY_BAT = registerItem(
             "ruby_bat",
             new BatItem(
                     ModToolMaterials.RUBY,
                     0,
                     -2.7f,
-                    new Item.Settings().maxCount(1)
+                    new Item.Settings()
+                            .maxCount(1)
             )
     );
 
     // Aquamarine Items
-    public static final Item AQUAMARINE_SHARD = registerItem("aquamarine_shard",
-            new Item(new Item.Settings()));
+    public static final Item AQUAMARINE_SHARD = registerItem(
+            "aquamarine_shard",
+            new Item(
+                    new Item.Settings()
+            )
+    );
 
     // Aquamarine Armor Set
-    public static final Item AQUAMARINE_HELMET = registerItem("aquamarine_helmet",
-            new ArmorItem(ModArmorMaterials.AQUAMARINE_ARMOR_MATERIAL,
-                    ArmorItem.Type.HELMET, new Item.Settings().maxCount(1)));
-    public static final Item AQUAMARINE_CHESTPLATE = registerItem("aquamarine_chestplate",
-            new ArmorItem(ModArmorMaterials.AQUAMARINE_ARMOR_MATERIAL,
-                    ArmorItem.Type.CHESTPLATE, new Item.Settings().maxCount(1)));
-    public static final Item AQUAMARINE_LEGGINGS = registerItem("aquamarine_leggings",
-            new ArmorItem(ModArmorMaterials.AQUAMARINE_ARMOR_MATERIAL,
-                    ArmorItem.Type.LEGGINGS, new Item.Settings().maxCount(1)));
-    public static final Item AQUAMARINE_BOOTS = registerItem("aquamarine_boots",
-            new ArmorItem(ModArmorMaterials.AQUAMARINE_ARMOR_MATERIAL,
-                    ArmorItem.Type.BOOTS, new Item.Settings().maxCount(1)));
+    public static final Item AQUAMARINE_HELMET = registerItem(
+            "aquamarine_helmet",
+            new ArmorItem(
+                    ModArmorMaterials.AQUAMARINE_ARMOR_MATERIAL,
+                    ArmorItem.Type.HELMET,
+                    new Item.Settings()
+                            .maxCount(1)
+            )
+    );
+    public static final Item AQUAMARINE_CHESTPLATE = registerItem(
+            "aquamarine_chestplate",
+            new ArmorItem(
+                    ModArmorMaterials.AQUAMARINE_ARMOR_MATERIAL,
+                    ArmorItem.Type.CHESTPLATE,
+                    new Item.Settings()
+                            .maxCount(1)
+            )
+    );
+    public static final Item AQUAMARINE_LEGGINGS = registerItem(
+            "aquamarine_leggings",
+            new ArmorItem(
+                    ModArmorMaterials.AQUAMARINE_ARMOR_MATERIAL,
+                    ArmorItem.Type.LEGGINGS,
+                    new Item.Settings()
+                            .maxCount(1)
+            )
+    );
+    public static final Item AQUAMARINE_BOOTS = registerItem(
+            "aquamarine_boots",
+            new ArmorItem(
+                    ModArmorMaterials.AQUAMARINE_ARMOR_MATERIAL,
+                    ArmorItem.Type.BOOTS,
+                    new Item.Settings()
+                            .maxCount(1)
+            )
+    );
 
     // Willow Items
-    public static final SignItem WILLOW_SIGN = (SignItem) registerItem("willow_sign",
-            new SignItem(new Item.Settings().maxCount(16), ModBlocks.WILLOW_SIGN, ModBlocks.WILLOW_WALL_SIGN));
+    public static final SignItem WILLOW_SIGN = (SignItem) registerItem(
+            "willow_sign",
+            new SignItem(
+                    new Item.Settings()
+                            .maxCount(16),
+                    ModBlocks.WILLOW_SIGN,
+                    ModBlocks.WILLOW_WALL_SIGN
+            )
+    );
+    public static final HangingSignItem WILLOW_HANGING_SIGN = (HangingSignItem) registerItem(
+            "willow_hanging_sign",
+            new HangingSignItem(
+                    ModBlocks.WILLOW_HANGING_SIGN,
+                    ModBlocks.WILLOW_WALL_HANGING_SIGN,
+                    new Item.Settings()
+                            .maxCount(16)
+            )
+    );
 
-    public static final HangingSignItem WILLOW_HANGING_SIGN = (HangingSignItem) registerItem("willow_hanging_sign",
-            new HangingSignItem(ModBlocks.WILLOW_HANGING_SIGN, ModBlocks.WILLOW_WALL_HANGING_SIGN, new Item.Settings().maxCount(16)));
-    public static final Item WILLOW_BOAT = TerraformBoatItemHelper.registerBoatItem(
-            ModBoats.WILLOW_BOAT_ID, ModBoats.WILLOW_BOAT_KEY, false);
-    public static final Item WILLOW_CHEST_BOAT = TerraformBoatItemHelper.registerBoatItem(
-            ModBoats.WILLOW_CHEST_BOAT_ID, ModBoats.WILLOW_BOAT_KEY, true);
+    public static final Item WILLOW_BOAT = TerraformBoatItemHelper
+            .registerBoatItem(
+                    ModBoats.WILLOW_BOAT_ID,
+                    ModBoats.WILLOW_BOAT_KEY,
+                    false
+            );
+    public static final Item WILLOW_CHEST_BOAT = TerraformBoatItemHelper
+            .registerBoatItem(
+                    ModBoats.WILLOW_CHEST_BOAT_ID,
+                    ModBoats.WILLOW_BOAT_KEY,
+                    true
+            );
 
     // Misc Items
-    public static final Item DRILL_BIT = registerItem("drill_bit",
-            new Item(new Item.Settings()));
-    public static final Item DRILL = registerItem("drill",
-            new HammerItem(ModToolMaterials.STEEL, new Item.Settings()
-                    .attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterials.STEEL,
-                            -7, -2.8f))));
+    public static final Item DRILL_BIT = registerItem(
+            "drill_bit",
+            new Item(
+                    new Item.Settings()
+            )
+    );
+    public static final Item DRILL = registerItem(
+            "drill",
+            new HammerItem(
+                    ModToolMaterials.STEEL,
+                    new Item.Settings()
+                            .attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterials.STEEL,
+                                    -7,
+                                    -2.8f
+                                    )
+                            )
+            )
+    );
 
     public static final Item WOODEN_BAT = registerItem(
             "wooden_bat",
@@ -202,13 +495,20 @@ public class ModItems {
                     ToolMaterials.WOOD,
                     5,
                     -2.9f,
-                    new Item.Settings().maxCount(1)
+                    new Item.Settings()
+                            .maxCount(1)
             )
     );
 
-    public static final Item COPPER_BUCKET = registerItem("copper_bucket",
-            new UniversalBucketItem(new UniversalBucketItem.Properties()
-                    .tab(ModItemGroupKeys.FIRES_REFLAMED)));
+    public static final Item COPPER_BUCKET = registerItem(
+            "copper_bucket",
+            new UniversalBucketItem(
+                    new UniversalBucketItem
+                            .Properties()
+                            .tab(ModItemGroupKeys.FIRES_REFLAMED)
+                            .durability(16)
+            )
+    );
 
     // Helper method to register items
     private static Item registerItem(String name, Item item) {
