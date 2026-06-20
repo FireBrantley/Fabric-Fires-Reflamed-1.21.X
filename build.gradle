@@ -71,9 +71,7 @@ dependencies {
     modImplementation "com.terraformersmc.terraform-api:terraform-wood-api-v1:${project.terraform_wood_api_version}"
     include "com.terraformersmc.terraform-api:terraform-wood-api-v1:${project.terraform_wood_api_version}"
 
-    // Sinytra Wiki Data Exporter - only runs at runtime for exporting wiki assets
     modRuntimeOnly "org.sinytra:item-asset-export-fabric:1.0.2+1.21"
-
 
     modImplementation "com.github.cech12.BucketLib:fabric:${project.bucketlib_version}"
     include "com.github.cech12.BucketLib:fabric:${project.bucketlib_version}"

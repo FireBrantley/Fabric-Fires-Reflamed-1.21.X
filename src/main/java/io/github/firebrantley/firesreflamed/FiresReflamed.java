@@ -46,5 +46,7 @@ public class FiresReflamed implements ModInitializer {
         FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.WILLOW_FENCE_GATE, 5, 20);
         FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.WILLOW_LEAVES, 30, 60);
         FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.HANGING_WILLOW_LEAVES, 30, 60);
+
+        FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.YELLOW_BIRCH_LEAVES, 30, 60);
 	}
 }

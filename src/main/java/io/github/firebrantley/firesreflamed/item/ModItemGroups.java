@@ -8,7 +8,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
-import net.minecraft.util.Identifier;
 
 public class ModItemGroups {
     public static final ItemGroup FIRES_REFLAMED = Registry.register(Registries.ITEM_GROUP,
@@ -130,6 +129,9 @@ public class ModItemGroups {
                         entries.add(ModItems.DRILL_BIT);
                         entries.add(ModItems.DRILL);
                         entries.add(ModItems.WOODEN_BAT);
+
+                        entries.add(ModBlocks.YELLOW_BIRCH_LEAVES);
+                        entries.add(ModBlocks.YELLOW_BIRCH_SAPLING);
                     }).build());
 
     public static void registerItemGroups() {

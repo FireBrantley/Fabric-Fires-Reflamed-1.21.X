@@ -24,29 +24,6 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
             Identifier.of("c", "clusters")
     );
 
-    /* Hypothetical cross-mod compat tags
-    // c: convention tags
-    public static final TagKey<Block> C_ORES_TITANIUM = TagKey.of(
-            RegistryKeys.BLOCK, Identifier.of("c", "ores/titanium"));
-    public static final TagKey<Block> C_ORES_RUBY = TagKey.of(
-            RegistryKeys.BLOCK, Identifier.of("c", "ores/ruby"));
-    public static final TagKey<Block> C_ORES_AQUAMARINE = TagKey.of(
-            RegistryKeys.BLOCK, Identifier.of("c", "ores/aquamarine"));
-    public static final TagKey<Block> C_STORAGE_BLOCKS_TITANIUM = TagKey.of(
-            RegistryKeys.BLOCK, Identifier.of("c", "storage_blocks/titanium"));
-    public static final TagKey<Block> C_STORAGE_BLOCKS_STEEL = TagKey.of(
-            RegistryKeys.BLOCK, Identifier.of("c", "storage_blocks/steel"));
-    public static final TagKey<Block> C_STORAGE_BLOCKS_RUBY = TagKey.of(
-            RegistryKeys.BLOCK, Identifier.of("c", "storage_blocks/ruby"));
-    public static final TagKey<Block> C_STORAGE_BLOCKS_AQUAMARINE = TagKey.of(
-            RegistryKeys.BLOCK, Identifier.of("c", "storage_blocks/aquamarine"));
-
-    // Broad parent c: tags
-    public static final TagKey<Block> C_ORES = TagKey.of(
-            RegistryKeys.BLOCK, Identifier.of("c", "ores"));
-    public static final TagKey<Block> C_STORAGE_BLOCKS = TagKey.of(
-            RegistryKeys.BLOCK, Identifier.of("c", "storage_blocks")); */
-
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
         // Pickaxe Mineable
@@ -84,7 +61,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.WILLOW_PRESSURE_PLATE)
                 .add(ModBlocks.WILLOW_BUTTON)
                 .add(ModBlocks.WILLOW_LEAVES)
-                .add(ModBlocks.HANGING_WILLOW_LEAVES);
+                .add(ModBlocks.HANGING_WILLOW_LEAVES)
+                .add(ModBlocks.YELLOW_BIRCH_LEAVES);
         // Shovel Mineable
         getOrCreateTagBuilder(BlockTags.SHOVEL_MINEABLE)
                 .add(ModBlocks.SNOW_BRICKS)
@@ -128,9 +106,11 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
         // Saplings & Leaves
         getOrCreateTagBuilder(BlockTags.SAPLINGS)
-                .add(ModBlocks.WILLOW_SAPLING);
+                .add(ModBlocks.WILLOW_SAPLING)
+                .add(ModBlocks.YELLOW_BIRCH_SAPLING);
         getOrCreateTagBuilder(BlockTags.LEAVES)
-                .add(ModBlocks.WILLOW_LEAVES);
+                .add(ModBlocks.WILLOW_LEAVES)
+                .add(ModBlocks.YELLOW_BIRCH_LEAVES);
 
         // Doors
         getOrCreateTagBuilder(BlockTags.MOB_INTERACTABLE_DOORS)
@@ -190,37 +170,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
         // Flower Pots
         getOrCreateTagBuilder(BlockTags.FLOWER_POTS)
-                .add(ModBlocks.POTTED_WILLOW_SAPLING);
-
-        /* Hypothetical cross-mod compat tags
-        // c: ore and storage block convention tags (cross-mod compat)
-        getOrCreateTagBuilder(C_ORES_TITANIUM)
-                .add(ModBlocks.TITANIUM_ORE)
-                .add(ModBlocks.DEEPSLATE_TITANIUM_ORE);
-        getOrCreateTagBuilder(C_ORES_RUBY)
-                .add(ModBlocks.RUBY_ORE)
-                .add(ModBlocks.DEEPSLATE_RUBY_ORE);
-        getOrCreateTagBuilder(C_ORES_AQUAMARINE)
-                .add(ModBlocks.AQUAMARINE_ORE)
-                .add(ModBlocks.DEEPSLATE_AQUAMARINE_ORE);
-        getOrCreateTagBuilder(C_STORAGE_BLOCKS_TITANIUM)
-                .add(ModBlocks.BLOCK_OF_TITANIUM);
-        getOrCreateTagBuilder(C_STORAGE_BLOCKS_STEEL)
-                .add(ModBlocks.BLOCK_OF_STEEL);
-        getOrCreateTagBuilder(C_STORAGE_BLOCKS_RUBY)
-                .add(ModBlocks.BLOCK_OF_RUBY);
-        getOrCreateTagBuilder(C_STORAGE_BLOCKS_AQUAMARINE)
-                .add(ModBlocks.BLOCK_OF_AQUAMARINE);
-
-        // Broad parent c: tags (for mods that check the top-level tag)
-        getOrCreateTagBuilder(C_ORES)
-                .addTag(C_ORES_TITANIUM)
-                .addTag(C_ORES_RUBY)
-                .addTag(C_ORES_AQUAMARINE);
-        getOrCreateTagBuilder(C_STORAGE_BLOCKS)
-                .addTag(C_STORAGE_BLOCKS_TITANIUM)
-                .addTag(C_STORAGE_BLOCKS_STEEL)
-                .addTag(C_STORAGE_BLOCKS_RUBY)
-                .addTag(C_STORAGE_BLOCKS_AQUAMARINE); */
+                .add(ModBlocks.POTTED_WILLOW_SAPLING)
+                .add(ModBlocks.POTTED_YELLOW_BIRCH_SAPLING);
     }
 }

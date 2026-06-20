@@ -101,6 +101,14 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.SNOW_BRICK_STAIRS);
         addDrop(ModBlocks.SNOW_BRICK_SLAB);
         addDrop(ModBlocks.SNOW_BRICK_WALL);
+
+        // Misc Blocks
+        addDrop(ModBlocks.YELLOW_BIRCH_LEAVES, leavesDrops(
+                ModBlocks.YELLOW_BIRCH_LEAVES,
+                ModBlocks.YELLOW_BIRCH_SAPLING,
+                0.0625f));
+        addDrop(ModBlocks.YELLOW_BIRCH_SAPLING);
+        addPottedPlantDrops(ModBlocks.POTTED_YELLOW_BIRCH_SAPLING);
     }
 
     // --- Helper Methods ---

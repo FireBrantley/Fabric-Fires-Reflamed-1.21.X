@@ -13,5 +13,15 @@ public class ModSaplingGenerators {
                     Optional.empty(),
                     Optional.of(
                             ModConfiguredFeatures.WILLOW_KEY),
-                    Optional.empty());
+                    Optional.empty()
+            );
+
+    public static final SaplingGenerator YELLOW_BIRCH =
+            new SaplingGenerator(
+                    FiresReflamed.MOD_ID + ":yellow_birch",
+                    Optional.empty(),
+                    Optional.of(
+                            ModConfiguredFeatures.YELLOW_BIRCH_KEY),
+                    Optional.empty()
+            );
 }

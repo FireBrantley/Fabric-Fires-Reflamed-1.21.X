@@ -19,6 +19,9 @@ public class FiresReflamedClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.HANGING_WILLOW_LEAVES, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.POTTED_WILLOW_SAPLING, RenderLayer.getCutout());
 
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.YELLOW_BIRCH_SAPLING, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.POTTED_YELLOW_BIRCH_SAPLING, RenderLayer.getCutout());
+
         TerraformBoatClientHelper.registerModelLayers(ModBoats.WILLOW_BOAT_ID, false);
     }
 }

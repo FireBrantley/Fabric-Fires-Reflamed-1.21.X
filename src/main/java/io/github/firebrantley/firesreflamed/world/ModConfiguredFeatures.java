@@ -17,14 +17,26 @@ import static io.github.firebrantley.firesreflamed.world.ModFeatures.STRUCTURE_T
 
 public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> TITANIUM_ORE_KEY =
-            registerKey("titanium_ore");
+            registerKey(
+                    "titanium_ore"
+            );
     public static final RegistryKey<ConfiguredFeature<?, ?>> RUBY_ORE_KEY =
-            registerKey("ruby_ore");
+            registerKey(
+                    "ruby_ore"
+            );
     public static final RegistryKey<ConfiguredFeature<?, ?>> AQUAMARINE_ORE_KEY =
-            registerKey("aquamarine_ore");
+            registerKey(
+                    "aquamarine_ore"
+            );
 
     public static final RegistryKey<ConfiguredFeature<?, ?>> WILLOW_KEY =
-            registerKey("willow");
+            registerKey(
+                    "willow"
+            );
+    public static final RegistryKey<ConfiguredFeature<?, ?>> YELLOW_BIRCH_KEY =
+            registerKey(
+                    "yellow_birch"
+            );
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
         RuleTest stoneReplaceables = new TagMatchRuleTest(BlockTags.STONE_ORE_REPLACEABLES);

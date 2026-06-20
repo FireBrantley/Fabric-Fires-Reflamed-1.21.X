@@ -155,22 +155,29 @@ public class ModModelProvider extends FabricModelProvider {
                         )
         );
         blockStateModelGenerator.registerSingleton(ModBlocks.WILLOW_LEAVES,
-                TexturedModel.LEAVES);
+                TexturedModel.LEAVES
+        );
         blockStateModelGenerator.registerTintableCross(ModBlocks.WILLOW_SAPLING,
                 BlockStateModelGenerator
-                        .TintType.NOT_TINTED);
+                        .TintType.NOT_TINTED
+        );
         blockStateModelGenerator.blockStateCollector.accept(
                 BlockStateModelGenerator.createSingletonBlockState(
                         ModBlocks.POTTED_WILLOW_SAPLING,
                         Models.FLOWER_POT_CROSS.upload(
                                 ModBlocks.POTTED_WILLOW_SAPLING,
-                                TextureMap.plant(ModBlocks.WILLOW_SAPLING),
+                                TextureMap.plant(ModBlocks.WILLOW_SAPLING
+                                ),
                                 blockStateModelGenerator.modelCollector
                         )
                 )
         );
 
-        blockStateModelGenerator.registerHangingSign(ModBlocks.STRIPPED_WILLOW_LOG, ModBlocks.WILLOW_HANGING_SIGN, ModBlocks.WILLOW_WALL_HANGING_SIGN);
+        blockStateModelGenerator.registerHangingSign(
+                ModBlocks.STRIPPED_WILLOW_LOG,
+                ModBlocks.WILLOW_HANGING_SIGN,
+                ModBlocks.WILLOW_WALL_HANGING_SIGN
+        );
 
         var exampleFamily = new BlockFamily.Builder(ModBlocks.WILLOW_PLANKS)
                 .button(ModBlocks.WILLOW_BUTTON)
@@ -192,5 +199,22 @@ public class ModModelProvider extends FabricModelProvider {
         snowPool.stairs(ModBlocks.SNOW_BRICK_STAIRS);
         snowPool.slab(ModBlocks.SNOW_BRICK_SLAB);
         snowPool.wall(ModBlocks.SNOW_BRICK_WALL);
+
+        // Misc Blocks
+        blockStateModelGenerator.registerSingleton(ModBlocks.YELLOW_BIRCH_LEAVES,
+                TexturedModel.LEAVES);
+        blockStateModelGenerator.registerTintableCross(ModBlocks.YELLOW_BIRCH_SAPLING,
+                BlockStateModelGenerator
+                        .TintType.NOT_TINTED);
+        blockStateModelGenerator.blockStateCollector.accept(
+                BlockStateModelGenerator.createSingletonBlockState(
+                        ModBlocks.POTTED_YELLOW_BIRCH_SAPLING,
+                        Models.FLOWER_POT_CROSS.upload(
+                                ModBlocks.POTTED_YELLOW_BIRCH_SAPLING,
+                                TextureMap.plant(ModBlocks.YELLOW_BIRCH_SAPLING),
+                                blockStateModelGenerator.modelCollector
+                        )
+                )
+        );
     }
 }

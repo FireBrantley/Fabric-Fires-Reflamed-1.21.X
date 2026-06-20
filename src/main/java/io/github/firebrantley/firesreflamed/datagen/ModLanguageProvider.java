@@ -134,5 +134,10 @@ public class ModLanguageProvider extends FabricLanguageProvider {
         builder.add(ModItems.COPPER_BUCKET, "Copper Bucket");
         builder.add("item.firesreflamed.copper_bucket.filled", "Copper %s Bucket");
         builder.add("item.firesreflamed.copper_bucket.entity", "Copper Bucket of %s");
+
+        // Misc Blocks
+        builder.add(ModBlocks.YELLOW_BIRCH_LEAVES, "Yellow Birch Leaves");
+        builder.add(ModBlocks.YELLOW_BIRCH_SAPLING, "Yellow Birch Sapling");
+        builder.add(ModBlocks.POTTED_YELLOW_BIRCH_SAPLING, "Yellow Birch Sapling");
     }
 }
