@@ -122,6 +122,22 @@ tasks.register('copyRecipesToDocs', Copy) {
         }.result.get()
     }
 }
+tasks.register('copyWikiAssets', Copy) {
+    description = 'Copies rendered item/block images from run to docs/.assets for the wiki.'
+    from 'run/firesreflamed'
+    into 'docs/.assets/firesreflamed'
+    include '*.png'
+
+    doLast {
+        providers.exec {
+            commandLine 'git', 'add', 'docs/.assets/firesreflamed/'
+        }.result.get()
+    }
+}
+
+tasks.named('runWikiExportClient') {
+    finalizedBy 'copyWikiAssets'
+}
 
 tasks.named('runDatagen') {
     finalizedBy 'copyRecipesToDocs'
