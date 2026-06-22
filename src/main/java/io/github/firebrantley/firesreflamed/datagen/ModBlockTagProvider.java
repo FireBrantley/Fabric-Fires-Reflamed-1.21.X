@@ -154,21 +154,18 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.PRESSURE_PLATES)
                 .add(ModBlocks.WILLOW_PRESSURE_PLATE);
 
-        // Walls
+        // Misc
         getOrCreateTagBuilder(BlockTags.WALLS)
                 .add(ModBlocks.SNOW_BRICK_WALL)
                 .add(ModBlocks.RUBY_BRICK_WALL);
 
-        // Moss Placeables
         getOrCreateTagBuilder(ModTags.Blocks.MOSS_PLACEABLE)
                 .add(ModBlocks.WILLOW_LOG)
                 .add(ModBlocks.WILLOW_LEAVES);
 
-        // Clusters
         getOrCreateTagBuilder(C_CLUSTERS)
                 .add(ModBlocks.RUBY_CLUSTER);
 
-        // Flower Pots
         getOrCreateTagBuilder(BlockTags.FLOWER_POTS)
                 .add(ModBlocks.POTTED_WILLOW_SAPLING)
                 .add(ModBlocks.POTTED_YELLOW_BIRCH_SAPLING);

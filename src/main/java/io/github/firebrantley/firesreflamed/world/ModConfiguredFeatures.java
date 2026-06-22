@@ -2,18 +2,24 @@ package io.github.firebrantley.firesreflamed.world;
 
 import io.github.firebrantley.firesreflamed.FiresReflamed;
 import io.github.firebrantley.firesreflamed.block.ModBlocks;
-import net.minecraft.registry.Registerable;
-import net.minecraft.registry.RegistryKey;
-import net.minecraft.registry.RegistryKeys;
+import net.minecraft.block.Blocks;
+import net.minecraft.registry.*;
 import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.structure.rule.RuleTest;
 import net.minecraft.structure.rule.TagMatchRuleTest;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.intprovider.ConstantIntProvider;
 import net.minecraft.world.gen.feature.*;
+import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
+import net.minecraft.world.gen.foliage.BlobFoliagePlacer;
+import net.minecraft.world.gen.foliage.LargeOakFoliagePlacer;
+import net.minecraft.world.gen.stateprovider.BlockStateProvider;
+import net.minecraft.world.gen.treedecorator.BeehiveTreeDecorator;
+import net.minecraft.world.gen.trunk.*;
 
 import java.util.List;
-
-import static io.github.firebrantley.firesreflamed.world.ModFeatures.STRUCTURE_TREE;
+// For trees using structures
+// import static io.github.firebrantley.firesreflamed.world.ModFeatures.STRUCTURE_TREE;
 
 public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> TITANIUM_ORE_KEY =
@@ -72,8 +78,54 @@ public class ModConfiguredFeatures {
                 new OreFeatureConfig(overworldAquamarineOres,
                         7));
 
-        // Willow Tree
-        register(context, WILLOW_KEY, STRUCTURE_TREE, new DefaultFeatureConfig());
+        // Trees
+        // Example for structure trees
+        // register(context, STRUCTURE_KEY, STRUCTURE_TREE, new DefaultFeatureConfig());
+
+        register(context, WILLOW_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+                BlockStateProvider.of(ModBlocks.WILLOW_LOG),
+                new LargeOakTrunkPlacer(
+                        6,
+                        3,
+                        2
+                ),
+                BlockStateProvider.of(ModBlocks.WILLOW_LEAVES),
+                new LargeOakFoliagePlacer(
+                        ConstantIntProvider.create(2),
+                        ConstantIntProvider.create(3),
+                        4),
+                new TwoLayersFeatureSize(
+                        1,
+                        0,
+                        2
+                )
+                )
+                .build()
+        );
+
+        register(context, YELLOW_BIRCH_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+                BlockStateProvider.of(Blocks.BIRCH_LOG),
+                new StraightTrunkPlacer(
+                        5,
+                        2,
+                        0
+                ),
+                BlockStateProvider.of(ModBlocks.YELLOW_BIRCH_LEAVES),
+                new BlobFoliagePlacer(
+                        ConstantIntProvider.create(2),
+                        ConstantIntProvider.create(0),
+                        3),
+                new TwoLayersFeatureSize(
+                        1,
+                        0,
+                        2
+                )
+                )
+                .decorators(List.of(new BeehiveTreeDecorator(0.002f)
+                )
+                )
+                .build()
+        );
     }
 
     public static RegistryKey<ConfiguredFeature<?, ?>> registerKey(String name) {
