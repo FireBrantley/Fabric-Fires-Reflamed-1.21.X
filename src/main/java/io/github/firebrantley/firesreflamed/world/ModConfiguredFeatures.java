@@ -14,7 +14,6 @@ import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
 import net.minecraft.world.gen.foliage.BlobFoliagePlacer;
 import net.minecraft.world.gen.foliage.LargeOakFoliagePlacer;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
-import net.minecraft.world.gen.treedecorator.BeehiveTreeDecorator;
 import net.minecraft.world.gen.trunk.*;
 
 import java.util.List;
@@ -118,10 +117,7 @@ public class ModConfiguredFeatures {
                 new TwoLayersFeatureSize(
                         1,
                         0,
-                        2
-                )
-                )
-                .decorators(List.of(new BeehiveTreeDecorator(0.002f)
+                        1
                 )
                 )
                 .build()
