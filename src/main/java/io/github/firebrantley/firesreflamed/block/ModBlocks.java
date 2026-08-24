@@ -6,7 +6,6 @@ import com.terraformersmc.terraform.sign.api.block.TerraformWallHangingSignBlock
 import com.terraformersmc.terraform.sign.api.block.TerraformWallSignBlock;
 import io.github.firebrantley.firesreflamed.FiresReflamed;
 import io.github.firebrantley.firesreflamed.block.custom.HangingMossBlock;
-import io.github.firebrantley.firesreflamed.block.custom.RubyClusterBlock;
 import io.github.firebrantley.firesreflamed.world.tree.ModSaplingGenerators;
 import net.minecraft.block.*;
 import net.minecraft.block.enums.NoteBlockInstrument;
@@ -194,7 +193,8 @@ public class ModBlocks {
     );
     public static final Block RUBY_CLUSTER = registerBlock(
             "ruby_cluster",
-            new RubyClusterBlock(
+            new AmethystClusterBlock(
+                    7, 3,
                     AbstractBlock.Settings
                             .create()
                             .strength(1.0f, 1.0f)
